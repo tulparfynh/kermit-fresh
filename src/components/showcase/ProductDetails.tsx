@@ -36,11 +36,11 @@ type ProductDetailsProps = {
 
 function FeatureColumn({ features }: { features: typeof allFeatures }) {
     return (
-        <div className="flex flex-col justify-center items-center gap-6 py-6 px-2 bg-muted h-full">
+        <div className="flex flex-col justify-center items-center gap-4 py-4 px-1 bg-muted h-full">
             {features.map((feature) => (
-                <div key={feature.text} className="flex flex-col items-center gap-2 text-center w-20">
-                    <feature.icon className="h-7 w-7 text-secondary" />
-                    <span className="text-xs font-medium text-foreground/80 leading-tight">{feature.text}</span>
+                <div key={feature.text} className="flex flex-col items-center gap-1.5 text-center w-20">
+                    <feature.icon className="h-6 w-6 text-secondary" />
+                    <span className="text-[11px] font-medium text-foreground/80 leading-tight">{feature.text}</span>
                 </div>
             ))}
         </div>
@@ -69,11 +69,11 @@ export function ProductDetails({ panel }: ProductDetailsProps) {
               />
             </div>
             <div className="p-8 bg-background/50 flex flex-col justify-center">
-              <ul className="space-y-3 text-sm">
+              <ul className="space-y-4">
                 {specs.map((spec) => (
                   <li key={spec.label} className="flex justify-between items-center border-b border-border/70 pb-3">
-                    <span className="font-semibold text-foreground/70">{spec.label}:</span>
-                    <span className="font-medium text-foreground">{spec.value}</span>
+                    <span className="font-bold text-foreground text-sm tracking-wide">{spec.label}:</span>
+                    <span className="font-medium text-foreground text-base">{spec.value}</span>
                   </li>
                 ))}
               </ul>
