@@ -22,7 +22,6 @@ export function Showcase() {
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-            <p className="text-sm tracking-widest text-foreground/70 uppercase">KERMIT FLOOR</p>
             <h2 className="font-headline text-3xl lg:text-4xl font-bold">Wall Panel Collection</h2>
         </div>
         <ProductDetails panel={selectedPanel} />
