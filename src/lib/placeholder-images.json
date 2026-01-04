@@ -21,19 +21,19 @@
     {
       "id": "kermit-thumb-2",
       "description": "Marble White thumbnail",
-      "imageUrl": "https://storage.googleapis.com/aifirebase-hosted-content/project-123/images/kermit-prod-2.jpg",
+      "imageUrl": "/images/kermit-prod-2.jpg",
       "imageHint": "marble texture"
     },
     {
       "id": "kermit-prod-2",
       "description": "Marble White product detail",
-      "imageUrl": "https://storage.googleapis.com/aifirebase-hosted-content/project-123/images/kermit-prod-2.jpg",
+      "imageUrl": "/images/kermit-prod-2.jpg",
       "imageHint": "marble panel"
     },
     {
       "id": "kermit-app-2",
       "description": "Marble White application",
-      "imageUrl": "https://storage.googleapis.com/aifirebase-hosted-content/project-123/images/kermit-app-2.jpg",
+      "imageUrl": "/images/kermit-app-2.jpg",
       "imageHint": "modern kitchen"
     },
     {
