@@ -21,9 +21,6 @@ export function Showcase() {
       />
       
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl lg:text-4xl font-bold">Wall Panel Collection</h2>
-        </div>
         <ProductDetails panel={selectedPanel} />
       </div>
       
