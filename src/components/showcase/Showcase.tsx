@@ -14,15 +14,15 @@ export function Showcase() {
 
   return (
     <div className="space-y-12 lg:space-y-16">
+      <div className="container mx-auto px-4 mt-12 lg:mt-16">
+        <ProductDetails panel={selectedPanel} />
+      </div>
+      
       <ColorPicker
         panels={panels}
         selectedPanel={selectedPanel}
         onPanelSelect={setSelectedPanel}
       />
-      
-      <div className="container mx-auto px-4">
-        <ProductDetails panel={selectedPanel} />
-      </div>
 
       <div className="container mx-auto px-4">
          <section id="application-photo" className="scroll-mt-20">
