@@ -113,7 +113,7 @@ export function Header() {
       </div>
       <div className="relative h-48 lg:h-64 w-full">
         <Image
-          src="https://images.unsplash.com/photo-1561633857-705b6b3a0fb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0cmF2ZXJ0aW5lJTIwaXZvcnl8ZW58MHx8fHwxNzE4MTMxMTM0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://images.unsplash.com/photo-1612303527503-f3b8a13543b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmF2ZXJ0aW5lJTIwaXZvcnl8ZW58MHx8fHwxNzY3NTQ0MzYyfDA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Ivory travertine texture background"
           fill
           className="object-cover"
