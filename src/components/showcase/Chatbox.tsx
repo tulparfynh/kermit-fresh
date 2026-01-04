@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -31,6 +31,7 @@ export function Chatbox() {
     },
   ]);
   const [inputValue, setInputValue] = useState('');
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
 
   const handleSendMessage = () => {
     if (inputValue.trim()) {
@@ -39,15 +40,34 @@ export function Chatbox() {
         text: inputValue,
         sender: 'user',
       };
+      
+      const phoneNumber = "905368338429";
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+        inputValue
+      )}`;
+      
+      window.open(whatsappUrl, '_blank');
+
       const agentResponse: Message = {
-        id: Date.now() + 1,
-        text: "Thanks for your message! An agent will be with you shortly.",
-        sender: 'agent',
+          id: Date.now() + 1,
+          text: "I've opened WhatsApp for you. Please send your message there!",
+          sender: 'agent',
       };
+
       setMessages([...messages, userMessage, agentResponse]);
       setInputValue('');
     }
   };
+  
+    useEffect(() => {
+    if (scrollAreaRef.current) {
+      scrollAreaRef.current.scrollTo({
+        top: scrollAreaRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
+  }, [messages]);
+
 
   return (
     <>
@@ -95,7 +115,7 @@ export function Chatbox() {
                 </Button>
               </CardHeader>
               <CardContent className="flex-grow p-4 bg-background overflow-y-auto">
-                <ScrollArea className="h-full pr-4">
+                <ScrollArea className="h-full pr-4" ref={scrollAreaRef}>
                   <div className="space-y-4">
                     {messages.map((message) => (
                       <div
