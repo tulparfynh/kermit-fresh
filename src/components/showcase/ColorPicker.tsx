@@ -26,9 +26,6 @@ export function ColorPicker({
   return (
     <div className="bg-muted py-8">
       <div className="container mx-auto px-4">
-        <h3 className="font-headline text-2xl font-bold text-center mb-6">
-          Choose a Finish
-        </h3>
         <Carousel
           opts={{
             align: 'start',
