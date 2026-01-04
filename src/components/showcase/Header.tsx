@@ -21,7 +21,7 @@ const navLinks = [
 function Logo() {
   return (
     <svg
-      className="h-12 w-auto"
+      className="h-16 w-auto"
       viewBox="0 0 160 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ function NavMenu({ isMobile = false }) {
     <nav
       className={cn(
         'flex items-center gap-4 lg:gap-6',
-        isMobile ? 'flex-col items-start space-y-4 p-6' : 'hidden md:flex'
+        isMobile ? 'flex-col items-start space-y-4 p-6' : 'hidden lg:flex'
       )}
     >
       {navLinks.map((link) => (
@@ -63,11 +63,11 @@ function NavMenu({ isMobile = false }) {
           key={link.label}
           href={link.href}
           className={cn(
-            'text-base font-medium transition-colors hover:text-primary whitespace-nowrap',
+            'text-lg font-medium transition-colors hover:text-primary whitespace-nowrap',
             link.active
               ? 'text-primary'
               : 'text-foreground/70',
-            isMobile && 'text-lg'
+            isMobile && 'text-xl'
           )}
         >
           {link.label}
@@ -81,36 +81,38 @@ export function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="relative bg-background">
-      <div className="container mx-auto px-4">
-        <div className="flex h-24 items-center justify-between">
-          <Logo />
-          <div className="hidden md:flex items-center gap-6">
-            <NavMenu />
-          </div>
-          <div className="md:hidden">
-            <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Open menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left" className="w-full max-w-sm">
-                <div className="p-6">
-                  <div className="flex justify-between items-center mb-8">
-                     <Logo />
-                     <Button variant="ghost" size="icon" onClick={() => setMenuOpen(false)}>
-                        <X className="h-6 w-6" />
-                     </Button>
+    <>
+      <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur-sm shadow-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex h-28 items-center justify-between">
+            <Logo />
+            <div className="hidden lg:flex items-center gap-6">
+              <NavMenu />
+            </div>
+            <div className="lg:hidden">
+              <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-8 w-8" />
+                    <span className="sr-only">Open menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="left" className="w-full max-w-sm">
+                  <div className="p-6">
+                    <div className="flex justify-between items-center mb-8">
+                       <Logo />
+                       <Button variant="ghost" size="icon" onClick={() => setMenuOpen(false)}>
+                          <X className="h-6 w-6" />
+                       </Button>
+                    </div>
+                    <NavMenu isMobile />
                   </div>
-                  <NavMenu isMobile />
-                </div>
-              </SheetContent>
-            </Sheet>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
       <div className="relative h-48 lg:h-64 w-full">
         <Image
           src="https://images.unsplash.com/photo-1594499699929-c884a29a3493?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0cmF2ZXJ0aW5lJTIwdGV4dHVyZXxlbnwwfHx8fDE3NjgxNTMyODh8MA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -126,6 +128,6 @@ export function Header() {
           </h1>
         </div>
       </div>
-    </header>
+    </>
   );
 }
