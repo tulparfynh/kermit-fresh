@@ -55,7 +55,7 @@ function NavMenu({ isMobile = false }) {
     <nav
       className={cn(
         'flex items-center gap-4 lg:gap-6',
-        isMobile ? 'flex-col items-start space-y-4 p-6' : 'hidden md:flex'
+        isMobile ? 'flex-col items-start space-y-4 p-6' : 'hidden lg:flex'
       )}
     >
       {navLinks.map((link) => (
@@ -63,7 +63,7 @@ function NavMenu({ isMobile = false }) {
           key={link.label}
           href={link.href}
           className={cn(
-            'text-sm font-medium transition-colors hover:text-primary',
+            'text-sm font-medium transition-colors hover:text-primary whitespace-nowrap',
             link.active
               ? 'text-primary border-b-2 border-primary pb-1'
               : 'text-foreground/70',
@@ -85,10 +85,10 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Logo />
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6">
             <NavMenu />
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
