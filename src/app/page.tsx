@@ -1,5 +1,6 @@
 import { Header } from '@/components/showcase/Header';
 import { Showcase } from '@/components/showcase/Showcase';
+import { Chatbox } from '@/components/showcase/Chatbox';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
           <p>&copy; {new Date().getFullYear()} Kermit Floor. All rights reserved.</p>
         </div>
       </footer>
+      <Chatbox />
     </main>
   );
 }
