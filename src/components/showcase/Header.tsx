@@ -39,7 +39,7 @@ function Logo() {
         y="36"
         fontFamily="Inter, sans-serif"
         fontSize="10"
-        letterSpacing="0.6em"
+        letterSpacing="0.75em"
         className="fill-foreground/80"
       >
         FLOOR
