@@ -61,7 +61,7 @@ export function ProductDetails({ panel }: ProductDetailsProps) {
 
         <Separator />
 
-        <div className="p-8">
+        <div className="px-8 py-4">
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-4 text-center">
               {features.map((feature) => (
                 <div key={feature.text} className="flex flex-col items-center gap-2">
