@@ -21,7 +21,7 @@ const navLinks = [
 function Logo() {
   return (
     <svg
-      className="h-10 w-auto"
+      className="h-12 w-auto"
       viewBox="0 0 160 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ export function Header() {
   return (
     <header className="relative bg-background">
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           <Logo />
           <div className="hidden md:flex items-center gap-6">
             <NavMenu />
