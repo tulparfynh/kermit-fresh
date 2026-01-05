@@ -56,8 +56,8 @@ export function ProductDetails({ panel }: ProductDetailsProps) {
         </div>
 
         <CardContent className="p-0 bg-card">
-          <div className="md:flex">
-            <div className="p-8 flex flex-col items-center justify-center md:w-1/2">
+          <div className="md:grid md:grid-cols-2">
+            <div className="p-8 flex flex-col items-center justify-center">
                 <div className="flex flex-col items-center gap-4 text-center">
                     <h2 className="text-2xl font-bold font-headline text-primary tracking-wide">{panel.name}</h2>
                     <Image
@@ -70,7 +70,7 @@ export function ProductDetails({ panel }: ProductDetailsProps) {
                     />
                 </div>
             </div>
-            <div className="p-8 bg-background/50 flex flex-col justify-center md:w-1/2">
+            <div className="p-8 bg-background/50 flex flex-col justify-center">
               <ul className="space-y-4">
                 {specs.map((spec) => (
                   <li key={spec.label} className="flex justify-between items-center border-b border-border/70 pb-3">
