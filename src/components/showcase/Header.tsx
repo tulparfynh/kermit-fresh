@@ -122,7 +122,7 @@ export function Header() {
           data-ai-hint="marble texture"
           priority
         />
-        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h1 className="font-headline text-4xl lg:text-5xl font-bold tracking-tight text-white">
             SPC WALL PANEL COLLECTION
           </h1>
