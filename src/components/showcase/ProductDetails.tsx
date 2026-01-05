@@ -56,29 +56,29 @@ export function ProductDetails({ panel }: ProductDetailsProps) {
         </div>
 
         <CardContent className="p-0 bg-card">
-          <div className="md:grid md:grid-cols-2">
-            <div className="p-8 flex flex-col items-center justify-center">
-                <div className="flex flex-col items-center gap-4 text-center">
-                    <h2 className="text-2xl font-bold font-headline text-primary tracking-wide">{panel.name}</h2>
-                    <Image
-                        src={panel.productImageUrl}
-                        alt={panel.name}
-                        width={600}
-                        height={600}
-                        className="w-full h-auto object-cover aspect-square rounded-lg shadow-md"
-                        data-ai-hint={panel.productImageHint}
-                    />
-                </div>
-            </div>
-            <div className="p-8 bg-background/50 flex flex-col justify-center">
-              <ul className="space-y-4">
-                {specs.map((spec) => (
-                  <li key={spec.label} className="flex justify-between items-center border-b border-border/70 pb-3">
-                    <span className="font-bold text-foreground text-sm tracking-wide">{spec.label}:</span>
-                    <span className="font-medium text-foreground text-base text-right">{spec.value}</span>
-                  </li>
-                ))}
-              </ul>
+          <div className="p-8">
+            <h2 className="text-2xl font-bold font-headline text-primary tracking-wide text-center mb-6">{panel.name}</h2>
+            <div className="relative">
+              <div className="md:absolute md:left-0 md:top-0 md:bottom-0 md:w-1/2 md:pr-4">
+                <Image
+                  src={panel.productImageUrl}
+                  alt={panel.name}
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover aspect-square rounded-lg shadow-md mb-8 md:mb-0"
+                  data-ai-hint={panel.productImageHint}
+                />
+              </div>
+              <div className="md:pl-[calc(50%+1rem)] bg-background/50 md:bg-transparent">
+                  <ul className="space-y-4 p-6 md:p-0 rounded-lg">
+                      {specs.map((spec) => (
+                          <li key={spec.label} className="flex justify-between items-center border-b border-border/70 pb-3">
+                              <span className="font-bold text-foreground text-sm tracking-wide">{spec.label}:</span>
+                              <span className="font-medium text-foreground text-base text-right">{spec.value}</span>
+                          </li>
+                      ))}
+                  </ul>
+              </div>
             </div>
           </div>
         </CardContent>
