@@ -11,7 +11,6 @@ export type Panel = {
   productImageHint: string;
   applicationImageUrl: string;
   applicationImageHint: string;
-  generateScene?: boolean;
 };
 
 const getImageData = (id: string): Pick<ImagePlaceholder, 'imageUrl' | 'imageHint'> => {
@@ -40,7 +39,6 @@ const panelDefinitions = [
         thumbId: 'kermit-thumb-2',
         prodId: 'kermit-prod-2',
         appId: 'kermit-app-2',
-        generateScene: true,
     },
     {
         id: '3',
@@ -78,6 +76,5 @@ export const panels: Panel[] = panelDefinitions.map(def => {
         productImageHint: prod.imageHint,
         applicationImageUrl: app.imageUrl,
         applicationImageHint: app.imageHint,
-        generateScene: def.generateScene || false,
     }
 });
