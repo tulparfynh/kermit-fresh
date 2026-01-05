@@ -70,7 +70,7 @@ export function ProductDetails({ panel }: ProductDetailsProps) {
                     />
                 </div>
             </div>
-            <div className="p-8 bg-background/50">
+            <div className="p-8 bg-background/50 flex flex-col justify-center">
               <ul className="space-y-4">
                 {specs.map((spec) => (
                   <li key={spec.label} className="flex justify-between items-center border-b border-border/70 pb-3">
