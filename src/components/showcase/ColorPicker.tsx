@@ -65,7 +65,7 @@ export function ColorPicker({
                           className="w-full h-full object-cover"
                           data-ai-hint={panel.productImageHint}
                         />
-                         <div className="absolute inset-0 flex items-end justify-center p-2 bg-gradient-to-t from-black/50 to-transparent">
+                         <div className="absolute inset-0 flex items-end justify-center p-2">
                            <p className="text-white text-sm font-bold text-center" style={{textShadow: '0 1px 3px rgba(0,0,0,0.5)'}}>{panel.name}</p>
                          </div>
                       </div>
