@@ -1,9 +1,10 @@
+
 'use client';
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { Logo, NavMenu } from './Header';
 
 export function MobileMenu() {
@@ -12,12 +13,13 @@ export function MobileMenu() {
   return (
     <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon">
-          <Menu className="h-8 w-8" />
+        <Button variant="ghost" className="h-auto w-auto p-2">
+          <Menu className="h-24 w-24" />
           <span className="sr-only">Open menu</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="w-full max-w-sm">
+        <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
         <div className="p-6">
           <div className="flex justify-between items-center mb-8">
             <Logo />
