@@ -89,11 +89,11 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
                           src={panel.productImageUrl}
                           alt={panel.name}
                           fill
-                          className="object-cover rounded-lg shadow-md group-hover:opacity-90 transition-opacity"
+                          className="object-cover rounded-lg shadow-md"
                           sizes="(max-width: 768px) 100vw, 50vw"
                           data-ai-hint={panel.productImageHint}
                           />
-                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                          <div className="absolute inset-0 flex items-center justify-center opacity-0 rounded-lg">
                               <ZoomIn className="h-16 w-16 text-white drop-shadow-lg" />
                           </div>
                       </div>
@@ -120,7 +120,7 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-background/50 hover:bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/30 hover:bg-black/50 text-white opacity-0 group-hover:opacity-100 transition-opacity"
                   onClick={handlePrevious}
                 >
                   <ChevronLeft className="h-6 w-6" />
@@ -128,7 +128,7 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-background/50 hover:bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/30 hover:bg-black/50 text-white opacity-0 group-hover:opacity-100 transition-opacity"
                   onClick={handleNext}
                 >
                   <ChevronRight className="h-6 w-6" />

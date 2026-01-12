@@ -70,11 +70,11 @@ export function Showcase({ initialPanels }: ShowcaseProps) {
                       src={selectedPanel.applicationImageUrl}
                       alt={`Application photo for ${selectedPanel.name}`}
                       fill
-                      className="object-cover group-hover:opacity-90 transition-opacity"
+                      className="object-cover"
                       data-ai-hint={selectedPanel.applicationImageHint}
                       sizes="(max-width: 768px) 100vw, 80vw"
                     />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0">
                       <ZoomIn className="h-16 w-16 text-white drop-shadow-lg" />
                     </div>
                 </Card>
