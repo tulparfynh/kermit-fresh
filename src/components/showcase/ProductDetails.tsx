@@ -93,8 +93,8 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
                           sizes="(max-width: 768px) 100vw, 50vw"
                           data-ai-hint={panel.productImageHint}
                           />
-                          <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-                              <ZoomIn className="h-16 w-16 text-white" />
+                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                              <ZoomIn className="h-16 w-16 text-white drop-shadow-lg" />
                           </div>
                       </div>
                   </DialogTrigger>
@@ -110,7 +110,7 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
                       />
                       </div>
                       <DialogClose asChild>
-                        <Button variant="ghost" size="icon" className="absolute top-[-1rem] right-[-1rem] bg-black/20 hover:bg-black/40 rounded-full h-9 w-9 text-white">
+                        <Button variant="ghost" size="icon" className="absolute top-[-1rem] right-[-1rem] bg-black/50 hover:bg-black/70 rounded-full h-9 w-9 text-white">
                             <X className="h-5 w-5" />
                             <span className="sr-only">Close</span>
                         </Button>
