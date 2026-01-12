@@ -5,7 +5,6 @@ import path from 'path';
 export type Panel = {
   id: string;
   name: string;
-  description: string;
   thumbnailUrl: string;
   thumbnailHint: string;
   productImageUrl: string;
@@ -16,38 +15,43 @@ export type Panel = {
 
 const PANELS_DIR = path.join(process.cwd(), 'public/panels');
 
-async function getPanelFromDirectory(dirName: string): Promise<Panel> {
-  const dirPath = path.join(PANELS_DIR, dirName);
-  
-  // Read metadata
-  const detailsPath = path.join(dirPath, 'details.json');
-  const detailsJson = await fs.readFile(detailsPath, 'utf-8');
-  const details = JSON.parse(detailsJson);
+function formatPanelName(dirName: string): string {
+  return dirName
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
 
-  // Construct image URLs. Assume standard naming.
-  // Note: These URLs are relative to the `public` directory.
+async function getPanelFromDirectory(dirName: string): Promise<Panel> {
+  const name = formatPanelName(dirName);
+  
   const thumbnailUrl = `/panels/${dirName}/thumbnail.png`;
   const productImageUrl = `/panels/${dirName}/product.png`;
   const applicationImageUrl = `/panels/${dirName}/application.png`;
   
   return {
     id: dirName,
-    name: details.name,
-    description: details.description,
+    name: name,
     thumbnailUrl,
     productImageUrl,
     applicationImageUrl,
-    // Hints can be added to details.json if needed, or standardized
-    thumbnailHint: details.thumbnailHint || `${details.name} thumbnail`,
-    productImageHint: details.productImageHint || `${details.name} product view`,
-    applicationImageHint: details.applicationImageHint || `${details.name} in a room`,
+    thumbnailHint: `${name} thumbnail`,
+    productImageHint: `${name} product view`,
+    applicationImageHint: `${name} in a room`,
   };
 }
 
 export async function getPanels(): Promise<Panel[]> {
   try {
     const panelDirs = await fs.readdir(PANELS_DIR);
-    const panelPromises = panelDirs.map(dirName => getPanelFromDirectory(dirName));
+    const panelPromises = panelDirs.map(dirName => {
+        // Basic check to ensure it's a directory we're interested in, not system files like .DS_Store
+        if (!dirName.startsWith('.')) {
+            return getPanelFromDirectory(dirName);
+        }
+        return null;
+    }).filter(p => p !== null) as Promise<Panel>[];
+    
     const panels = await Promise.all(panelPromises);
     return panels;
   } catch (error) {
