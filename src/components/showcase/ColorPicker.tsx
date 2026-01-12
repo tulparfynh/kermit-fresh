@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -57,13 +58,12 @@ export function ColorPicker({
                           : 'border-transparent hover:border-primary/50'
                       )}
                     >
-                      <div className="relative">
+                      <div className="relative aspect-square">
                         <Image
                           src={panel.thumbnailUrl}
                           alt={panel.name}
-                          width={200}
-                          height={200}
-                          className="w-full h-auto object-cover aspect-square"
+                          fill
+                          className="w-full h-full object-contain"
                           data-ai-hint={panel.thumbnailHint}
                         />
                          <div className="absolute bottom-0 left-0 right-0 bg-black/50 p-2">
