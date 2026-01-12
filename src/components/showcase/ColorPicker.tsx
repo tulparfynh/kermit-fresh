@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -66,7 +67,7 @@ export function ColorPicker({
                           data-ai-hint={panel.productImageHint}
                         />
                          <div className="absolute inset-0 flex items-end justify-center p-2">
-                           <p className="text-white text-sm font-bold text-center" style={{textShadow: '0 1px 3px rgba(0,0,0,0.5)'}}>{panel.name}</p>
+                           <p className="bg-black/40 px-2 py-1 rounded-md text-white text-sm font-bold text-center" style={{textShadow: '0 1px 2px rgba(0,0,0,0.7)'}}>{panel.name}</p>
                          </div>
                       </div>
                     </Card>
