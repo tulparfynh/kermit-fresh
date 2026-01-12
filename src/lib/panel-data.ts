@@ -10,7 +10,7 @@ export type Panel = {
   productImageUrl: string;
   productImageHint: string;
   applicationImageUrl: string;
-  applicationImageHint: string;
+  applicationImageHint:string;
 };
 
 const PANELS_DIR = path.join(process.cwd(), 'public/images/spc-wall-panels');
@@ -25,16 +25,14 @@ function formatPanelName(dirName: string): string {
 async function getPanelFromDirectory(dirName: string): Promise<Panel> {
   const name = formatPanelName(dirName);
   
-  const thumbnailUrl = `/images/spc-wall-panels/${dirName}/thumbnail.png`;
-  const productImageUrl = `/images/spc-wall-panels/${dirName}/product.png`;
-  const applicationImageUrl = `/images/spc-wall-panels/${dirName}/application.png`;
+  const baseImagePath = `/images/spc-wall-panels/${dirName}`;
   
   return {
     id: dirName,
     name: name,
-    thumbnailUrl,
-    productImageUrl,
-    applicationImageUrl,
+    thumbnailUrl: `${baseImagePath}/thumbnail.png`,
+    productImageUrl: `${baseImagePath}/product.png`,
+    applicationImageUrl: `${baseImagePath}/application.png`,
     thumbnailHint: `${name} thumbnail`,
     productImageHint: `${name} product view`,
     applicationImageHint: `${name} in a room`,
