@@ -65,7 +65,7 @@ export function ColorPicker({
         <Carousel
           setApi={setApi}
           opts={{
-            align: 'start',
+            align: 'center',
             loop: true,
           }}
           className="w-full"
