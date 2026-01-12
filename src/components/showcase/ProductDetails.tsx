@@ -3,7 +3,15 @@ import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import type { Panel } from '@/lib/panel-data';
-import { Droplets, ShieldCheck, Zap, Hammer, Star, Volume2, Leaf } from 'lucide-react';
+import { Droplets, ShieldCheck, Zap, Hammer, Star, Volume2, Leaf, ZoomIn, X } from 'lucide-react';
+import {
+    Dialog,
+    DialogContent,
+    DialogTrigger,
+    DialogTitle,
+    DialogClose,
+  } from "@/components/ui/dialog"
+import { Button } from '../ui/button';
 
 const specs = [
   { label: 'THICKNESS', value: '4 mm' },
@@ -59,16 +67,42 @@ export function ProductDetails({ panel }: ProductDetailsProps) {
           <div className="p-4 md:p-4 md:pb-8">
             <h2 className="text-2xl md:text-3xl font-bold font-headline text-primary tracking-wide text-center mb-4">{panel.name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start max-w-6xl mx-auto">
-              <div className="relative aspect-[1920/1298] w-full">
-                <Image
-                  src={panel.productImageUrl}
-                  alt={panel.name}
-                  fill
-                  className="object-cover rounded-lg shadow-md"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  data-ai-hint={panel.productImageHint}
-                />
-              </div>
+              <Dialog>
+                <DialogTrigger asChild>
+                    <div className="relative aspect-[1920/1298] w-full group cursor-pointer">
+                        <Image
+                        src={panel.productImageUrl}
+                        alt={panel.name}
+                        fill
+                        className="object-cover rounded-lg shadow-md group-hover:opacity-90 transition-opacity"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        data-ai-hint={panel.productImageHint}
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                            <ZoomIn className="h-16 w-16 text-white" />
+                        </div>
+                    </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
+                    <DialogTitle className="sr-only">{`Enlarged view of ${panel.name} product photo`}</DialogTitle>
+                    <div className="relative aspect-[1920/1298]">
+                    <Image
+                        src={panel.productImageUrl}
+                        alt={`Enlarged view of ${panel.name}`}
+                        fill
+                        className="object-contain rounded-lg"
+                        data-ai-hint={panel.productImageHint}
+                    />
+                    </div>
+                    <DialogClose asChild>
+                    <Button variant="ghost" size="icon" className="absolute top-[-1rem] right-[-1rem] bg-background/50 hover:bg-background/80 rounded-full h-9 w-9">
+                        <X className="h-5 w-5" />
+                        <span className="sr-only">Close</span>
+                    </Button>
+                    </DialogClose>
+                </DialogContent>
+              </Dialog>
+
               <div className="flex flex-col h-full">
                   <ul className="h-full flex flex-col justify-center space-y-2 lg:space-y-2">
                       {specs.map((spec) => (
