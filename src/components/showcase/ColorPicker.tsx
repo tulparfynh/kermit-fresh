@@ -63,10 +63,10 @@ export function ColorPicker({
                           src={panel.thumbnailUrl}
                           alt={panel.name}
                           fill
-                          className="w-full h-full object-contain"
-                          data-ai-hint={panel.thumbnailHint}
+                          className="w-full h-full object-cover"
+                          data-ai-hint={panel.productImageHint}
                         />
-                         <div className="absolute bottom-0 left-0 right-0 bg-black/50 p-2">
+                         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent p-2">
                            <p className="text-white text-xs font-semibold truncate">{panel.name}</p>
                          </div>
                       </div>
