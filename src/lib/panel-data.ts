@@ -1,5 +1,6 @@
 
-import { PlaceHolderImages, type ImagePlaceholder } from './placeholder-images';
+import fs from 'fs/promises';
+import path from 'path';
 
 export type Panel = {
   id: string;
@@ -13,68 +14,46 @@ export type Panel = {
   applicationImageHint: string;
 };
 
-const getImageData = (id: string): Pick<ImagePlaceholder, 'imageUrl' | 'imageHint'> => {
-    const image = PlaceHolderImages.find(img => img.id === id);
-    if (!image) {
-        throw new Error(`Placeholder image with id "${id}" not found.`);
-    }
-    return { imageUrl: image.imageUrl, imageHint: image.imageHint };
-};
+const PANELS_DIR = path.join(process.cwd(), 'public/panels');
 
-const panelDefinitions = [
-    {
-        id: '1',
-        name: 'Natural Oak',
-        description:
-        'A classic wood finish that brings warmth and timeless elegance to any room.',
-        thumbId: 'kermit-thumb-1',
-        prodId: 'kermit-prod-1',
-        appId: 'kermit-app-1',
-    },
-    {
-        id: '2',
-        name: 'Marble White',
-        description:
-        'Luxurious and bright, this marble-effect panel creates a sense of space and sophistication.',
-        thumbId: 'kermit-thumb-2',
-        prodId: 'kermit-prod-2',
-        appId: 'kermit-app-2',
-    },
-    {
-        id: '3',
-        name: 'Concrete Grey',
-        description:
-        'An industrial, modern look with a smooth concrete finish for a minimalist aesthetic.',
-        thumbId: 'kermit-thumb-3',
-        prodId: 'kermit-prod-3',
-        appId: 'kermit-app-3',
-    },
-    {
-        id: '4',
-        name: 'Charcoal Slate',
-        description:
-        'A deep, textured slate effect that adds drama and a natural stone feel to your walls.',
-        thumbId: 'kermit-thumb-4',
-        prodId: 'kermit-prod-4',
-        appId: 'kermit-app-4',
-    },
-];
+async function getPanelFromDirectory(dirName: string): Promise<Panel> {
+  const dirPath = path.join(PANELS_DIR, dirName);
+  
+  // Read metadata
+  const detailsPath = path.join(dirPath, 'details.json');
+  const detailsJson = await fs.readFile(detailsPath, 'utf-8');
+  const details = JSON.parse(detailsJson);
 
+  // Construct image URLs. Assume standard naming.
+  // Note: These URLs are relative to the `public` directory.
+  const thumbnailUrl = `/panels/${dirName}/thumbnail.png`;
+  const productImageUrl = `/panels/${dirName}/product.png`;
+  const applicationImageUrl = `/panels/${dirName}/application.png`;
+  
+  return {
+    id: dirName,
+    name: details.name,
+    description: details.description,
+    thumbnailUrl,
+    productImageUrl,
+    applicationImageUrl,
+    // Hints can be added to details.json if needed, or standardized
+    thumbnailHint: details.thumbnailHint || `${details.name} thumbnail`,
+    productImageHint: details.productImageHint || `${details.name} product view`,
+    applicationImageHint: details.applicationImageHint || `${details.name} in a room`,
+  };
+}
 
-export const panels: Panel[] = panelDefinitions.map(def => {
-    const thumb = getImageData(def.thumbId);
-    const prod = getImageData(def.prodId);
-    const app = getImageData(def.appId);
-    
-    return {
-        id: def.id,
-        name: def.name,
-        description: def.description,
-        thumbnailUrl: thumb.imageUrl,
-        thumbnailHint: thumb.imageHint,
-        productImageUrl: prod.imageUrl,
-        productImageHint: prod.imageHint,
-        applicationImageUrl: app.imageUrl,
-        applicationImageHint: app.imageHint,
-    }
-});
+export async function getPanels(): Promise<Panel[]> {
+  try {
+    const panelDirs = await fs.readdir(PANELS_DIR);
+    const panelPromises = panelDirs.map(dirName => getPanelFromDirectory(dirName));
+    const panels = await Promise.all(panelPromises);
+    return panels;
+  } catch (error) {
+    console.error("Failed to read panel data:", error);
+    // If the directory doesn't exist or is empty, return an empty array
+    // so the page can still build.
+    return [];
+  }
+}

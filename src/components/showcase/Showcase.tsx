@@ -1,16 +1,39 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
-import { panels, type Panel } from '@/lib/panel-data';
+import React, { useState, useEffect } from 'react';
+import type { Panel } from '@/lib/panel-data';
 import { Card } from '@/components/ui/card';
 import { InquiryForm } from './InquiryForm';
 import { Separator } from '@/components/ui/separator';
 import { ColorPicker } from './ColorPicker';
 import { ProductDetails } from './ProductDetails';
+import { Skeleton } from '@/components/ui/skeleton';
 
-export function Showcase() {
-  const [selectedPanel, setSelectedPanel] = useState<Panel>(panels[0]);
+type ShowcaseProps = {
+  initialPanels: Panel[];
+};
+
+export function Showcase({ initialPanels }: ShowcaseProps) {
+  const [panels, setPanels] = useState<Panel[]>(initialPanels);
+  const [selectedPanel, setSelectedPanel] = useState<Panel | null>(initialPanels.length > 0 ? initialPanels[0] : null);
+
+  useEffect(() => {
+    setPanels(initialPanels);
+    if (!selectedPanel && initialPanels.length > 0) {
+      setSelectedPanel(initialPanels[0]);
+    }
+  }, [initialPanels, selectedPanel]);
+
+  if (!selectedPanel) {
+    return (
+      <div className="container mx-auto px-4 mt-12 lg:mt-16 space-y-8">
+        <Skeleton className="h-[50vh] w-full" />
+        <Skeleton className="h-[20vh] w-full" />
+        <p className="text-center text-lg text-muted-foreground">Loading panel data... If this persists, please check the 'public/panels' directory for product folders.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-12 lg:space-y-16">
