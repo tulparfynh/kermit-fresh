@@ -1,4 +1,6 @@
 
+'use client';
+
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -12,6 +14,13 @@ import {
     DialogClose,
   } from "@/components/ui/dialog"
 import { Button } from '../ui/button';
+import React, { useState, useEffect } from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from '@/components/ui/carousel';
 
 const specs = [
   { label: 'THICKNESS', value: '4 mm' },
@@ -58,16 +67,41 @@ function FeatureColumn({ features }: { features: typeof allFeatures }) {
 }
 
 export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsProps) {
-  const currentIndex = panels.findIndex((p) => p.id === panel.id);
+  const [api, setApi] = useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+    const selectedIndex = panels.findIndex((p) => p.id === panel.id);
+    if (selectedIndex !== -1 && selectedIndex !== api.selectedScrollSnap()) {
+      api.scrollTo(selectedIndex);
+    }
+  }, [api, panel, panels]);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+    const onSelect = () => {
+      const selectedIndex = api.selectedScrollSnap();
+      const newSelectedPanel = panels[selectedIndex];
+      if (newSelectedPanel.id !== panel.id) {
+        onPanelSelect(newSelectedPanel);
+      }
+    };
+    api.on('select', onSelect);
+    return () => {
+      api.off('select', onSelect);
+    };
+  }, [api, panel, panels, onPanelSelect]);
 
   const handleNext = () => {
-    const nextIndex = (currentIndex + 1) % panels.length;
-    onPanelSelect(panels[nextIndex]);
+    api?.scrollNext();
   };
 
   const handlePrevious = () => {
-    const prevIndex = (currentIndex - 1 + panels.length) % panels.length;
-    onPanelSelect(panels[prevIndex]);
+    api?.scrollPrev();
   };
 
   return (
@@ -82,41 +116,49 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
             <h2 className="text-2xl md:text-3xl font-bold font-headline text-primary tracking-wide text-center mb-4">{panel.name}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start max-w-6xl mx-auto">
               <div className="relative group">
-                <Dialog>
-                  <DialogTrigger asChild>
-                      <div className="relative aspect-[1920/1298] w-full group cursor-pointer">
-                          <Image
-                          src={panel.productImageUrl}
-                          alt={panel.name}
-                          fill
-                          className="object-cover rounded-lg shadow-md"
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          data-ai-hint={panel.productImageHint}
-                          />
-                          <div className="absolute inset-0 flex items-start justify-end p-4 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300">
-                              <ZoomIn className="h-12 w-12 text-white drop-shadow-lg" />
-                          </div>
-                      </div>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
-                      <DialogTitle className="sr-only">{`Enlarged view of ${panel.name} product photo`}</DialogTitle>
-                      <div className="relative aspect-[1920/1298]">
-                      <Image
-                          src={panel.productImageUrl}
-                          alt={`Enlarged view of ${panel.name}`}
-                          fill
-                          className="object-contain rounded-lg"
-                          data-ai-hint={panel.productImageHint}
-                      />
-                      </div>
-                      <DialogClose asChild>
-                        <Button variant="ghost" size="icon" className="absolute top-[-1rem] right-[-1rem] bg-black/50 hover:bg-black/70 rounded-full h-9 w-9 text-white">
-                            <X className="h-5 w-5" />
-                            <span className="sr-only">Close</span>
-                        </Button>
-                      </DialogClose>
-                  </DialogContent>
-                </Dialog>
+                <Carousel setApi={setApi} opts={{loop: true}}>
+                    <CarouselContent>
+                        {panels.map((p) => (
+                            <CarouselItem key={p.id}>
+                                <Dialog>
+                                <DialogTrigger asChild>
+                                    <div className="relative aspect-[1920/1298] w-full group cursor-pointer">
+                                        <Image
+                                        src={p.productImageUrl}
+                                        alt={p.name}
+                                        fill
+                                        className="object-cover rounded-lg shadow-md"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        data-ai-hint={p.productImageHint}
+                                        />
+                                        <div className="absolute inset-0 flex items-start justify-end p-4 rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                                            <ZoomIn className="h-12 w-12 text-white drop-shadow-lg" />
+                                        </div>
+                                    </div>
+                                </DialogTrigger>
+                                <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
+                                    <DialogTitle className="sr-only">{`Enlarged view of ${p.name} product photo`}</DialogTitle>
+                                    <div className="relative aspect-[1920/1298]">
+                                    <Image
+                                        src={p.productImageUrl}
+                                        alt={`Enlarged view of ${p.name}`}
+                                        fill
+                                        className="object-contain rounded-lg"
+                                        data-ai-hint={p.productImageHint}
+                                    />
+                                    </div>
+                                    <DialogClose asChild>
+                                        <Button variant="ghost" size="icon" className="absolute top-[-1rem] right-[-1rem] bg-black/50 hover:bg-black/70 rounded-full h-9 w-9 text-white">
+                                            <X className="h-5 w-5" />
+                                            <span className="sr-only">Close</span>
+                                        </Button>
+                                    </DialogClose>
+                                </DialogContent>
+                                </Dialog>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                </Carousel>
                 <Button
                   variant="outline"
                   size="icon"
@@ -167,3 +209,5 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
     </Card>
   );
 }
+
+    
