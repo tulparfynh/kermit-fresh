@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { Logo, NavMenu } from './Header';
+import Link from 'next/link';
 
 export function MobileMenu() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -14,17 +15,21 @@ export function MobileMenu() {
     <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
       <SheetTrigger asChild>
         <Button variant="ghost" className="h-auto w-auto p-2">
-          <Menu className="h-96 w-96" />
+          <Menu className="h-8 w-8" />
           <span className="sr-only">Open menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-full max-w-sm">
+      <SheetContent side="left" className="w-full max-w-sm p-0">
         <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
-        <div className="p-6">
-          <div className="flex justify-between items-center mb-8">
-            <Logo />
+        <div className="flex flex-col h-full">
+          <div className="p-6 border-b">
+            <Link href="/" onClick={() => setMenuOpen(false)}>
+              <Logo />
+            </Link>
           </div>
-          <NavMenu isMobile />
+          <div className="p-6 flex-grow">
+            <NavMenu isMobile />
+          </div>
         </div>
       </SheetContent>
     </Sheet>

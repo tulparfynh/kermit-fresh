@@ -1,13 +1,16 @@
+
 'use client';
 
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { MobileMenu } from './MobileMenu';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { href: '#', label: 'FLOORS' },
-  { href: '#', label: 'WALLS', active: true },
+  { href: '/', label: 'WALLS' },
   { href: '#', label: 'SKIRTINGS' },
   { href: '#', label: 'DOWNLOAD' },
   { href: '#', label: 'ABOUT' },
@@ -21,17 +24,21 @@ const DynamicMobileMenu = dynamic(
 
 export function Logo() {
   return (
-    <Image
-      src="https://www.kermitfloor.com/wp-content/uploads/2022/11/Kermit-Floor-Logo-PNG-2-3-1-1024x347.png"
-      alt="Kermit Floor Logo"
-      width={140}
-      height={48}
-      className="object-contain"
-    />
+    <Link href="/">
+      <Image
+        src="https://www.kermitfloor.com/wp-content/uploads/2022/11/Kermit-Floor-Logo-PNG-2-3-1-1024x347.png"
+        alt="Kermit Floor Logo"
+        width={140}
+        height={48}
+        className="object-contain"
+      />
+    </Link>
   );
 }
 
 export function NavMenu({ isMobile = false }) {
+  const pathname = usePathname();
+  
   return (
     <nav
       className={cn(
@@ -39,26 +46,33 @@ export function NavMenu({ isMobile = false }) {
         isMobile ? 'flex-col items-start space-y-4 p-6' : 'hidden md:flex'
       )}
     >
-      {navLinks.map((link) => (
-        <a
-          key={link.label}
-          href={link.href}
-          className={cn(
-            'text-lg font-semibold tracking-wider transition-colors hover:text-primary whitespace-nowrap',
-            link.active
-              ? 'text-primary'
-              : 'text-foreground/70',
-            isMobile && 'text-2xl'
-          )}
-        >
-          {link.label}
-        </a>
-      ))}
+      {navLinks.map((link) => {
+        const isActive = pathname === link.href;
+        return (
+          <Link
+            key={link.label}
+            href={link.href}
+            className={cn(
+              'text-lg font-semibold tracking-wider transition-colors hover:text-primary whitespace-nowrap',
+              isActive
+                ? 'text-primary'
+                : 'text-foreground/70',
+              isMobile && 'text-2xl'
+            )}
+          >
+            {link.label}
+          </Link>
+        );
+      })}
     </nav>
   );
 }
 
 export function Header() {
+  const pathname = usePathname();
+  const is3DPage = pathname.startsWith('/spc-3d-wall-panels');
+  const pageTitle = is3DPage ? 'SPC 3D WALL PANEL COLLECTION' : 'SPC WALL PANEL COLLECTION';
+
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur-sm shadow-sm">
@@ -87,7 +101,7 @@ export function Header() {
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h1 className="font-headline text-4xl lg:text-5xl font-bold tracking-tight text-white text-center">
-            SPC WALL PANEL COLLECTION
+            {pageTitle}
           </h1>
         </div>
       </div>
