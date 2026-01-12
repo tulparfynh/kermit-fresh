@@ -30,9 +30,9 @@ async function getPanelFromDirectory(dirName: string): Promise<Panel> {
   return {
     id: dirName,
     name: name,
-    thumbnailUrl: `${baseImagePath}/thumbnail.png`,
-    productImageUrl: `${baseImagePath}/product.png`,
-    applicationImageUrl: `${baseImagePath}/application.png`,
+    thumbnailUrl: `${baseImagePath}/thumbnail.jpg`,
+    productImageUrl: `${baseImagePath}/product.jpg`,
+    applicationImageUrl: `${baseImagePath}/application.jpg`,
     thumbnailHint: `${name} thumbnail`,
     productImageHint: `${name} product view`,
     applicationImageHint: `${name} in a room`,
@@ -56,7 +56,7 @@ export async function getPanels(): Promise<Panel[]> {
     const panels = await Promise.all(panelPromises);
     return panels;
   } catch (error) {
-    console.error("Failed to read panel data from 'public/images/spc-wall-panels':", error);
+    console.error("Failed to read panel data from 'public/images/spc-wall-panels'. Does the directory exist?", error);
     // If the directory doesn't exist or is empty, return an empty array
     // so the page can still build.
     return [];
