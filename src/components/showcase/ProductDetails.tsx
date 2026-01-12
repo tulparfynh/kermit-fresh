@@ -73,8 +73,8 @@ export function ProductDetails({ panel }: ProductDetailsProps) {
                   <ul className="space-y-4 lg:space-y-5 p-6 md:p-0">
                       {specs.map((spec) => (
                           <li key={spec.label} className="flex justify-between items-center border-b border-border/70 pb-3">
-                              <span className="font-bold text-foreground text-sm md:text-base tracking-wide">{spec.label}:</span>
-                              <span className="font-medium text-foreground text-base md:text-lg text-right">{spec.value}</span>
+                              <span className="font-bold text-foreground text-xs md:text-sm tracking-wide">{spec.label}:</span>
+                              <span className="font-medium text-foreground text-sm md:text-base text-right">{spec.value}</span>
                           </li>
                       ))}
                   </ul>
