@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Logo } from './Header';
@@ -64,17 +65,17 @@ export function Footer() {
             <div className="space-y-4">
                 <h3 className="font-headline text-lg font-semibold text-foreground">Contact</h3>
                 <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0" />
-                    <span>123 Kermit Street, Floor City, 16000, Turkey</span>
+                <li className="flex items-start">
+                    <MapPin className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0 mr-3 -ml-8" />
+                    <span className="pl-8">123 Kermit Street, Floor City, 16000, Turkey</span>
                 </li>
-                <li className="flex items-start gap-3">
-                    <Phone className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0" />
-                    <a href="tel:+905368338429" className="hover:text-primary transition-colors">+90 (536) 833-8429</a>
+                <li className="flex items-start">
+                    <Phone className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0 mr-3 -ml-8" />
+                    <a href="tel:+905368338429" className="hover:text-primary transition-colors pl-8">+90 (536) 833-8429</a>
                 </li>
-                <li className="flex items-start gap-3">
-                    <Mail className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0" />
-                    <a href="mailto:info@kermitfloor.com" className="hover:text-primary transition-colors">info@kermitfloor.com</a>
+                <li className="flex items-start">
+                    <Mail className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0 mr-3 -ml-8" />
+                    <a href="mailto:info@kermitfloor.com" className="hover:text-primary transition-colors pl-8">info@kermitfloor.com</a>
                 </li>
                 </ul>
             </div>
