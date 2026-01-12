@@ -10,6 +10,11 @@ import { Separator } from '@/components/ui/separator';
 import { ColorPicker } from './ColorPicker';
 import { ProductDetails } from './ProductDetails';
 import { Skeleton } from '@/components/ui/skeleton';
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 type ShowcaseProps = {
   initialPanels: Panel[];
@@ -50,16 +55,31 @@ export function Showcase({ initialPanels }: ShowcaseProps) {
 
       <div className="container mx-auto px-4">
          <section id="application-photo" className="scroll-mt-20">
-            <Card className="overflow-hidden shadow-lg border-none bg-background/50 relative aspect-[16/9]">
-                <Image
-                  src={selectedPanel.applicationImageUrl}
-                  alt={`Application photo for ${selectedPanel.name}`}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={selectedPanel.applicationImageHint}
-                  sizes="(max-width: 768px) 100vw, 80vw"
-                />
-            </Card>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Card className="overflow-hidden shadow-lg border-none bg-background/50 relative aspect-[16/9] cursor-pointer hover:opacity-90 transition-opacity">
+                    <Image
+                      src={selectedPanel.applicationImageUrl}
+                      alt={`Application photo for ${selectedPanel.name}`}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={selectedPanel.applicationImageHint}
+                      sizes="(max-width: 768px) 100vw, 80vw"
+                    />
+                </Card>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
+                <div className="relative aspect-[16/9]">
+                   <Image
+                    src={selectedPanel.applicationImageUrl}
+                    alt={`Application photo for ${selectedPanel.name}`}
+                    fill
+                    className="object-contain rounded-lg"
+                    data-ai-hint={selectedPanel.applicationImageHint}
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
         </section>
       </div>
       
