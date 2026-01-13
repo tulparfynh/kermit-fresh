@@ -47,7 +47,7 @@ export function NavMenu({ isMobile = false }) {
       )}
     >
       {navLinks.map((link) => {
-        const isActive = pathname.endsWith(link.href);
+        const isActive = pathname.includes(link.href);
         return (
           <Link
             key={link.label}
