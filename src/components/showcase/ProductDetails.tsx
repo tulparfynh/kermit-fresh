@@ -131,7 +131,7 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                         data-ai-hint={p.productImageHint}
                                         />
-                                        <div className="absolute inset-0 flex items-start justify-end p-4 rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                                        <div className="absolute inset-0 flex items-start justify-end p-2 rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                                             <ZoomIn className="h-12 w-12 text-white drop-shadow-lg" />
                                         </div>
                                     </div>
@@ -162,18 +162,18 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/30 hover:bg-black/50 text-white border-white/50 hover:border-white opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 h-6 w-6 rounded-full bg-black/30 hover:bg-black/50 text-white border-white/50 hover:border-white transition-opacity"
                   onClick={handlePrevious}
                 >
-                  <ChevronLeft className="h-6 w-6" />
+                  <ChevronLeft className="h-4 w-4" />
                 </Button>
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/30 hover:bg-black/50 text-white border-white/50 hover:border-white opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 h-6 w-6 rounded-full bg-black/30 hover:bg-black/50 text-white border-white/50 hover:border-white transition-opacity"
                   onClick={handleNext}
                 >
-                  <ChevronRight className="h-6 w-6" />
+                  <ChevronRight className="h-4 w-4" />
                 </Button>
               </div>
 
@@ -209,5 +209,7 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
     </Card>
   );
 }
+
+    
 
     
