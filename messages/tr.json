@@ -1,0 +1,85 @@
+
+{
+  "Metadata": {
+    "title": "Kermit Duvar Paneli Vitrini",
+    "description": "Modern iç mekanlar için yüksek kaliteli SPC Duvar Panelleri."
+  },
+  "Header": {
+    "navFloors": "ZEMİNLER",
+    "navWalls": "DUVARLAR",
+    "navSkirtings": "SÜPÜRGELİKLER",
+    "navDownload": "İNDİR",
+    "navAbout": "HAKKIMIZDA",
+    "navContact": "İLETİŞİM",
+    "heroTitleSpc": "SPC DUVAR PANELİ KOLEKSİYONU",
+    "heroTitle3d": "SPC 3D DUVAR PANELİ KOLEKSİYONU"
+  },
+  "HomePage": {
+    "heroTitle": "Yenilikçi Duvar ve Zemin Çözümleri",
+    "heroSubtitle": "Mekanınızı zarafet ve dayanıklılıkla yeniden tanımlayan premium SPC ürünlerini keşfedin.",
+    "collectionsTitle": "Koleksiyonlarımız",
+    "spcWallPanelsTitle": "SPC Duvar Panelleri",
+    "spcWallPanelsDescription": "Premium Taş Polimer Kompozit duvar paneli koleksiyonumuzu keşfedin.",
+    "spcFlooringTitle": "SPC Zemin Kaplaması",
+    "spcFlooringDescription": "Her mekan için dayanıklı ve şık zemin çözümleri.",
+    "spc3dWallPanelsTitle": "SPC 3D Duvar Panelleri",
+    "spc3dWallPanelsDescription": "Yenilikçi 3D duvar panellerimizle derinlik ve doku katın.",
+    "viewCollection": "Koleksiyonu Görüntüle"
+  },
+  "ProductDetails": {
+    "specThickness": "KALINLIK",
+    "specWearLayer": "AŞINMA TABAKASI",
+    "specDimensions": "BOYUTLAR",
+    "specEdge": "KENAR",
+    "specInstallation": "MONTAJ",
+    "specUtilityClass": "KULLANIM SINIFI",
+    "specUsageArea": "KULLANIM ALANI",
+    "specMaterial": "MALZEME",
+    "featureWaterProof": "Su Geçirmez",
+    "featureAntiBacterial": "Anti Bakteriyel",
+    "featureQuickInstallation": "Hızlı Montaj",
+    "featureImpactResistant": "Darbeye Dayanıklı",
+    "featureUltimateShield": "Üstün Kalkan Kaplama",
+    "featureSoundAbsorbtion": "Ses Emilimi",
+    "featurePhthalateFree": "Ftalat İçermez"
+  },
+  "InquiryForm": {
+    "title": "Bilgi Talebi Gönder",
+    "description": "{panelName} paneliyle ilgileniyor musunuz? Aşağıdaki formu doldurun.",
+    "nameLabel": "Tam Adınız",
+    "namePlaceholder": "Ad Soyad",
+    "emailLabel": "E-posta Adresi",
+    "emailPlaceholder": "ornek@example.com",
+    "messageLabel": "Mesajınız",
+    "messagePlaceholder": "Fiyatlandırma ve stok durumu hakkında daha fazla bilgi almak istiyorum...",
+    "submitButton": "Talebi Gönder",
+    "submittingButton": "Gönderiliyor...",
+    "successTitle": "Talep Gönderildi!",
+    "successDescription": "Teşekkürler, {name}! {panelName} hakkındaki talebiniz alınmıştır.",
+    "errorTitle": "Bir şeyler ters gitti",
+    "errorMessage": "Beklenmedik bir hata oluştu. Lütfen tekrar deneyin."
+  },
+  "Chatbox": {
+    "greeting": "Merhaba! SPC duvar panellerimiz hakkında size nasıl yardımcı olabilirim?",
+    "prompt": "Bizimle sohbet edin!",
+    "placeholder": "Mesajınızı yazın...",
+    "whatsappRedirect": "Sizin için WhatsApp'ı açtım. Lütfen mesajınızı oradan gönderin!"
+  },
+  "Footer": {
+    "tagline": "Modern iç mekanlar için premium SPC zemin ve duvar paneli çözümleri.",
+    "productsTitle": "Ürünler",
+    "productFlooring": "SPC Zemin Kaplaması",
+    "productSkirting": "SPC Süpürgelik",
+    "productWallPanels": "SPC Duvar Panelleri",
+    "product3dWallPanels": "SPC 3D Duvar Panelleri",
+    "supportTitle": "Destek",
+    "supportCatalogue": "Katalog İndir",
+    "supportInstallation": "Montaj Kılavuzu",
+    "supportTechnical": "Teknik Veri Sayfaları",
+    "contactTitle": "İletişim",
+    "address": "123 Kermit Sokak, Floor City, 16000, Türkiye",
+    "copyright": "© {year} Kermit Floor. Tüm hakları saklıdır.",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Hizmet Şartları"
+  }
+}

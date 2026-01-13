@@ -1,0 +1,85 @@
+
+{
+  "Metadata": {
+    "title": "Kermit Wall Panel Showcase",
+    "description": "High-quality SPC Wall Panels for modern interiors."
+  },
+  "Header": {
+    "navFloors": "FLOORS",
+    "navWalls": "WALLS",
+    "navSkirtings": "SKIRTINGS",
+    "navDownload": "DOWNLOAD",
+    "navAbout": "ABOUT",
+    "navContact": "CONTACT",
+    "heroTitleSpc": "SPC WALL PANEL COLLECTION",
+    "heroTitle3d": "SPC 3D WALL PANEL COLLECTION"
+  },
+  "HomePage": {
+    "heroTitle": "Innovative Wall & Floor Solutions",
+    "heroSubtitle": "Discover premium SPC products that redefine your space with elegance and durability.",
+    "collectionsTitle": "Our Collections",
+    "spcWallPanelsTitle": "SPC Wall Panels",
+    "spcWallPanelsDescription": "Explore our premium collection of Stone Polymer Composite wall panels.",
+    "spcFlooringTitle": "SPC Flooring",
+    "spcFlooringDescription": "Durable and stylish flooring solutions for any space.",
+    "spc3dWallPanelsTitle": "SPC 3D Wall Panels",
+    "spc3dWallPanelsDescription": "Add depth and texture with our innovative 3D wall panels.",
+    "viewCollection": "View Collection"
+  },
+  "ProductDetails": {
+    "specThickness": "THICKNESS",
+    "specWearLayer": "WEAR LAYER",
+    "specDimensions": "DIMENSIONS",
+    "specEdge": "EDGE",
+    "specInstallation": "INSTALLATION",
+    "specUtilityClass": "UTILITY CLASS",
+    "specUsageArea": "USAGE AREA",
+    "specMaterial": "MATERIAL",
+    "featureWaterProof": "Water Proof",
+    "featureAntiBacterial": "Anti Bacterial",
+    "featureQuickInstallation": "Quick Installation",
+    "featureImpactResistant": "Impact Resistant",
+    "featureUltimateShield": "Ultimate Shield Coating",
+    "featureSoundAbsorbtion": "Sound Absorbtion",
+    "featurePhthalateFree": "Phthalate Free"
+  },
+  "InquiryForm": {
+    "title": "Send an Inquiry",
+    "description": "Interested in the {panelName} panel? Fill out the form below.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "John Doe",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "Your Message",
+    "messagePlaceholder": "I'd like to know more about pricing and availability...",
+    "submitButton": "Send Inquiry",
+    "submittingButton": "Sending...",
+    "successTitle": "Inquiry Sent!",
+    "successDescription": "Thank you, {name}! Your inquiry about {panelName} has been received.",
+    "errorTitle": "Something went wrong",
+    "errorMessage": "An unexpected error occurred. Please try again."
+  },
+  "Chatbox": {
+    "greeting": "Hello! How can I help you with our SPC wall panels today?",
+    "prompt": "Chat with us!",
+    "placeholder": "Type your message...",
+    "whatsappRedirect": "I've opened WhatsApp for you. Please send your message there!"
+  },
+  "Footer": {
+    "tagline": "Premium SPC flooring and wall panel solutions for modern interiors.",
+    "productsTitle": "Products",
+    "productFlooring": "SPC Flooring",
+    "productSkirting": "SPC Skirting Boards",
+    "productWallPanels": "SPC Wall Panels",
+    "product3dWallPanels": "SPC 3D Wall Panels",
+    "supportTitle": "Support",
+    "supportCatalogue": "Download Catalogue",
+    "supportInstallation": "Installation Guide",
+    "supportTechnical": "Technical Data Sheets",
+    "contactTitle": "Contact",
+    "address": "123 Kermit Street, Floor City, 16000, Turkey",
+    "copyright": "© {year} Kermit Floor. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
+}
