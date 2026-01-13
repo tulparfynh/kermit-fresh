@@ -7,12 +7,11 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
-import { LanguageSwitcher } from './LanguageSwitcher';
 
-const DynamicMobileMenu = dynamic(
-  () => import('./MobileMenu').then((mod) => mod.MobileMenu),
-  { ssr: false }
-);
+// Dynamically import components that cause hydration issues
+const LanguageSwitcher = dynamic(() => import('./LanguageSwitcher').then(mod => mod.LanguageSwitcher), { ssr: false });
+const MobileMenu = dynamic(() => import('./MobileMenu').then(mod => mod.MobileMenu), { ssr: false });
+
 
 export function Logo() {
   const locale = useLocale();
@@ -106,7 +105,7 @@ export function Header() {
               <LanguageSwitcher />
             </div>
             <div className="md:hidden">
-              <DynamicMobileMenu />
+              <MobileMenu />
             </div>
           </div>
         </div>

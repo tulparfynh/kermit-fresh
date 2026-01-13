@@ -5,10 +5,10 @@
     "description": "Modern iç mekanlar için yüksek kaliteli SPC Duvar Panelleri."
   },
   "Header": {
-    "navFloors": "ZEMİNLER",
-    "navWalls": "DUVARLAR",
-    "navSkirtings": "SÜPÜRGELİKLER",
-    "navDownload": "İNDİR",
+    "navFloors": "PARKE",
+    "navWalls": "DUVAR",
+    "navSkirtings": "SÜPÜRGELİK",
+    "navDownload": "KATALOG",
     "navAbout": "HAKKIMIZDA",
     "navContact": "İLETİŞİM",
     "heroTitleSpc": "SPC DUVAR PANELİ KOLEKSİYONU",
@@ -34,13 +34,13 @@
     "specInstallation": "MONTAJ",
     "specUtilityClass": "KULLANIM SINIFI",
     "specUsageArea": "KULLANIM ALANI",
-    "specMaterial": "MALZEME",
-    "featureWaterProof": "Su Geçirmez",
+    "specMaterial": "MATERYAL",
+    "featureWaterProof": "Nemden Etkilenmez",
     "featureAntiBacterial": "Anti Bakteriyel",
     "featureQuickInstallation": "Hızlı Montaj",
     "featureImpactResistant": "Darbeye Dayanıklı",
     "featureUltimateShield": "Üstün Kalkan Kaplama",
-    "featureSoundAbsorbtion": "Ses Emilimi",
+    "featureSoundAbsorbtion": "Yüksek Ses Emilimi",
     "featurePhthalateFree": "Ftalat İçermez"
   },
   "InquiryForm": {
