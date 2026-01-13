@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { href: '#', label: 'FLOORS' },
-  { href: '/', label: 'WALLS' },
+  { href: '/spc-wall-panels', label: 'WALLS' },
   { href: '#', label: 'SKIRTINGS' },
   { href: '#', label: 'DOWNLOAD' },
   { href: '#', label: 'ABOUT' },
@@ -70,8 +70,22 @@ export function NavMenu({ isMobile = false }) {
 
 export function Header() {
   const pathname = usePathname();
+  const isWallPanelPage = pathname.startsWith('/spc-wall-panels');
   const is3DPage = pathname.startsWith('/spc-3d-wall-panels');
-  const pageTitle = is3DPage ? 'SPC 3D WALL PANEL COLLECTION' : 'SPC WALL PANEL COLLECTION';
+
+  let pageTitle;
+  let heroImage;
+  let heroImageHint;
+
+  if (is3DPage) {
+    pageTitle = 'SPC 3D WALL PANEL COLLECTION';
+    heroImage = '/images/placeholder-3d-hero.jpg';
+    heroImageHint = '3d wall panel texture';
+  } else if (isWallPanelPage) {
+    pageTitle = 'SPC WALL PANEL COLLECTION';
+    heroImage = '/images/Marble-Statuario-w23138-product-image.png';
+    heroImageHint = 'marble texture';
+  }
 
   return (
     <>
@@ -90,21 +104,23 @@ export function Header() {
           </div>
         </div>
       </header>
-      <div className="relative h-48 lg:h-64 w-full">
-        <Image
-          src="/images/Marble-Statuario-w23138-product-image.png"
-          alt="Marble wall panel texture background"
-          fill
-          className="object-cover"
-          data-ai-hint="marble texture"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="font-headline text-4xl lg:text-5xl font-bold tracking-tight text-white text-center">
-            {pageTitle}
-          </h1>
+      {pageTitle && (
+        <div className="relative h-48 lg:h-64 w-full">
+          <Image
+            src={heroImage || ''}
+            alt="Wall panel texture background"
+            fill
+            className="object-cover"
+            data-ai-hint={heroImageHint}
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <h1 className="font-headline text-4xl lg:text-5xl font-bold tracking-tight text-white text-center">
+              {pageTitle}
+            </h1>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
