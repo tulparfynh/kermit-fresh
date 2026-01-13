@@ -7,7 +7,7 @@ import { MobileMenu } from './MobileMenu';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const DynamicMobileMenu = dynamic(
   () => import('./MobileMenu').then((mod) => mod.MobileMenu),
@@ -15,8 +15,9 @@ const DynamicMobileMenu = dynamic(
 );
 
 export function Logo() {
+  const locale = useLocale();
   return (
-    <Link href="/">
+    <Link href={`/${locale}`}>
       <Image
         src="https://www.kermitfloor.com/wp-content/uploads/2022/11/Kermit-Floor-Logo-PNG-2-3-1-1024x347.png"
         alt="Kermit Floor Logo"
@@ -31,6 +32,7 @@ export function Logo() {
 export function NavMenu({ isMobile = false }) {
   const pathname = usePathname();
   const t = useTranslations('Header');
+  const locale = useLocale();
   
   const navLinks = [
     { href: '#', label: t('navFloors') },
@@ -49,11 +51,12 @@ export function NavMenu({ isMobile = false }) {
       )}
     >
       {navLinks.map((link) => {
-        const isActive = pathname.includes(link.href);
+        const localizedHref = link.href.startsWith('/') ? `/${locale}${link.href}` : link.href;
+        const isActive = pathname.endsWith(link.href) && link.href !== '#';
         return (
           <Link
             key={link.label}
-            href={link.href}
+            href={localizedHref}
             className={cn(
               'text-lg font-semibold tracking-wider transition-colors hover:text-primary whitespace-nowrap',
               isActive

@@ -5,10 +5,11 @@ import { Logo } from './Header';
 import { Separator } from '@/components/ui/separator';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 export function Footer() {
   const t = useTranslations('Footer');
+  const locale = useLocale();
 
   const productLinks = [
       { href: '#', label: t('productFlooring') },
@@ -40,13 +41,16 @@ export function Footer() {
             <div className="space-y-4">
                 <h3 className="font-headline text-lg font-semibold text-foreground">{t('productsTitle')}</h3>
                 <ul className="space-y-2">
-                {productLinks.map((link) => (
+                {productLinks.map((link) => {
+                  const localizedHref = link.href.startsWith('/') ? `/${locale}${link.href}` : link.href;
+                  return (
                     <li key={link.label}>
-                    <Link href={link.href} className="text-sm hover:text-primary transition-colors">
-                        {link.label}
-                    </Link>
+                      <Link href={localizedHref} className="text-sm hover:text-primary transition-colors">
+                          {link.label}
+                      </Link>
                     </li>
-                ))}
+                  );
+                })}
                 </ul>
             </div>
             
@@ -69,15 +73,15 @@ export function Footer() {
                 <h3 className="font-headline text-lg font-semibold text-foreground">{t('contactTitle')}</h3>
                 <ul className="space-y-3 text-sm">
                 <li className="flex items-start">
-                    <MapPin className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0 mr-3 -ml-8" />
+                    <MapPin className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0 mr-3" />
                     <span>{t('address')}</span>
                 </li>
                 <li className="flex items-start">
-                    <Phone className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0 mr-3 -ml-8" />
+                    <Phone className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0 mr-3" />
                     <a href="tel:+905368338429" className="hover:text-primary transition-colors">+90 (536) 833-8429</a>
                 </li>
                 <li className="flex items-start">
-                    <Mail className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0 mr-3 -ml-8" />
+                    <Mail className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0 mr-3" />
                     <a href="mailto:info@kermitfloor.com" className="hover:text-primary transition-colors">info@kermitfloor.com</a>
                 </li>
                 </ul>
