@@ -55,7 +55,7 @@ export function NavMenu({ isMobile = false }) {
             key={link.label}
             href={localizedHref}
             className={cn(
-              'text-lg font-semibold tracking-wider transition-colors hover:text-primary whitespace-nowrap',
+              'font-semibold tracking-wider transition-colors hover:text-primary whitespace-nowrap text-base lg:text-lg',
               isActive
                 ? 'text-primary'
                 : 'text-foreground/70',
