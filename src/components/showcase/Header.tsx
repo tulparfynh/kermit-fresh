@@ -47,7 +47,7 @@ export function NavMenu({ isMobile = false }) {
       )}
     >
       {navLinks.map((link) => {
-        const isActive = pathname === link.href;
+        const isActive = pathname.endsWith(link.href);
         return (
           <Link
             key={link.label}
@@ -70,8 +70,8 @@ export function NavMenu({ isMobile = false }) {
 
 export function Header() {
   const pathname = usePathname();
-  const isWallPanelPage = pathname.startsWith('/spc-wall-panels');
-  const is3DPage = pathname.startsWith('/spc-3d-wall-panels');
+  const isWallPanelPage = pathname.includes('/spc-wall-panels');
+  const is3DPage = pathname.includes('/spc-3d-wall-panels');
 
   let pageTitle;
   let heroImage;
