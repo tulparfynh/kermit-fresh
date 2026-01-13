@@ -8,6 +8,8 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/s
 import { Logo, NavMenu } from './Header';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
+import { LanguageSwitcher } from './LanguageSwitcher';
+import { Separator } from '../ui/separator';
 
 export function MobileMenu() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -31,6 +33,10 @@ export function MobileMenu() {
           </div>
           <div className="p-6 flex-grow">
             <NavMenu isMobile />
+          </div>
+          <Separator />
+          <div className="p-6">
+            <LanguageSwitcher />
           </div>
         </div>
       </SheetContent>

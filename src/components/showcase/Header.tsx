@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 const DynamicMobileMenu = dynamic(
   () => import('./MobileMenu').then((mod) => mod.MobileMenu),
@@ -103,6 +104,7 @@ export function Header() {
             </div>
             <div className="hidden md:flex items-center gap-6">
               <NavMenu />
+              <LanguageSwitcher />
             </div>
             <div className="md:hidden">
               <DynamicMobileMenu />
