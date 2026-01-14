@@ -71,7 +71,7 @@ export function NavMenu({ isMobile = false }) {
 }
 
 type HeaderProps = {
-  pageType?: 'spc-wall-panels' | 'spc-3d-wall-panels' | 'walls';
+  pageType?: 'spc-wall-panels' | 'spc-3d-wall-panels';
 }
 
 export function Header({ pageType }: HeaderProps) {
@@ -83,9 +83,9 @@ export function Header({ pageType }: HeaderProps) {
 
   if (pageType === 'spc-3d-wall-panels') {
     pageTitle = t('heroTitle3d');
-    heroImage = '/images/placeholder-3d-hero.jpg';
+    heroImage = 'https://picsum.photos/seed/3dhero/1920/1080';
     heroImageHint = '3d wall panel texture';
-  } else if (pageType === 'spc-wall-panels' || pageType === 'walls') {
+  } else if (pageType === 'spc-wall-panels') {
     pageTitle = t('heroTitleSpc');
     heroImage = '/images/Marble-Statuario-w23138-2-application-photo.jpg';
     heroImageHint = 'modern kitchen with marble panels';

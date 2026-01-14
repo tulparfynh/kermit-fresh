@@ -22,6 +22,8 @@ import { Button } from '../ui/button';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/navigation';
 import { cn } from '@/lib/utils';
+import { getPanels } from '@/lib/panel-data';
+import { get3dPanelsModelA } from '@/lib/3d-panel-data-model-a';
 
 
 function CollectionNav() {
@@ -36,7 +38,7 @@ function CollectionNav() {
     },
     { 
       name: t('spc3dWallPanelsModelATitle'), 
-      href: '#', 
+      href: '/spc-3d-wall-panels-model-a', 
       imageUrl: 'https://picsum.photos/seed/3dnavA/100/100',
       imageHint: 'geometric 3d texture'
     },
@@ -60,7 +62,8 @@ function CollectionNav() {
                                 "flex flex-col items-center gap-2 group",
                             )}
                         >
-                            <div className={cn("relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border-2 transition-all duration-300",
+                            <div className={cn(
+                                "relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border-2 transition-all duration-300",
                                 pathname === collection.href ? "border-primary" : "border-transparent group-hover:border-primary/50"
                             )}
                             >
@@ -97,22 +100,42 @@ type ShowcaseProps = {
 
 export function Showcase({ initialPanels }: ShowcaseProps) {
   const [panels, setPanels] = useState<Panel[]>(initialPanels);
-  const [selectedPanel, setSelectedPanel] = useState<Panel | null>(initialPanels.length > 0 ? initialPanels[0] : null);
+  const [selectedPanel, setSelectedPanel] = useState<Panel | null>(null);
   const tPanelNames = useTranslations('PanelNames');
+  const pathname = usePathname();
 
   useEffect(() => {
-    setPanels(initialPanels);
-    if (!selectedPanel && initialPanels.length > 0) {
-      setSelectedPanel(initialPanels[0]);
+    async function loadPanels() {
+      let loadedPanels: Panel[] = [];
+      if (pathname.includes('/spc-wall-panels')) {
+        loadedPanels = await getPanels();
+      } else if (pathname.includes('/spc-3d-wall-panels-model-a')) {
+        loadedPanels = await get3dPanelsModelA();
+      } else {
+        loadedPanels = initialPanels;
+      }
+      setPanels(loadedPanels);
+      if (loadedPanels.length > 0) {
+        setSelectedPanel(loadedPanels[0]);
+      } else {
+        setSelectedPanel(null);
+      }
     }
-  }, [initialPanels, selectedPanel]);
+    loadPanels();
+  }, [pathname, initialPanels]);
+
 
   if (!selectedPanel) {
     return (
-      <div className="container mx-auto px-4 mt-6 lg:mt-8 space-y-6">
-        <Skeleton className="h-[50vh] w-full" />
-        <Skeleton className="h-[20vh] w-full" />
-        <p className="text-center text-lg text-muted-foreground">Loading panel data... If this persists, please check the 'public/panels' directory for product folders.</p>
+      <div className="space-y-6 lg:space-y-8">
+        <CollectionNav />
+        <div className="container mx-auto px-4 mt-6 lg:mt-8">
+          <Skeleton className="h-[60vh] w-full" />
+          <div className="text-center py-8">
+            <p className="text-lg text-muted-foreground">There are currently no products in this collection.</p>
+            <p className="text-sm text-muted-foreground mt-2">Please add product folders with images to the corresponding directory in `public/images`.</p>
+          </div>
+        </div>
       </div>
     );
   }
