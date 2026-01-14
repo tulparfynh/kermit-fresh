@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -16,17 +17,16 @@ import {
   DialogTitle,
   DialogClose,
 } from "@/components/ui/dialog"
-import { ZoomIn, X, ChevronRight } from 'lucide-react';
+import { ZoomIn, X } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/navigation';
+import { Link, usePathname } from '@/navigation';
+import { cn } from '@/lib/utils';
 
-type ShowcaseProps = {
-  initialPanels: Panel[];
-};
 
 function CollectionNav() {
   const t = useTranslations('HomePage');
+  const pathname = usePathname();
   const collections = [
     { name: t('spcWallPanelsTitle'), href: '/spc-wall-panels' },
     { name: t('spc3dWallPanelsModelATitle'), href: '#' },
@@ -36,14 +36,20 @@ function CollectionNav() {
   return (
     <div className="bg-muted py-3 border-b">
         <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center gap-4 md:gap-8">
+            <div className="flex items-center justify-center gap-4 md:gap-6">
                 {collections.map((collection, index) => (
                     <React.Fragment key={collection.name}>
-                        <Link href={collection.href} className="text-sm md:text-base font-semibold text-foreground/80 hover:text-primary transition-colors text-center">
+                        <Link 
+                            href={collection.href} 
+                            className={cn(
+                                "text-sm md:text-base font-semibold text-foreground/80 hover:text-primary transition-colors text-center",
+                                pathname === collection.href && "text-primary"
+                            )}
+                        >
                             {collection.name}
                         </Link>
                         {index < collections.length - 1 && (
-                            <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                            <Separator orientation="vertical" className="h-5" />
                         )}
                     </React.Fragment>
                 ))}
