@@ -60,8 +60,9 @@ function CollectionNav() {
                                 "flex flex-col items-center gap-2 group",
                             )}
                         >
-                            <div className="relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border-2 transition-all duration-300",
+                            <div className={cn("relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border-2 transition-all duration-300",
                                 pathname === collection.href ? "border-primary" : "border-transparent group-hover:border-primary/50"
+                            )}
                             >
                                 <Image 
                                     src={collection.imageUrl}
