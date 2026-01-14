@@ -41,9 +41,7 @@ export default function WallsPage() {
         {/* Collections Section */}
         <div className="py-12 lg:py-20 bg-muted/50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl lg:text-4xl font-bold font-headline text-primary tracking-wide text-center mb-10 lg:mb-12">
-              {t('collectionsTitle')}
-            </h2>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {collections.map((collection) => (
                 <Link href={collection.href} key={collection.name} className="group">
