@@ -47,7 +47,7 @@ export default function WallsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {collections.map((collection) => (
                 <Link href={collection.href} key={collection.name} className="group">
-                  <Card className="overflow-hidden h-full transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                  <Card className="overflow-hidden h-full flex flex-col transform transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
                     <div className="relative aspect-video">
                       <Image
                         src={collection.imageUrl}
@@ -56,14 +56,11 @@ export default function WallsPage() {
                         className="object-cover"
                         data-ai-hint={collection.imageHint}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     </div>
-                    <CardHeader className="relative -mt-16 z-10">
-                      <CardTitle className="font-headline text-2xl text-white">{collection.name}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-base">{collection.description}</CardDescription>
-                       <div className="mt-4 flex items-center text-primary font-semibold">
+                    <CardContent className="p-6 flex flex-col flex-grow">
+                      <CardTitle className="font-headline text-2xl text-primary">{collection.name}</CardTitle>
+                      <CardDescription className="text-base mt-2">{collection.description}</CardDescription>
+                       <div className="mt-auto pt-4 flex items-center text-primary font-semibold">
                          <span>{t('viewCollection')}</span>
                          <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                        </div>
