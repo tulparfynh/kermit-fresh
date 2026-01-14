@@ -54,9 +54,19 @@
     "29074-1": "Nordic Oak"
   },
   "3DModelAPanelNames": {
-    "3DA-001": "Geometrik Zirve",
-    "3DA-002": "Doğrusal Akış",
-    "3DA-003": "Elmas Dokuma"
+    "3D-29192-1": "Adaçayı Grisi",
+    "3D-29192-4": "Kül Grisi",
+    "3D-29192-6": "Tütsülenmiş Meşe",
+    "3D-29192-8": "Kömür Meşe",
+    "3D-29115-18": "Doğal Meşe",
+    "3D-16041-4": "Açık Gri Meşe",
+    "3D-16041-8": "Füme Meşe",
+    "3D-29074-1": "Gri Meşe İkilisi"
+  },
+  "3DModelBPanelNames": {
+    "3DB-001": "Dalga Tepesi",
+    "3DB-002": "Akan Kumul",
+    "3DB-003": "Dalga Etkisi"
   },
   "ProductDetails": {
     "specThickness": "KALINLIK",

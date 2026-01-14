@@ -27,7 +27,7 @@ type ProductDetailsProps = {
   panel: Panel;
   panels: Panel[];
   onPanelSelect: (panel: Panel) => void;
-  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a';
+  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a' | 'spc-3d-wall-panels-model-b';
   tPanelNames: (key: string) => string;
 };
 
@@ -55,6 +55,13 @@ export function ProductDetails({ panel, panels, onPanelSelect, collectionType, t
       specs = [
           { label: t('specThickness'), value: '24 mm' },
           { label: t('specDimensions'), value: '160 X 2750 mm' },
+          { label: t('specUsageArea'), value: "Interior" },
+          { label: t('specMaterial'), value: t('specMaterialValue') },
+      ];
+  } else if (collectionType === 'spc-3d-wall-panels-model-b') {
+      specs = [
+          { label: t('specThickness'), value: '26 mm' },
+          { label: t('specDimensions'), value: '180 X 2750 mm' },
           { label: t('specUsageArea'), value: "Interior" },
           { label: t('specMaterial'), value: t('specMaterialValue') },
       ];

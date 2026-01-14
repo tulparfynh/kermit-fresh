@@ -27,7 +27,7 @@ import { useTranslations } from 'next-intl';
 
 type InquiryFormProps = {
   panel: Panel;
-  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a';
+  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a' | 'spc-3d-wall-panels-model-b';
   tPanelNames: (key: string) => string;
 };
 

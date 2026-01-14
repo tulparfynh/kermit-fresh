@@ -19,7 +19,7 @@ type ColorPickerProps = {
   panels: Panel[];
   selectedPanel: Panel;
   onPanelSelect: (panel: Panel) => void;
-  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a';
+  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a' | 'spc-3d-wall-panels-model-b';
   tPanelNames: (key: string) => string;
 };
 

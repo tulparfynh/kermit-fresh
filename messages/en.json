@@ -54,7 +54,19 @@
     "29074-1": "Nordic Oak"
   },
   "3DModelAPanelNames": {
-    "3D-29192-1": "Sage Grey"
+    "3D-29192-1": "Sage Grey",
+    "3D-29192-4": "Ash Grey",
+    "3D-29192-6": "Fumed Oak",
+    "3D-29192-8": "Charcoal Oak",
+    "3D-29115-18": "Natural Oak",
+    "3D-16041-4": "Light Grey Oak",
+    "3D-16041-8": "Smoked Oak",
+    "3D-29074-1": "Greige Oak Duo"
+  },
+  "3DModelBPanelNames": {
+    "3DB-001": "Wave Crest",
+    "3DB-002": "Flowing Dune",
+    "3DB-003": "Ripple Effect"
   },
   "ProductDetails": {
     "specThickness": "THICKNESS",

@@ -42,7 +42,7 @@ function CollectionNav() {
     },
     { 
       name: t('spc3dWallPanelsModelBTitle'), 
-      href: '#', 
+      href: '/spc-3d-wall-panels-model-b', 
       imageUrl: 'https://picsum.photos/seed/3dnavB/100/100',
       imageHint: 'wavy 3d texture'
     },
@@ -94,15 +94,26 @@ function CollectionNav() {
 
 type ShowcaseProps = {
   initialPanels: Panel[];
-  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a';
+  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a' | 'spc-3d-wall-panels-model-b';
 }
 
 export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
   const [panels, setPanels] = useState<Panel[]>(initialPanels);
   const [selectedPanel, setSelectedPanel] = useState<Panel | null>(initialPanels[0] || null);
   const tSpcPanelNames = useTranslations('PanelNames');
-  const t3dPanelNames = useTranslations('3DModelAPanelNames');
-  const tPanelNames = (key: string) => collectionType === 'spc-3d-wall-panels-model-a' ? t3dPanelNames(key) : tSpcPanelNames(key);
+  const t3dModelAPanelNames = useTranslations('3DModelAPanelNames');
+  const t3dModelBPanelNames = useTranslations('3DModelBPanelNames');
+
+  const tPanelNames = (key: string) => {
+    switch (collectionType) {
+      case 'spc-3d-wall-panels-model-a':
+        return t3dModelAPanelNames(key);
+      case 'spc-3d-wall-panels-model-b':
+        return t3dModelBPanelNames(key);
+      default:
+        return tSpcPanelNames(key);
+    }
+  };
 
   useEffect(() => {
     setPanels(initialPanels);

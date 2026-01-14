@@ -71,7 +71,7 @@ export function NavMenu({ isMobile = false }) {
 }
 
 type HeaderProps = {
-  pageType?: 'spc-wall-panels' | 'spc-3d-wall-panels';
+  pageType?: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a' | 'spc-3d-wall-panels-model-b';
 }
 
 export function Header({ pageType }: HeaderProps) {
@@ -81,7 +81,7 @@ export function Header({ pageType }: HeaderProps) {
   let heroImage;
   let heroImageHint;
 
-  if (pageType === 'spc-3d-wall-panels') {
+  if (pageType === 'spc-3d-wall-panels-model-a' || pageType === 'spc-3d-wall-panels-model-b') {
     pageTitle = t('heroTitle3d');
     heroImage = 'https://picsum.photos/seed/3dhero/1920/1080';
     heroImageHint = '3d wall panel texture';
