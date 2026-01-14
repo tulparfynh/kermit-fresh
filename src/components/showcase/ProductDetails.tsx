@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import type { Panel } from '@/lib/panel-data';
-import { Droplets, ShieldCheck, Zap, Hammer, Star, Volume2, Leaf, ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Droplets, ShieldCheck, Zap, Hammer, Volume2, Leaf, ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import {
     Dialog,
     DialogContent,
@@ -62,13 +62,12 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
     { icon: ShieldCheck, text: t('featureAntiBacterial') },
     { icon: Zap, text: t('featureQuickInstallation') },
     { icon: Hammer, text: t('featureImpactResistant') },
-    { icon: Star, text: t('featureUltimateShield') },
     { icon: Volume2, text: t('featureSoundAbsorbtion') },
     { icon: Leaf, text: t('featurePhthalateFree') },
   ];
   
-  const leftFeatures = allFeatures.slice(0, 4);
-  const rightFeatures = allFeatures.slice(4);
+  const leftFeatures = allFeatures.slice(0, 3);
+  const rightFeatures = allFeatures.slice(3);
 
   useEffect(() => {
     if (!api) {
@@ -210,7 +209,3 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
     </Card>
   );
 }
-
-    
-
-    
