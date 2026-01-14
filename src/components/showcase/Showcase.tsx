@@ -28,28 +28,58 @@ function CollectionNav() {
   const t = useTranslations('HomePage');
   const pathname = usePathname();
   const collections = [
-    { name: t('spcWallPanelsTitle'), href: '/spc-wall-panels' },
-    { name: t('spc3dWallPanelsModelATitle'), href: '#' },
-    { name: t('spc3dWallPanelsModelBTitle'), href: '#' },
+    { 
+      name: t('spcWallPanelsTitle'), 
+      href: '/spc-wall-panels', 
+      imageUrl: '/images/Marble-Statuario-w23138-product-image.png',
+      imageHint: 'marble texture'
+    },
+    { 
+      name: t('spc3dWallPanelsModelATitle'), 
+      href: '#', 
+      imageUrl: 'https://picsum.photos/seed/3dnavA/100/100',
+      imageHint: 'geometric 3d texture'
+    },
+    { 
+      name: t('spc3dWallPanelsModelBTitle'), 
+      href: '#', 
+      imageUrl: 'https://picsum.photos/seed/3dnavB/100/100',
+      imageHint: 'wavy 3d texture'
+    },
   ];
 
   return (
-    <div className="bg-muted py-3 border-b">
+    <div className="bg-muted py-4 border-b">
         <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center gap-4 md:gap-6">
+            <div className="flex items-start justify-center gap-4 md:gap-8">
                 {collections.map((collection, index) => (
                     <React.Fragment key={collection.name}>
                         <Link 
                             href={collection.href} 
                             className={cn(
-                                "text-sm md:text-base font-semibold text-foreground/80 hover:text-primary transition-colors text-center",
-                                pathname === collection.href && "text-primary"
+                                "flex flex-col items-center gap-2 group",
                             )}
                         >
-                            {collection.name}
+                            <div className="relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border-2 transition-all duration-300",
+                                pathname === collection.href ? "border-primary" : "border-transparent group-hover:border-primary/50"
+                            >
+                                <Image 
+                                    src={collection.imageUrl}
+                                    alt={collection.name}
+                                    fill
+                                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                                    data-ai-hint={collection.imageHint}
+                                />
+                            </div>
+                            <span className={cn(
+                                "text-xs md:text-sm font-semibold text-foreground/80 group-hover:text-primary transition-colors text-center",
+                                pathname === collection.href && "text-primary"
+                            )}>
+                                {collection.name}
+                            </span>
                         </Link>
                         {index < collections.length - 1 && (
-                            <Separator orientation="vertical" className="h-5" />
+                            <Separator orientation="vertical" className="h-24 self-center" />
                         )}
                     </React.Fragment>
                 ))}
@@ -59,6 +89,10 @@ function CollectionNav() {
   );
 }
 
+
+type ShowcaseProps = {
+  initialPanels: Panel[];
+}
 
 export function Showcase({ initialPanels }: ShowcaseProps) {
   const [panels, setPanels] = useState<Panel[]>(initialPanels);
