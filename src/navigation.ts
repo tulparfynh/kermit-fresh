@@ -11,6 +11,10 @@ export const pathnames = {
     en: '/spc-wall-panels',
     tr: '/spc-duvar-panelleri',
   },
+  '/collections': {
+    en: '/collections',
+    tr: '/koleksiyonlar',
+  }
 } satisfies Pathnames<typeof locales>;
 
 // Use the default: `always`

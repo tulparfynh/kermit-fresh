@@ -6,6 +6,7 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname } from '@/navigation';
+import * as React from 'react';
 
 // Dynamically import components that cause hydration issues
 const LanguageSwitcher = dynamic(() => import('./LanguageSwitcher').then(mod => mod.LanguageSwitcher), { ssr: false });
@@ -32,8 +33,8 @@ export function NavMenu({ isMobile = false }) {
   const t = useTranslations('Header');
   
   const navLinks = [
+    { href: '/collections', label: t('navWalls') },
     { href: '#', label: t('navFloors') },
-    { href: '/spc-wall-panels', label: t('navWalls') },
     { href: '#', label: t('navSkirtings') },
     { href: '#', label: t('navDownload') },
     { href: '#', label: t('navAbout') },
@@ -43,7 +44,7 @@ export function NavMenu({ isMobile = false }) {
   return (
     <nav
       className={cn(
-        'flex items-center gap-4 lg:gap-6',
+        'flex items-center gap-2 md:gap-4 lg:gap-6',
         isMobile ? 'flex-col items-start space-y-4 p-6' : 'hidden md:flex'
       )}
     >
@@ -55,7 +56,7 @@ export function NavMenu({ isMobile = false }) {
             key={link.label}
             href={localizedHref}
             className={cn(
-              'font-semibold tracking-wider transition-colors hover:text-primary whitespace-nowrap text-base lg:text-lg',
+              'font-semibold tracking-wider transition-colors hover:text-primary whitespace-nowrap text-sm md:text-base lg:text-lg',
               isActive
                 ? 'text-primary'
                 : 'text-foreground/70',
@@ -98,14 +99,18 @@ export function Header() {
       <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur-sm shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex h-28 items-center justify-between">
-            <Logo />
-            <div className="flex items-center gap-4">
-              <NavMenu />
-              <div className="hidden md:flex">
-                <LanguageSwitcher />
-              </div>
+            <div className="flex items-center">
+              <Logo />
             </div>
-            <div className="md:hidden">
+            
+            <div className="flex-1 flex justify-end items-center gap-4">
+                <NavMenu />
+                <div className="hidden md:flex">
+                    <LanguageSwitcher />
+                </div>
+            </div>
+
+            <div className="md:hidden flex flex-1 justify-end">
               <MobileMenu />
             </div>
           </div>
