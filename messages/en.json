@@ -36,6 +36,10 @@
     "specUtilityClass": "UTILITY CLASS",
     "specUsageArea": "USAGE AREA",
     "specMaterial": "MATERIAL",
+    "specEdgeValue": "Micro Bevel",
+    "specInstallationValue": "Glue Down",
+    "specUsageAreaValue": "Interior Wall & Floor",
+    "specMaterialValue": "SPC (Stone Polymer Composite)",
     "featureWaterProof": "Water Proof",
     "featureAntiBacterial": "Anti Bacterial",
     "featureQuickInstallation": "Quick Installation",
@@ -83,3 +87,5 @@
     "termsOfService": "Terms of Service"
   }
 }
+
+    

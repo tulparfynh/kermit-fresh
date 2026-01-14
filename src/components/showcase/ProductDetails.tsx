@@ -50,11 +50,11 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
     { label: t('specThickness'), value: '4 mm' },
     { label: t('specWearLayer'), value: '0,30 mm' },
     { label: t('specDimensions'), value: ['960mm X 2800mm', '960mm X 1400mm'] },
-    { label: t('specEdge'), value: 'Micro Bevel' },
-    { label: t('specInstallation'), value: 'Glue Down' },
+    { label: t('specEdge'), value: t('specEdgeValue') },
+    { label: t('specInstallation'), value: t('specInstallationValue') },
     { label: t('specUtilityClass'), value: '23 / 31' },
-    { label: t('specUsageArea'), value: 'Interior Wall & Floor' },
-    { label: t('specMaterial'), value: 'SPC (Stone Polymer Composite)' },
+    { label: t('specUsageArea'), value: t('specUsageAreaValue') },
+    { label: t('specMaterial'), value: t('specMaterialValue') },
   ];
 
   const allFeatures = [
@@ -217,3 +217,5 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
     </Card>
   );
 }
+
+    

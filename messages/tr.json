@@ -36,6 +36,10 @@
     "specUtilityClass": "KULLANIM SINIFI",
     "specUsageArea": "KULLANIM ALANI",
     "specMaterial": "MATERYAL",
+    "specEdgeValue": "Mikro Derzli",
+    "specInstallationValue": "Yapıştırma",
+    "specUsageAreaValue": "İç Cephe Duvar & Zemin",
+    "specMaterialValue": "SPC (Taş Polimer Kompozit)",
     "featureWaterProof": "Nemden Etkilenmez",
     "featureAntiBacterial": "Anti Bakteriyel",
     "featureQuickInstallation": "Hızlı Montaj",
@@ -83,3 +87,5 @@
     "termsOfService": "Hizmet Şartları"
   }
 }
+
+    
