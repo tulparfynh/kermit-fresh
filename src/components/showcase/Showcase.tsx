@@ -16,13 +16,43 @@ import {
   DialogTitle,
   DialogClose,
 } from "@/components/ui/dialog"
-import { ZoomIn, X } from 'lucide-react';
+import { ZoomIn, X, ChevronRight } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
 
 type ShowcaseProps = {
   initialPanels: Panel[];
 };
+
+function CollectionNav() {
+  const t = useTranslations('HomePage');
+  const collections = [
+    { name: t('spcWallPanelsTitle'), href: '/spc-wall-panels' },
+    { name: t('spc3dWallPanelsModelATitle'), href: '#' },
+    { name: t('spc3dWallPanelsModelBTitle'), href: '#' },
+  ];
+
+  return (
+    <div className="bg-muted py-3 border-b">
+        <div className="container mx-auto px-4">
+            <div className="flex items-center justify-center gap-4 md:gap-8">
+                {collections.map((collection, index) => (
+                    <React.Fragment key={collection.name}>
+                        <Link href={collection.href} className="text-sm md:text-base font-semibold text-foreground/80 hover:text-primary transition-colors text-center">
+                            {collection.name}
+                        </Link>
+                        {index < collections.length - 1 && (
+                            <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                        )}
+                    </React.Fragment>
+                ))}
+            </div>
+        </div>
+    </div>
+  );
+}
+
 
 export function Showcase({ initialPanels }: ShowcaseProps) {
   const [panels, setPanels] = useState<Panel[]>(initialPanels);
@@ -48,6 +78,7 @@ export function Showcase({ initialPanels }: ShowcaseProps) {
 
   return (
     <div className="space-y-6 lg:space-y-8">
+      <CollectionNav />
       <div className="container mx-auto px-4 mt-6 lg:mt-8">
         <ProductDetails 
           panel={selectedPanel} 
