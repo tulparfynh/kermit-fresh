@@ -14,26 +14,24 @@ import {
 import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
 
 type ColorPickerProps = {
   panels: Panel[];
   selectedPanel: Panel;
   onPanelSelect: (panel: Panel) => void;
   collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a';
+  tPanelNames: (key: string) => string;
 };
 
 export function ColorPicker({
   panels,
   selectedPanel,
   onPanelSelect,
-  collectionType
+  collectionType,
+  tPanelNames
 }: ColorPickerProps) {
   const [api, setApi] = useState<CarouselApi>();
-  const tSpcPanelNames = useTranslations('PanelNames');
-  const t3dPanelNames = useTranslations('3DModelAPanelNames');
-  const tPanelNames = (key: string) => collectionType === 'spc-3d-wall-panels-model-a' ? t3dPanelNames(key) : tSpcPanelNames(key);
-
+  
   useEffect(() => {
     if (!api) {
       return;

@@ -28,13 +28,11 @@ import { useTranslations } from 'next-intl';
 type InquiryFormProps = {
   panel: Panel;
   collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a';
+  tPanelNames: (key: string) => string;
 };
 
-export function InquiryForm({ panel, collectionType }: InquiryFormProps) {
+export function InquiryForm({ panel, collectionType, tPanelNames }: InquiryFormProps) {
   const t = useTranslations('InquiryForm');
-  const tSpcPanelNames = useTranslations('PanelNames');
-  const t3dPanelNames = useTranslations('3DModelAPanelNames');
-  const tPanelNames = (key: string) => collectionType === 'spc-3d-wall-panels-model-a' ? t3dPanelNames(key) : tSpcPanelNames(key);
   const panelName = tPanelNames(panel.nameKey);
   const { toast } = useToast();
   

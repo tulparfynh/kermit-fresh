@@ -104,7 +104,6 @@ export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
   const t3dPanelNames = useTranslations('3DModelAPanelNames');
   const tPanelNames = (key: string) => collectionType === 'spc-3d-wall-panels-model-a' ? t3dPanelNames(key) : tSpcPanelNames(key);
 
-
   useEffect(() => {
     setPanels(initialPanels);
     if (initialPanels.length > 0) {
@@ -139,6 +138,7 @@ export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
           panels={panels} 
           onPanelSelect={setSelectedPanel}
           collectionType={collectionType}
+          tPanelNames={tPanelNames}
         />
       </div>
       
@@ -147,6 +147,7 @@ export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
         selectedPanel={selectedPanel}
         onPanelSelect={setSelectedPanel}
         collectionType={collectionType}
+        tPanelNames={tPanelNames}
       />
 
       <div className="container mx-auto px-4">
@@ -209,7 +210,7 @@ export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
         <Separator className="my-6 lg:my-8" />
 
         <section id="inquiry" className="scroll-mt-20">
-          <InquiryForm panel={selectedPanel} collectionType={collectionType} />
+          <InquiryForm panel={selectedPanel} collectionType={collectionType} tPanelNames={tPanelNames} />
         </section>
       </div>
     </div>

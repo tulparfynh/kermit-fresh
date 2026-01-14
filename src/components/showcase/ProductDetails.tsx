@@ -28,6 +28,7 @@ type ProductDetailsProps = {
   panels: Panel[];
   onPanelSelect: (panel: Panel) => void;
   collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a';
+  tPanelNames: (key: string) => string;
 };
 
 function FeatureColumn({ features }: { features: {icon: React.ElementType, text: string}[] }) {
@@ -43,12 +44,9 @@ function FeatureColumn({ features }: { features: {icon: React.ElementType, text:
     )
 }
 
-export function ProductDetails({ panel, panels, onPanelSelect, collectionType }: ProductDetailsProps) {
+export function ProductDetails({ panel, panels, onPanelSelect, collectionType, tPanelNames }: ProductDetailsProps) {
   const t = useTranslations('ProductDetails');
-  const tSpcPanelNames = useTranslations('PanelNames');
-  const t3dPanelNames = useTranslations('3DModelAPanelNames');
-  const tPanelNames = (key: string) => collectionType === 'spc-3d-wall-panels-model-a' ? t3dPanelNames(key) : tSpcPanelNames(key);
-
+  
   const [api, setApi] = useState<CarouselApi>();
 
   let specs: { label: string; value: string | string[]; icon?: React.ElementType }[];
