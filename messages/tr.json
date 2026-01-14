@@ -12,18 +12,19 @@
     "navAbout": "HAKKIMIZDA",
     "navContact": "İLETİŞİM",
     "heroTitleSpc": "SPC DUVAR PANELİ KOLEKSİYONU",
-    "heroTitle3d": "SPC 3D DUVAR PANELİ KOLEKSİYONU"
+    "heroTitle3d": "SPC 3D DUVAR PANELİ KOLEKSİYONU",
+    "collectionsTitle": "SPC Duvar Paneli Koleksiyonları"
   },
   "HomePage": {
     "heroTitle": "Yenilikçi Duvar ve Zemin Çözümleri",
     "heroSubtitle": "Mekanınızı zarafet ve dayanıklılıkla yeniden tanımlayan premium SPC ürünlerini keşfedin.",
-    "collectionsTitle": "SPC Duvar Paneli Koleksiyonları",
+    "collectionsTitle": "Koleksiyonlarımız",
     "spcWallPanelsTitle": "SPC Duvar Panelleri",
     "spcWallPanelsDescription": "Premium Taş Polimer Kompozit duvar paneli koleksiyonumuzu keşfedin.",
-    "spcFlooringTitle": "SPC Zemin Kaplaması",
-    "spcFlooringDescription": "Her mekan için dayanıklı ve şık zemin çözümleri.",
-    "spc3dWallPanelsTitle": "SPC 3D Duvar Panelleri",
-    "spc3dWallPanelsDescription": "Yenilikçi 3D duvar panellerimizle derinlik ve doku katın.",
+    "spc3dWallPanelsModelATitle": "3D Paneller: Model A",
+    "spc3dWallPanelsModelADescription": "Her duvara modern, yapılandırılmış bir görünüm katan geometrik tasarımlar.",
+    "spc3dWallPanelsModelBTitle": "3D Paneller: Model B",
+    "spc3dWallPanelsModelBDescription": "Hareket ve organik bir stil hissi yaratan akıcı, dalgalı desenler.",
     "viewCollection": "Koleksiyonu Görüntüle"
   },
   "ProductDetails": {

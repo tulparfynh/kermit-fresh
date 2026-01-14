@@ -19,18 +19,18 @@ export default function WallsPage() {
       imageHint: 'modern kitchen with marble panels'
     },
     {
-      name: t('spcFlooringTitle'),
-      description: t('spcFlooringDescription'),
+      name: t('spc3dWallPanelsModelATitle'),
+      description: t('spc3dWallPanelsModelADescription'),
       href: '#',
-      imageUrl: 'https://picsum.photos/seed/floor1/800/600',
-      imageHint: 'stylish modern flooring'
+      imageUrl: 'https://picsum.photos/seed/3dmodelA/800/600',
+      imageHint: 'geometric 3d wall panels'
     },
       {
-      name: t('spc3dWallPanelsTitle'),
-      description: t('spc3dWallPanelsDescription'),
+      name: t('spc3dWallPanelsModelBTitle'),
+      description: t('spc3dWallPanelsModelBDescription'),
       href: '#',
-      imageUrl: 'https://picsum.photos/seed/3dpanel/800/600',
-      imageHint: 'textured 3d wall panels'
+      imageUrl: 'https://picsum.photos/seed/3dmodelB/800/600',
+      imageHint: 'wavy 3d wall panels'
     },
   ];
 

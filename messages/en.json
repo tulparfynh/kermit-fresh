@@ -12,18 +12,19 @@
     "navAbout": "ABOUT",
     "navContact": "CONTACT",
     "heroTitleSpc": "SPC WALL PANEL COLLECTION",
-    "heroTitle3d": "SPC 3D WALL PANEL COLLECTION"
+    "heroTitle3d": "SPC 3D WALL PANEL COLLECTION",
+    "collectionsTitle": "SPC Wall Panel Collections"
   },
   "HomePage": {
     "heroTitle": "Innovative Wall & Floor Solutions",
     "heroSubtitle": "Discover premium SPC products that redefine your space with elegance and durability.",
-    "collectionsTitle": "SPC Wall Panel Collections",
+    "collectionsTitle": "Our Collections",
     "spcWallPanelsTitle": "SPC Wall Panels",
     "spcWallPanelsDescription": "Explore our premium collection of Stone Polymer Composite wall panels.",
-    "spcFlooringTitle": "SPC Flooring",
-    "spcFlooringDescription": "Durable and stylish flooring solutions for any space.",
-    "spc3dWallPanelsTitle": "SPC 3D Wall Panels",
-    "spc3dWallPanelsDescription": "Add depth and texture with our innovative 3D wall panels.",
+    "spc3dWallPanelsModelATitle": "3D Panels: Model A",
+    "spc3dWallPanelsModelADescription": "Geometric designs that add a modern, structured look to any wall.",
+    "spc3dWallPanelsModelBTitle": "3D Panels: Model B",
+    "spc3dWallPanelsModelBDescription": "Fluid, wavy patterns that create a sense of movement and organic style.",
     "viewCollection": "View Collection"
   },
   "ProductDetails": {
