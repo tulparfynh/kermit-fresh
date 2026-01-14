@@ -22,8 +22,6 @@ import { Button } from '../ui/button';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/navigation';
 import { cn } from '@/lib/utils';
-import { getPanels } from '@/lib/panel-data';
-import { get3dPanelsModelA } from '@/lib/3d-panel-data-model-a';
 
 
 function CollectionNav() {
@@ -100,29 +98,17 @@ type ShowcaseProps = {
 
 export function Showcase({ initialPanels }: ShowcaseProps) {
   const [panels, setPanels] = useState<Panel[]>(initialPanels);
-  const [selectedPanel, setSelectedPanel] = useState<Panel | null>(null);
+  const [selectedPanel, setSelectedPanel] = useState<Panel | null>(initialPanels[0] || null);
   const tPanelNames = useTranslations('PanelNames');
-  const pathname = usePathname();
 
   useEffect(() => {
-    async function loadPanels() {
-      let loadedPanels: Panel[] = [];
-      if (pathname.includes('/spc-wall-panels')) {
-        loadedPanels = await getPanels();
-      } else if (pathname.includes('/spc-3d-wall-panels-model-a')) {
-        loadedPanels = await get3dPanelsModelA();
-      } else {
-        loadedPanels = initialPanels;
-      }
-      setPanels(loadedPanels);
-      if (loadedPanels.length > 0) {
-        setSelectedPanel(loadedPanels[0]);
-      } else {
-        setSelectedPanel(null);
-      }
+    setPanels(initialPanels);
+    if (initialPanels.length > 0) {
+      setSelectedPanel(initialPanels[0]);
+    } else {
+      setSelectedPanel(null);
     }
-    loadPanels();
-  }, [pathname, initialPanels]);
+  }, [initialPanels]);
 
 
   if (!selectedPanel) {
