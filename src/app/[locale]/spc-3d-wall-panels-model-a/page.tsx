@@ -16,7 +16,7 @@ export default async function Spc3dWallPanelsModelAPage() {
     <main className="min-h-screen flex flex-col bg-background">
       <Header pageType="spc-3d-wall-panels" />
       <div className="flex-grow">
-        <Showcase initialPanels={panels} />
+        <Showcase initialPanels={panels} collectionType="spc-3d-wall-panels-model-a" />
       </div>
       <Footer />
       <Chatbox />

@@ -16,7 +16,7 @@ export default async function SpcWallPanelsPage() {
     <main className="min-h-screen flex flex-col bg-background">
       <Header pageType="spc-wall-panels" />
       <div className="flex-grow">
-        <Showcase initialPanels={panels} />
+        <Showcase initialPanels={panels} collectionType="spc-wall-panels" />
       </div>
       <Footer />
       <Chatbox />

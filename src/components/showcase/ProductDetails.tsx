@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import type { Panel } from '@/lib/panel-data';
-import { Droplets, ShieldCheck, Zap, Hammer, Volume2, Leaf, ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Droplets, ShieldCheck, Zap, Hammer, Volume2, Leaf, ZoomIn, X, ChevronLeft, ChevronRight, Ruler, Square, Building, Layers } from 'lucide-react';
 import {
     Dialog,
     DialogContent,
@@ -27,6 +27,7 @@ type ProductDetailsProps = {
   panel: Panel;
   panels: Panel[];
   onPanelSelect: (panel: Panel) => void;
+  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a';
 };
 
 function FeatureColumn({ features }: { features: {icon: React.ElementType, text: string}[] }) {
@@ -42,21 +43,33 @@ function FeatureColumn({ features }: { features: {icon: React.ElementType, text:
     )
 }
 
-export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsProps) {
+export function ProductDetails({ panel, panels, onPanelSelect, collectionType }: ProductDetailsProps) {
   const t = useTranslations('ProductDetails');
   const tPanelNames = useTranslations('PanelNames');
   const [api, setApi] = useState<CarouselApi>();
 
-  const specs = [
-    { label: t('specThickness'), value: '4 mm' },
-    { label: t('specWearLayer'), value: '0,30 mm' },
-    { label: t('specDimensions'), value: ['960mm X 2800mm', '960mm X 1400mm'] },
-    { label: t('specEdge'), value: t('specEdgeValue') },
-    { label: t('specInstallation'), value: t('specInstallationValue') },
-    { label: t('specUtilityClass'), value: '23 / 31' },
-    { label: t('specUsageArea'), value: t('specUsageAreaValue') },
-    { label: t('specMaterial'), value: t('specMaterialValue') },
-  ];
+  let specs: { label: string; value: string | string[]; icon?: React.ElementType }[];
+  
+  if (collectionType === 'spc-3d-wall-panels-model-a') {
+      specs = [
+          { label: t('specThickness'), value: '24 mm' },
+          { label: t('specDimensions'), value: '160 X 2750 mm' },
+          { label: t('specUsageArea'), value: "Interior" },
+          { label: t('specMaterial'), value: t('specMaterialValue') },
+      ];
+  } else {
+      specs = [
+          { label: t('specThickness'), value: '4 mm' },
+          { label: t('specWearLayer'), value: '0,30 mm' },
+          { label: t('specDimensions'), value: ['960mm X 2800mm', '960mm X 1400mm'] },
+          { label: t('specEdge'), value: t('specEdgeValue') },
+          { label: t('specInstallation'), value: t('specInstallationValue') },
+          { label: t('specUtilityClass'), value: '23 / 31' },
+          { label: t('specUsageArea'), value: t('specUsageAreaValue') },
+          { label: t('specMaterial'), value: t('specMaterialValue') },
+      ];
+  }
+
 
   const allFeatures = [
     { icon: Droplets, text: t('featureWaterProof') },
@@ -218,5 +231,3 @@ export function ProductDetails({ panel, panels, onPanelSelect }: ProductDetailsP
     </Card>
   );
 }
-
-    

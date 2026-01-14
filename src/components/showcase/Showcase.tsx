@@ -94,9 +94,10 @@ function CollectionNav() {
 
 type ShowcaseProps = {
   initialPanels: Panel[];
+  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a';
 }
 
-export function Showcase({ initialPanels }: ShowcaseProps) {
+export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
   const [panels, setPanels] = useState<Panel[]>(initialPanels);
   const [selectedPanel, setSelectedPanel] = useState<Panel | null>(initialPanels[0] || null);
   const tPanelNames = useTranslations('PanelNames');
@@ -133,7 +134,8 @@ export function Showcase({ initialPanels }: ShowcaseProps) {
         <ProductDetails 
           panel={selectedPanel} 
           panels={panels} 
-          onPanelSelect={setSelectedPanel} 
+          onPanelSelect={setSelectedPanel}
+          collectionType={collectionType}
         />
       </div>
       
