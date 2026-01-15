@@ -81,7 +81,11 @@ export function Header({ pageType }: HeaderProps) {
   let heroImage;
   let heroImageHint;
 
-  if (pageType === 'spc-3d-wall-panels-model-a' || pageType === 'spc-3d-wall-panels-model-b') {
+  if (pageType === 'spc-3d-wall-panels-model-a') {
+    pageTitle = t('heroTitle3dModelA');
+    heroImage = 'https://picsum.photos/seed/3dhero/1920/1080';
+    heroImageHint = '3d wall panel texture';
+  } else if (pageType === 'spc-3d-wall-panels-model-b') {
     pageTitle = t('heroTitle3d');
     heroImage = 'https://picsum.photos/seed/3dhero/1920/1080';
     heroImageHint = '3d wall panel texture';

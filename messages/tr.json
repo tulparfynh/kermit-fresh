@@ -13,6 +13,7 @@
     "navContact": "İLETİŞİM",
     "heroTitleSpc": "SPC DUVAR PANELİ KOLEKSİYONU",
     "heroTitle3d": "SPC 3D DUVAR PANELİ KOLEKSİYONU",
+    "heroTitle3dModelA": "SPC 3D DUVAR PANELLERİ: MODEL A",
     "collectionsTitle": "SPC Duvar Paneli Koleksiyonları"
   },
   "HomePage": {
@@ -27,7 +28,7 @@
     "spc3dWallPanelsModelBDescription": "Hareket ve organik bir stil hissi yaratan akıcı, dalgalı desenler.",
     "viewCollection": "Koleksiyonu Görüntüle"
   },
-  "PanelNames": {
+"PanelNames": {
     "23054-2": "Anthracite Concrete",
     "23054-5": "Concrete Light Grey",
     "23040-3": "Calacatta Bianco",
@@ -54,19 +55,23 @@
     "29074-1": "Nordic Oak"
   },
   "3DModelAPanelNames": {
-    "3D-29192-1": "Adaçayı Grisi",
-    "3D-29192-4": "Kül Grisi",
-    "3D-29192-6": "Tütsülenmiş Meşe",
-    "3D-29192-8": "Kömür Meşe",
-    "3D-29115-18": "Doğal Meşe",
-    "3D-16041-4": "Açık Gri Meşe",
-    "3D-16041-8": "Füme Meşe",
-    "3D-29074-1": "Gri Meşe İkilisi"
+    "3D-29192-1": "Sage Grey",
+    "3D-29192-4": "Ash Grey",
+    "3D-29192-6": "Fumed Oak",
+    "3D-29192-8": "Charcoal Oak",
+    "3D-29115-18": "Natural Oak",
+    "3D-16041-4": "Light Grey Oak",
+    "3D-16041-8": "Smoked Oak",
+    "3D-29074-1": "Greige Oak Duo"
   },
   "3DModelBPanelNames": {
-    "3DB-001": "Dalga Tepesi",
-    "3DB-002": "Akan Kumul",
-    "3DB-003": "Dalga Etkisi"
+    "3D-23138-2": "Bianco Carrara",
+    "3D-23140-1": "Marble White Grey Vein",
+    "3D-23033-1": "Pietra Grey",
+    "3D-23047-8": "Nero Marquina",
+    "3D-23137-3": "Urban Concrete",
+    "3D-23137-6": "Travertine Beige",
+    "3D-23139-1": "Calacatta White"
   },
   "ProductDetails": {
     "specThickness": "KALINLIK",
