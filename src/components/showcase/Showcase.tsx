@@ -37,7 +37,7 @@ function CollectionNav() {
     { 
       name: t('spc3dWallPanelsModelATitle'), 
       href: '/spc-3d-wall-panels-model-a', 
-      imageUrl: '/images/spc-3d-panels-model-a/3D-29192-6/product.jpg',
+      imageUrl: '/images/spc-3d-panels-model-a/3D-29115-18/product.jpg',
       imageHint: 'geometric 3d texture'
     },
     { 
