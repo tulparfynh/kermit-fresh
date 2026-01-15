@@ -49,17 +49,18 @@ export function NavMenu({ isMobile = false }) {
       )}
     >
       {navLinks.map((link) => {
-        const isActive = pathname.startsWith(link.href);
+        const isActive = pathname.startsWith(link.href) && link.href !== '#';
         return (
           <Link
             key={link.label}
             href={link.href}
             className={cn(
-              'font-semibold tracking-wider transition-colors hover:text-primary whitespace-nowrap text-sm md:text-base lg:text-lg',
+              'relative font-semibold tracking-wider transition-colors hover:text-primary whitespace-nowrap text-sm md:text-base lg:text-lg',
+              'after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-primary after:origin-center after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100',
               isActive
-                ? 'text-primary'
+                ? 'text-primary after:scale-x-100'
                 : 'text-foreground/70',
-              isMobile && 'text-2xl'
+              isMobile && 'text-2xl after:bottom-[-2px]'
             )}
           >
             {link.label}
