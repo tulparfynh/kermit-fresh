@@ -24,27 +24,94 @@ import { Link, usePathname } from '@/navigation';
 import { cn } from '@/lib/utils';
 
 
-function CollectionNav() {
+function WallCollectionNav() {
   const t = useTranslations('HomePage');
   const pathname = usePathname();
   const collections = [
     { 
       name: t('spcWallPanelsTitle'), 
       href: '/spc-wall-panels', 
-      imageUrl: '/images/spc-wall-panels/23048-6/product.jpg',
+      imageUrl: '/images/spc-wall-panels/23048-6/application.jpg',
       imageHint: 'travertine texture'
     },
     { 
       name: t('spc3dWallPanelsModelATitle'), 
       href: '/spc-3d-wall-panels-model-a', 
-      imageUrl: '/images/spc-3d-panels-model-a/3D-29115-18/product.jpg',
+      imageUrl: '/images/spc-3d-panels-model-a/3D-29115-18/application.jpg',
       imageHint: 'geometric 3d texture'
     },
     { 
       name: t('spc3dWallPanelsModelBTitle'), 
       href: '/spc-3d-wall-panels-model-b', 
-      imageUrl: '/images/spc-3d-panels-model-b/3D-23138-2/product.jpg',
+      imageUrl: '/images/spc-3d-panels-model-b/3D-23138-2/application.jpg',
       imageHint: 'wavy 3d texture'
+    },
+  ];
+
+  return (
+    <div className="bg-muted py-4 border-b">
+        <div className="container mx-auto px-4">
+            <div className="flex items-start justify-center gap-4 md:gap-8">
+                {collections.map((collection, index) => (
+                    <React.Fragment key={collection.name}>
+                        <Link 
+                            href={collection.href} 
+                            className={cn(
+                                "flex flex-col items-center gap-2 group",
+                            )}
+                        >
+                            <div className={cn(
+                                "relative h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border-2 transition-all duration-300",
+                                pathname === collection.href ? "border-primary" : "border-transparent group-hover:border-primary/50"
+                            )}
+                            >
+                                <Image 
+                                    src={collection.imageUrl}
+                                    alt={collection.name}
+                                    fill
+                                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                                    data-ai-hint={collection.imageHint}
+                                />
+                            </div>
+                            <span className={cn(
+                                "text-xs md:text-sm font-semibold text-foreground/80 group-hover:text-primary transition-colors text-center",
+                                pathname === collection.href && "text-primary"
+                            )}>
+                                {collection.name}
+                            </span>
+                        </Link>
+                        {index < collections.length - 1 && (
+                            <Separator orientation="vertical" className="h-24 self-center" />
+                        )}
+                    </React.Fragment>
+                ))}
+            </div>
+        </div>
+    </div>
+  );
+}
+
+function FlooringCollectionNav() {
+  const t = useTranslations('HomePage');
+  const pathname = usePathname();
+  const collections = [
+    { 
+      name: t('spcParquetNaturalCollectionTitle'), 
+      href: '/spc-parquet-natural-collection', 
+      imageUrl: '/images/spc-parquet-natural-collection/29098-2/product.jpg',
+      imageHint: 'natural oak flooring'
+    },
+    { 
+      name: t('spcParquetStoneCollectionTitle'), 
+      href: '/spc-parquet-stone-collection', 
+      imageUrl: '/images/spc-parquet-stone-collection/23054-2/product.jpg',
+      imageHint: 'stone look flooring'
+    },
+    { 
+      name: t('fullNaturalCollectionTitle'), 
+      href: '/full-natural-collection', 
+      imageUrl: '/images/full-natural-collection/29074-1/product.jpg',
+      imageHint: 'wide plank flooring'
     },
   ];
 
@@ -124,11 +191,12 @@ export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
     }
   }, [initialPanels]);
 
+  const isFlooring = ['spc-parquet-natural-collection', 'spc-parquet-stone-collection', 'full-natural-collection'].includes(collectionType);
 
   if (!selectedPanel) {
     return (
       <div className="space-y-6 lg:space-y-8">
-        <CollectionNav />
+        {isFlooring ? <FlooringCollectionNav /> : <WallCollectionNav />}
         <div className="container mx-auto px-4 mt-6 lg:mt-8">
           <Skeleton className="h-[60vh] w-full" />
           <div className="text-center py-8">
@@ -142,7 +210,7 @@ export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
 
   return (
     <div className="space-y-6 lg:space-y-8">
-      <CollectionNav />
+      {isFlooring ? <FlooringCollectionNav /> : <WallCollectionNav />}
       <div className="container mx-auto px-4 mt-6 lg:mt-8">
         <ProductDetails 
           panel={selectedPanel} 
@@ -227,3 +295,5 @@ export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
     </div>
   );
 }
+
+    

@@ -6,7 +6,7 @@
   },
   "Header": {
     "navFloors": "PARKE",
-    "navWalls": "DUVAR PANELİ",
+    "navWalls": "SPC DUVAR PANELİ",
     "navSkirtings": "SÜPÜRGELİK",
     "navDownload": "DÖKÜMANLAR",
     "navAbout": "HAKKIMIZDA",
@@ -27,6 +27,9 @@
     "spc3dWallPanelsModelADescription": "Her duvara modern, yapılandırılmış bir görünüm katan geometrik tasarımlar.",
     "spc3dWallPanelsModelBTitle": "3D PANELLER: MODEL B",
     "spc3dWallPanelsModelBDescription": "Hareket ve organik bir stil hissi yaratan akıcı, dalgalı desenler.",
+    "spcParquetNaturalCollectionTitle": "HIZLI TESLİMAT: DOĞAL",
+    "spcParquetStoneCollectionTitle": "HIZLI TESLİMAT: TAŞ",
+    "fullNaturalCollectionTitle": "DOĞAL: TÜM RENKLER",
     "viewCollection": "Koleksiyonu Görüntüle"
   },
 "PanelNames": {
@@ -134,3 +137,5 @@
     "termsOfService": "Hizmet Şartları"
   }
 }
+
+    
