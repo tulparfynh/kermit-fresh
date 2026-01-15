@@ -60,8 +60,8 @@ export function ProductDetails({ panel, panels, onPanelSelect, collectionType, t
       ];
   } else if (collectionType === 'spc-3d-wall-panels-model-b') {
       specs = [
-          { label: t('specThickness'), value: '26 mm' },
-          { label: t('specDimensions'), value: '180 X 2750 mm' },
+          { label: t('specThickness'), value: '14 mm' },
+          { label: t('specDimensions'), value: '186 X 2750 mm' },
           { label: t('specUsageArea'), value: "Interior" },
           { label: t('specMaterial'), value: t('specMaterialValue') },
       ];

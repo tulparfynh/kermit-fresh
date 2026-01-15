@@ -64,9 +64,13 @@
     "3D-29074-1": "Greige Oak Duo"
   },
   "3DModelBPanelNames": {
-    "3DB-001": "Wave Crest",
-    "3DB-002": "Flowing Dune",
-    "3DB-003": "Ripple Effect"
+    "3D-23138-2": "Bianco Carrara",
+    "3D-23140-1": "Marble White Grey Vein",
+    "3D-23033-1": "Pietra Grey",
+    "3D-23047-8": "Nero Marquina",
+    "3D-23137-3": "Urban Concrete",
+    "3D-23137-6": "Travertine Beige",
+    "3D-23139-1": "Calacatta White"
   },
   "ProductDetails": {
     "specThickness": "THICKNESS",
