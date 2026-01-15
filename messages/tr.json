@@ -6,9 +6,9 @@
   },
   "Header": {
     "navFloors": "PARKE",
-    "navWalls": "DUVAR",
+    "navWalls": "DUVAR PANELİ",
     "navSkirtings": "SÜPÜRGELİK",
-    "navDownload": "KATALOG",
+    "navDownload": "DÖKÜMANLAR",
     "navAbout": "HAKKIMIZDA",
     "navContact": "İLETİŞİM",
     "heroTitleSpc": "SPC DUVAR PANELİ KOLEKSİYONU",
