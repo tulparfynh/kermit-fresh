@@ -15,7 +15,10 @@
     "heroTitle3d": "SPC 3D DUVAR PANELİ KOLEKSİYONU",
     "heroTitle3dModelA": "SPC 3D DUVAR PANELLERİ: MODEL A",
     "heroTitle3dModelB": "SPC 3D DUVAR PANELLERİ: MODEL B",
-    "collectionsTitle": "SPC Duvar Paneli Koleksiyonları"
+    "collectionsTitle": "SPC Duvar Paneli Koleksiyonları",
+    "heroTitleSpcParquetNaturalCollection": "HIZLI TESLİMAT: DOĞAL",
+    "heroTitleSpcParquetStoneCollection": "HIZLI TESLİMAT: TAŞ",
+    "heroTitleFullNaturalCollection": "DOĞAL: TÜM RENKLER"
   },
   "HomePage": {
     "heroTitle": "Yenilikçi Duvar ve Zemin Çözümleri",
@@ -137,5 +140,3 @@
     "termsOfService": "Hizmet Şartları"
   }
 }
-
-    

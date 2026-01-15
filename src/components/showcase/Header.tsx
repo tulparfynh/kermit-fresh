@@ -94,6 +94,18 @@ export function Header({ pageType }: HeaderProps) {
     pageTitle = t('heroTitleSpc');
     heroImage = '/images/spc-wall-panels/23048-6/application.jpg';
     heroImageHint = 'modern kitchen with marble panels';
+  } else if (pageType === 'spc-parquet-natural-collection') {
+    pageTitle = t('heroTitleSpcParquetNaturalCollection');
+    heroImage = '/images/spc-parquet-natural-collection/29098-2/application.jpg';
+    heroImageHint = 'modern living room with natural oak flooring';
+  } else if (pageType === 'spc-parquet-stone-collection') {
+    pageTitle = t('heroTitleSpcParquetStoneCollection');
+    heroImage = '/images/spc-parquet-stone-collection/23054-2/application.jpg';
+    heroImageHint = 'stylish interior with stone look flooring';
+  } else if (pageType === 'full-natural-collection') {
+    pageTitle = t('heroTitleFullNaturalCollection');
+    heroImage = '/images/full-natural-collection/29074-1/application.jpg';
+    heroImageHint = 'elegant room with wide plank natural flooring';
   }
 
 

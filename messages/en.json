@@ -15,7 +15,10 @@
     "heroTitle3d": "SPC 3D WALL PANEL COLLECTION",
     "heroTitle3dModelA": "SPC FLUTED PANELS: MODEL A",
     "heroTitle3dModelB": "SPC FLUTED PANELS: MODEL B",
-    "collectionsTitle": "SPC Wall Panel Collections"
+    "collectionsTitle": "SPC Wall Panel Collections",
+    "heroTitleSpcParquetNaturalCollection": "QUICK SHIP: NATURAL",
+    "heroTitleSpcParquetStoneCollection": "QUICK SHIP: STONE",
+    "heroTitleFullNaturalCollection": "NATURAL: FULL RANGE"
   },
   "HomePage": {
     "heroTitle": "Innovative Wall & Floor Solutions",
@@ -137,5 +140,3 @@
     "termsOfService": "Terms of Service"
   }
 }
-
-    
