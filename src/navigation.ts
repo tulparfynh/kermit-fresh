@@ -18,6 +18,18 @@ export const pathnames = {
   '/spc-3d-wall-panels-model-b': {
     en: '/spc-3d-wall-panels-model-b',
     tr: '/spc-3d-duvar-panelleri-model-b',
+  },
+  '/spc-parquet-natural-collection': {
+    en: '/spc-parquet-natural-collection',
+    tr: '/spc-parke-natural-koleksiyonu',
+  },
+  '/spc-parquet-stone-collection': {
+    en: '/spc-parquet-stone-collection',
+    tr: '/spc-parke-tas-koleksiyonu',
+  },
+  '/full-natural-collection': {
+    en: '/full-natural-collection',
+    tr: '/tam-dogal-koleksiyon',
   }
 } satisfies Pathnames<typeof locales>;
 

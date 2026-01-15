@@ -34,7 +34,7 @@ export function NavMenu({ isMobile = false }) {
   
   const navLinks = [
     { href: '/spc-wall-panels', label: t('navWalls') },
-    { href: '#', label: t('navFloors') },
+    { href: '/spc-parquet-natural-collection', label: t('navFloors') },
     { href: '#', label: t('navSkirtings') },
     { href: '#', label: t('navDownload') },
     { href: '#', label: t('navAbout') },
@@ -72,7 +72,7 @@ export function NavMenu({ isMobile = false }) {
 }
 
 type HeaderProps = {
-  pageType?: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a' | 'spc-3d-wall-panels-model-b';
+  pageType?: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a' | 'spc-3d-wall-panels-model-b' | 'spc-parquet-natural-collection' | 'spc-parquet-stone-collection' | 'full-natural-collection';
 }
 
 export function Header({ pageType }: HeaderProps) {

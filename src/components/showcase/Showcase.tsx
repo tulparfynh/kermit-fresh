@@ -94,7 +94,7 @@ function CollectionNav() {
 
 type ShowcaseProps = {
   initialPanels: Panel[];
-  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a' | 'spc-3d-wall-panels-model-b';
+  collectionType: 'spc-wall-panels' | 'spc-3d-wall-panels-model-a' | 'spc-3d-wall-panels-model-b' | 'spc-parquet-natural-collection' | 'spc-parquet-stone-collection' | 'full-natural-collection';
 }
 
 export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
