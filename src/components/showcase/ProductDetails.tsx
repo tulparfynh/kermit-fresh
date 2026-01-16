@@ -51,6 +51,18 @@ export function ProductDetails({ panel, panels, onPanelSelect, collectionType, t
 
   let specs: { label: string; value: string | string[]; icon?: React.ElementType }[];
   
+  const flooringSpecs = [
+    { label: t('specThickness'), value: '5 mm / 7 mm' },
+    { label: t('specWearLayer'), value: '0,30 mm / 0,55 mm' },
+    { label: t('specIxpeUnderlay'), value: '1 mm / 1,5 mm Included' },
+    { label: t('specDimensions'), value: ['181,1 X 1219,2 mm', '228,6 X 1219,2 mm', '228,6 X 1493 mm'] },
+    { label: t('specEdge'), value: t('specEdgeValue') },
+    { label: t('specLockingSystem'), value: 'UniClic / I4F' },
+    { label: t('specUtilityClass'), value: '23 / 33' },
+    { label: t('specUsageArea'), value: 'Interior' },
+    { label: t('specMaterial'), value: t('specMaterialValue') },
+  ];
+
   if (collectionType === 'spc-3d-wall-panels-model-a') {
       specs = [
           { label: t('specThickness'), value: '24 mm' },
@@ -65,28 +77,8 @@ export function ProductDetails({ panel, panels, onPanelSelect, collectionType, t
           { label: t('specUsageArea'), value: "Interior" },
           { label: t('specMaterial'), value: t('specMaterialValue') },
       ];
-  } else if (collectionType === 'spc-parquet-natural-collection' || collectionType === 'spc-parquet-stone-collection') {
-      specs = [
-          { label: t('specThickness'), value: '5 mm' },
-          { label: t('specWearLayer'), value: '0,55 mm' },
-          { label: t('specDimensions'), value: '228 X 1219 mm' },
-          { label: t('specEdge'), value: t('specEdgeValue') },
-          { label: t('specInstallation'), value: t('specInstallationValueClick') },
-          { label: t('specUtilityClass'), value: '33' },
-          { label: t('specUsageArea'), value: t('specUsageAreaValue') },
-          { label: t('specMaterial'), value: t('specMaterialValue') },
-      ];
-  } else if (collectionType === 'full-natural-collection') {
-      specs = [
-          { label: t('specThickness'), value: '6 mm' },
-          { label: t('specWearLayer'), value: '0,70 mm' },
-          { label: t('specDimensions'), value: '295 X 1500 mm' },
-          { label: t('specEdge'), value: t('specEdgeValue') },
-          { label: t('specInstallation'), value: t('specInstallationValueClick') },
-          { label: t('specUtilityClass'), value: '34 / 43' },
-          { label: t('specUsageArea'), value: t('specUsageAreaValue') },
-          { label: t('specMaterial'), value: t('specMaterialValue') },
-      ];
+  } else if (['spc-parquet-natural-collection', 'spc-parquet-stone-collection', 'full-natural-collection'].includes(collectionType)) {
+      specs = flooringSpecs;
   }
   else {
       specs = [
