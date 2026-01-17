@@ -105,9 +105,25 @@
     "2641-3": "Rustic Greige Oak"
   },
   "SpcParquetStoneCollectionPanelNames": {
-    "23040-3": "Calacatta Bianco",
     "23054-2": "Anthracite Concrete",
-    "23069-9": "Concrete Grey"
+    "23054-3": "Microcement Silver",
+    "23054-5": "Concrete Light Grey",
+    "23040-3": "Calacatta Bianco",
+    "23033-1": "Bardiglio Grey",
+    "23033-2": "Marble Anthracite",
+    "23089-1": "Statuario Bianco",
+    "23069-9": "Concrete Grey",
+    "23047-8": "Marble Black",
+    "23138-2": "Bianco Lasa",
+    "23139-1": "Calacatta Gold",
+    "23140-1": "Carrara White",
+    "23135-2": "Crema Marfil Beige",
+    "23048-2": "Tundra Grey",
+    "23048-6": "Fior di Bosco (Olive)",
+    "23124-3": "Ceppo di Gre White",
+    "23124-8": "Ceppo di Gre Beige",
+    "23137-3": "Travertine Grey",
+    "23137-6": "Travertine White Vein"
   },
   "FullNaturalCollectionPanelNames": {
     "29074-1": "Nordic Oak",
