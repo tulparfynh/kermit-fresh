@@ -96,14 +96,14 @@ export function ProductDetails({ panel, panels, onPanelSelect, collectionType, t
     let height = 'N/A';
     let depth = 'N/A';
 
-    if (collectionType.includes('alpha-140-mm')) { height = '140 mm'; depth = '16 mm'; }
-    else if (collectionType.includes('berlin-100-mm')) { height = '100 mm'; depth = '13 mm'; }
-    else if (collectionType.includes('elite-100-mm')) { height = '100 mm'; depth = '15 mm'; }
-    else if (collectionType.includes('moderna-100-mm')) { height = '100 mm'; depth = '15 mm'; }
+    if (collectionType.includes('alpha-140-mm')) { height = '140 mm'; depth = '14 mm'; }
+    else if (collectionType.includes('berlin-100-mm')) { height = '100 mm'; depth = '14 mm'; }
+    else if (collectionType.includes('elite-100-mm')) { height = '100 mm'; depth = '14 mm'; }
+    else if (collectionType.includes('moderna-100-mm')) { height = '100 mm'; depth = '14 mm'; }
     else if (collectionType.includes('optima-60-mm')) { height = '60 mm'; depth = '14 mm'; }
     else if (collectionType.includes('optima-90-mm')) { height = '90 mm'; depth = '18 mm'; }
     else if (collectionType.includes('solid-80-mm')) { height = '80 mm'; depth = '18 mm'; }
-    else if (collectionType.includes('x-line-100-mm')) { height = '100 mm'; depth = '15 mm'; }
+    else if (collectionType.includes('x-line-100-mm')) { height = '100 mm'; depth = '14 mm'; }
 
     specs = [
         { label: t('specHeight'), value: height },
