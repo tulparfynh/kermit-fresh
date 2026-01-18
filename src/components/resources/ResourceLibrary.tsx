@@ -35,9 +35,9 @@ export default function ResourceLibrary({ documents }: ResourceLibraryProps) {
 
   return (
     <Tabs defaultValue={defaultTab} className="w-full">
-      <TabsList className="grid w-full grid-cols-3">
+      <TabsList className="grid w-full grid-cols-3 h-auto">
         {productLines.map(pl => (
-          <TabsTrigger key={pl} value={pl}>
+          <TabsTrigger key={pl} value={pl} className="py-3 text-lg">
             {t(`productLineTabs_${pl}` as any)}
           </TabsTrigger>
         ))}
