@@ -44,9 +44,9 @@ export default function Home() {
   const t = useTranslations('HomePage');
 
   const collections = [
-    { name: 'flooring', href: '/spc-parquet-natural-collection', imageUrl: 'https://picsum.photos/seed/flooring/800/600', imageHint: 'wood flooring' },
-    { name: 'walls', href: '/spc-wall-panels', imageUrl: 'https://picsum.photos/seed/wallpanels/800/600', imageHint: 'marble wall panels' },
-    { name: 'skirting', href: '/skirting-boards/optima-60-mm-skirting-board', imageUrl: 'https://picsum.photos/seed/skirting/800/600', imageHint: 'skirting board closeup' },
+    { name: 'flooring', href: '/spc-parquet-natural-collection', imageUrl: '/images/full-natural-collection/29074-1/application.jpg', imageHint: 'elegant room flooring' },
+    { name: 'walls', href: '/spc-wall-panels', imageUrl: '/images/spc-wall-panels/23048-6/application.jpg', imageHint: 'modern kitchen panels' },
+    { name: 'skirting', href: '/skirting-boards/optima-60-mm-skirting-board', imageUrl: '/images/skirting-boards/alpha-140-mm-skirting-board/14005031/application.jpg', imageHint: 'living room skirting' },
   ];
   
   const whyKermitItems = [
@@ -62,11 +62,11 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative h-[60vh] lg:h-[80vh] w-full">
           <Image
-            src="https://picsum.photos/seed/mainhero/1920/1080"
-            alt="Elegant modern interior with stylish wall and floor finishes"
+            src="/images/spc-parquet-natural-collection/29098-2/application.jpg"
+            alt="Elegant modern living room with natural oak flooring"
             fill
             className="object-cover"
-            data-ai-hint="modern interior living room"
+            data-ai-hint="modern living room"
             priority
           />
           <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-4">
