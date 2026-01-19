@@ -155,7 +155,7 @@
         "moldovaPhone": "+373 (22) 85 42 29 / +373 (22) 85 42 30",
         "moldovaGsm": "GSM: +373 79 157375",
         "moldovaFax": "+373 (22) 52 40 02",
-        "moldovaEmail": "info@serkanplast.com,\nsales@serkanplast.com",
+        "moldovaEmail": "info@serkanplast.com",
         "romaniaTitle": "ROMANYA – MAĞAZA",
         "romaniaCompany": "DMS INNOVATIVE SOLUTION SRL",
         "romaniaAddress": "Bükreş - Romanya",
@@ -401,3 +401,5 @@
     "termsOfService": "Hizmet Şartları"
   }
 }
+
+    
