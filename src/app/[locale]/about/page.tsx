@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Link } from '@/navigation';
-import { Factory, DraftingCompass, Layers, Recycle } from 'lucide-react';
+import { Factory, DraftingCompass, Layers } from 'lucide-react';
 import { getMessages, getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -22,7 +22,7 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 
 
 const WhyKermitCard = ({ icon: Icon, title, text }: { icon: React.ElementType, title: string, text: string }) => (
-  <div className="flex flex-col items-center text-center p-6 bg-muted/50 rounded-lg">
+  <div className="flex flex-col items-center text-center p-6 bg-muted/50 rounded-lg h-full">
     <div className="bg-background p-3 rounded-full mb-4 border">
         <Icon className="h-8 w-8 text-primary" />
     </div>
@@ -52,7 +52,6 @@ export default async function AboutPage() {
     { icon: Factory, title: t('whyKermit.manufacturer.title'), text: t('whyKermit.manufacturer.text') },
     { icon: DraftingCompass, title: t('whyKermit.design.title'), text: t('whyKermit.design.text') },
     { icon: Layers, title: t('whyKermit.system.title'), text: t('whyKermit.system.text') },
-    { icon: Recycle, title: t('whyKermit.sustainability.title'), text: t('whyKermit.sustainability.text') },
   ];
   
   const whatWeMakeItems = [
@@ -109,7 +108,7 @@ export default async function AboutPage() {
             {/* 4. Why Kermit Floor */}
             <section>
                 <h2 className="font-headline text-3xl font-bold text-foreground text-center">{t('whyKermit.title')}</h2>
-                <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     {whyKermitItems.map(item => (
                         <WhyKermitCard key={item.title} icon={item.icon} title={item.title} text={item.text} />
                     ))}
