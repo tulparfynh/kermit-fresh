@@ -70,6 +70,78 @@
     "comingSoon": "Coming soon...",
     "noResults": "No documents match your criteria."
   },
+  "AboutPage": {
+    "seo": {
+      "metaTitle": "About Kermit Floor | SPC Flooring, Skirting & Wall Panels Manufacturer",
+      "metaDescription": "Kermit Floor manufactures SPC flooring, SPC skirting boards and SPC wall panels. Built on decades of polymer processing and mold-making expertise, with export-ready supply and system solutions."
+    },
+    "hero": {
+      "title": "About Kermit Floor",
+      "subtitle": "We manufacture SPC flooring, SPC skirting boards and SPC wall panels—designed for durability, fast installation and consistent project results.",
+      "ctaPrimary": "Explore Products",
+      "ctaSecondary": "Download Resources"
+    },
+    "whoWeAre": {
+      "title": "Who We Are",
+      "p1": "Kermit Floor is a manufacturer focused on SPC-based interior finishing systems: SPC flooring, SPC skirting boards, and SPC wall panels. Our product development is rooted in long-term experience in polymer processing and mold-making, enabling tight control over design details, repeatability and production consistency.",
+      "p2": "We build products that are practical for the trade—stable, durable, and easy to work with—while keeping the look clean and modern for residential and commercial environments."
+    },
+    "whatWeMake": {
+      "title": "What We Make",
+      "flooring": {
+        "title": "SPC Flooring",
+        "text": "Rigid-core flooring systems engineered for everyday durability and a reliable installation outcome across a wide range of interior spaces."
+      },
+      "skirting": {
+        "title": "SPC Skirting Boards",
+        "text": "Skirting solutions designed to finish the wall–floor junction cleanly. Our skirting boards feature flexible edges to improve the final fit on uneven surfaces."
+      },
+      "wallPanels": {
+        "title": "SPC Wall Panels",
+        "text": "Interior wall panel systems designed for fast installation, impact resistance and consistent decorative results."
+      }
+    },
+    "whyKermit": {
+      "title": "Why Kermit Floor",
+      "manufacturer": {
+        "title": "Manufacturer Mindset",
+        "text": "Consistent production, stable specs, repeatable quality."
+      },
+      "design": {
+        "title": "Design Control",
+        "text": "Mold-driven design capability enables detail control and product evolution."
+      },
+      "system": {
+        "title": "System Approach",
+        "text": "Flooring + skirting + wall panels designed to work together for a complete finish."
+      },
+      "installation": {
+        "title": "Trade-Friendly Installation",
+        "text": "Support for multiple installation approaches (adhesive, mechanical, clip systems, silicone, hybrid)."
+      },
+      "sustainability": {
+        "title": "Sustainability Focus",
+        "text": "Our skirting boards are made of recyclable material."
+      }
+    },
+    "footprint": {
+      "title": "Manufacturing & Supply Footprint",
+      "p1": "We operate with a production and supply structure built for both domestic projects and export workflows. Our goal is simple: reliable availability, clear documentation, and predictable results for distributors, contractors and project buyers.",
+      "ctaTitle": "Interested in working with us?",
+      "ctaText": "We support distributor/dealer structures and project-based supply. Contact our sales team for product documentation, samples and commercial terms.",
+      "ctaButton1": "Contact Sales",
+      "ctaButton2": "View Resources"
+    },
+    "sustainability": {
+      "title": "Sustainability & Responsibility",
+      "p1": "We prioritize long service life, practical installation and material responsibility. For product lines where applicable, we produce using recyclable material and design for durable performance—reducing replacement cycles in real-world use."
+    },
+    "finalCta": {
+      "title": "Build complete SPC interiors with a manufacturer-backed system.",
+      "ctaPrimary": "Explore Products",
+      "ctaSecondary": "Download Catalogues"
+    }
+  },
   "PanelNames": {
     "23054-2": "Anthracite Concrete",
     "23054-5": "Concrete Light Grey",

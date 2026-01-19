@@ -70,6 +70,78 @@
     "comingSoon": "Yakında...",
     "noResults": "Kriterlerinize uygun belge bulunamadı."
   },
+  "AboutPage": {
+    "seo": {
+      "metaTitle": "Kermit Floor Hakkımızda | SPC Zemin, Süpürgelik ve Duvar Paneli Üreticisi",
+      "metaDescription": "Kermit Floor; SPC zemin kaplama, SPC süpürgelik ve SPC duvar paneli üretir. Polimer işleme ve kalıp tecrübesine dayalı üretim altyapısı ile ihracata uygun, sistem odaklı çözümler sunar."
+    },
+    "hero": {
+      "title": "Kermit Floor Hakkımızda",
+      "subtitle": "SPC zemin kaplama, SPC süpürgelik ve SPC duvar paneli üretiyoruz—dayanıklılık, hızlı uygulama ve tutarlı sonuç için tasarlandı.",
+      "ctaPrimary": "Ürünleri İncele",
+      "ctaSecondary": "Dokümanları İndir"
+    },
+    "whoWeAre": {
+      "title": "Biz Kimiz",
+      "p1": "Kermit Floor, SPC tabanlı iç mekân bitiş sistemlerine odaklanan bir üreticidir: SPC zemin kaplama, SPC süpürgelik, SPC duvar paneli. Ürün geliştirme yaklaşımımız; polimer işleme ve kalıp üretim tecrübesi üzerine kuruludur. Bu sayede tasarım detaylarında kontrol, üretimde süreklilik ve kalite standardizasyonu sağlar.",
+      "p2": "Ürünlerimizi; ustanın işini kolaylaştıracak şekilde, sağlam, dayanıklı ve uygulaması pratik olacak biçimde geliştirirken; konut ve ticari mekânlarda modern ve temiz bir görünüm hedefleriz."
+    },
+    "whatWeMake": {
+      "title": "Neler Üretiyoruz",
+      "flooring": {
+        "title": "SPC Zemin Kaplama",
+        "text": "Günlük kullanıma uygun dayanıklılık ve farklı iç mekânlarda güvenilir uygulama sonucu sağlayan rijit çekirdekli sistemler."
+      },
+      "skirting": {
+        "title": "SPC Süpürgelik",
+        "text": "Duvar–zemin birleşimini temiz bitiren çözümler. Süpürgeliklerimizde esnek kenar yapısı, özellikle yüzey düzensizliklerinde daha iyi oturma ve daha düzgün bitiş sağlar."
+      },
+      "wallPanels": {
+        "title": "SPC Duvar Paneli",
+        "text": "Hızlı uygulama, darbe dayanımı ve dekoratif yüzey kalitesi için tasarlanmış iç mekân panel sistemleri."
+      }
+    },
+    "whyKermit": {
+      "title": "Neden Kermit Floor",
+      "manufacturer": {
+        "title": "Üretici Yaklaşımı",
+        "text": "Standart spesifikasyon, tutarlı kalite ve süreklilik."
+      },
+      "design": {
+        "title": "Tasarım Kontrolü",
+        "text": "Kalıp temelli üretim kabiliyeti ile detay kontrolü ve ürün geliştirme esnekliği."
+      },
+      "system": {
+        "title": "Sistem Mantığı",
+        "text": "Zemin + süpürgelik + duvar paneli ile bütüncül bitiş."
+      },
+      "installation": {
+        "title": "Uygulama Esnekliği",
+        "text": "Projeye göre farklı montaj yöntemlerine destek (yapıştırma, mekanik sabitleme, klips, silikon, hibrit)."
+      },
+      "sustainability": {
+        "title": "Sürdürülebilirlik Odağı",
+        "text": "Süpürgeliklerimiz geri dönüştürülebilir malzemeden üretilir."
+      }
+    },
+    "footprint": {
+      "title": "Üretim ve Tedarik Yapısı",
+      "p1": "Yurt içi projeler ve ihracat süreçleri için planlanmış üretim ve tedarik yapısıyla çalışıyoruz. Amacımız; bayi/distribütör, uygulamacı ve proje alıcıları için güvenilir stok/termin, net dokümantasyon ve öngörülebilir sonuçtur.",
+      "ctaTitle": "Bizimle çalışmak ister misiniz?",
+      "ctaText": "Bayi/distribütör yapılanmalarına ve proje bazlı tedarik modeline uygunuz. Doküman, numune ve ticari koşullar için satış ekibimizle iletişime geçin.",
+      "ctaButton1": "Satış ile İletişim",
+      "ctaButton2": "Dokümanları Gör"
+    },
+    "sustainability": {
+      "title": "Sürdürülebilirlik ve Sorumluluk",
+      "p1": "Uzun servis ömrü, pratik uygulama ve malzeme sorumluluğunu önceliklendiriyoruz. Uygun ürün gruplarında geri dönüştürülebilir malzeme kullanımı ve dayanıklı performans hedefi ile gerçek kullanım koşullarında yenileme ihtiyacını azaltmayı amaçlarız."
+    },
+    "finalCta": {
+      "title": "Üretici destekli SPC sistem ile mekânlarınızı tamamlayın.",
+      "ctaPrimary": "Ürünleri İncele",
+      "ctaSecondary": "Katalogları İndir"
+    }
+  },
   "PanelNames": {
     "23054-2": "Anthracite Concrete",
     "23054-5": "Concrete Light Grey",

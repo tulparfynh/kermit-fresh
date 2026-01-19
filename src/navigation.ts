@@ -11,6 +11,10 @@ export const pathnames = {
     en: '/resources',
     tr: '/kaynaklar'
   },
+  '/about': {
+    en: '/about',
+    tr: '/hakkimizda'
+  },
   '/spc-wall-panels': {
     en: '/spc-wall-panels',
     tr: '/spc-duvar-panelleri',
