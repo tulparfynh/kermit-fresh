@@ -31,17 +31,37 @@
   "HomePage": {
     "heroTitle": "Yenilikçi Duvar ve Zemin Çözümleri",
     "heroSubtitle": "Mekanınızı zarafet ve dayanıklılıkla yeniden tanımlayan premium SPC ürünlerini keşfedin.",
+    "exploreProducts": "Ürünleri Keşfet",
     "collectionsTitle": "Koleksiyonlarımız",
-    "spcWallPanelsTitle": "SPC DUVAR PANELLERİ",
-    "spcWallPanelsDescription": "Premium Taş Polimer Kompozit duvar paneli koleksiyonumuzu keşfedin.",
-    "spc3dWallPanelsModelATitle": "3D PANELLER: MODEL A",
-    "spc3dWallPanelsModelADescription": "Her duvara modern, yapılandırılmış bir görünüm katan geometrik tasarımlar.",
-    "spc3dWallPanelsModelBTitle": "3D PANELLER: MODEL B",
-    "spc3dWallPanelsModelBDescription": "Hareket ve organik bir stil hissi yaratan akıcı, dalgalı desenler.",
-    "spcParquetNaturalCollectionTitle": "HIZLI TESLİMAT: DOĞAL",
-    "spcParquetStoneCollectionTitle": "HIZLI TESLİMAT: TAŞ",
-    "fullNaturalCollectionTitle": "DOĞAL: TÜM RENKLER",
-    "viewCollection": "Koleksiyonu Görüntüle"
+    "flooringTitle": "SPC Parke",
+    "flooringDescription": "Dayanıklılık ve stil için tasarlanan rijit çekirdekli parkelerimiz, her iç mekan için geniş bir tasarım yelpazesi sunar.",
+    "viewFlooring": "Parkeleri Görüntüle",
+    "wallsTitle": "SPC Duvar Panelleri",
+    "wallsDescription": "Taş, ahşap ve 3D dokularda mevcut, kolay monte edilen premium SPC panellerimizle iç mekanları dönüştürün.",
+    "viewWalls": "Duvar Panellerini Görüntüle",
+    "skirtingTitle": "SPC Süpürgelikler",
+    "skirtingDescription": "Kusursuz bir duvar-zemin bitişi için mükemmel uyumlu, esnek kenarlı süpürgeliklerimizle projenizi tamamlayın.",
+    "viewSkirting": "Süpürgelikleri Görüntüle",
+    "whyKermitTitle": "Neden Kermit Floor?",
+    "whyKermit": {
+      "manufacturer": {
+        "title": "Üretici Yaklaşımı",
+        "text": "Güvenebileceğiniz tutarlı üretim, stabil özellikler ve tekrarlanabilir kalite."
+      },
+      "design": {
+        "title": "Tasarım Kontrolü",
+        "text": "Şirket içi kalıp üretimi, hassas detay kontrolü ve hızlı ürün geliştirmeye olanak tanır."
+      },
+      "system": {
+        "title": "Sistem Yaklaşımı",
+        "text": "Zemin, süpürgelik ve duvar panelleri, bütüncül bir bitiş için birlikte çalışacak şekilde tasarlanmıştır."
+      }
+    },
+    "finalCta": {
+      "title": "Üretici Destekli Bir Sistemle İnşa Etmeye Hazır mısınız?",
+      "ctaPrimary": "Tüm Ürünleri Keşfet",
+      "ctaSecondary": "Satış ile İletişime Geçin"
+    }
   },
   "ResourcesPage": {
     "heroTitle": "Kaynaklar ve İndirmeler",
@@ -401,5 +421,3 @@
     "termsOfService": "Hizmet Şartları"
   }
 }
-
-    

@@ -31,17 +31,37 @@
   "HomePage": {
     "heroTitle": "Innovative Wall & Floor Solutions",
     "heroSubtitle": "Discover premium SPC products that redefine your space with elegance and durability.",
+    "exploreProducts": "Explore Products",
     "collectionsTitle": "Our Collections",
-    "spcWallPanelsTitle": "SPC WALL PANELS",
-    "spcWallPanelsDescription": "Explore our premium collection of Stone Polymer Composite wall panels.",
-    "spc3dWallPanelsModelATitle": "3D PANELS: MODEL A",
-    "spc3dWallPanelsModelADescription": "Geometric designs that add a modern, structured look to any wall.",
-    "spc3dWallPanelsModelBTitle": "3D PANELS: MODEL B",
-    "spc3dWallPanelsModelBDescription": "Fluid, wavy patterns that create a sense of movement and organic style.",
-    "spcParquetNaturalCollectionTitle": "QUICK SHIP: NATURAL",
-    "spcParquetStoneCollectionTitle": "QUICK SHIP: STONE",
-    "fullNaturalCollectionTitle": "NATURAL: FULL RANGE",
-    "viewCollection": "View Collection"
+    "flooringTitle": "SPC Flooring",
+    "flooringDescription": "Engineered for durability and style, our rigid-core flooring offers a wide range of designs for any interior.",
+    "viewFlooring": "View Flooring",
+    "wallsTitle": "SPC Wall Panels",
+    "wallsDescription": "Transform interiors with our premium, easy-to-install SPC panels, available in stone, wood, and 3D textures.",
+    "viewWalls": "View Walls",
+    "skirtingTitle": "SPC Skirting Boards",
+    "skirtingDescription": "Complete your project with perfectly matched, flexible-edge skirting for a flawless wall-to-floor finish.",
+    "viewSkirting": "View Skirting",
+    "whyKermitTitle": "Why Kermit Floor?",
+    "whyKermit": {
+      "manufacturer": {
+        "title": "Manufacturer Mindset",
+        "text": "Consistent production, stable specs, and repeatable quality you can rely on."
+      },
+      "design": {
+        "title": "Design Control",
+        "text": "In-house mold-making allows for precise detail control and rapid product evolution."
+      },
+      "system": {
+        "title": "System Approach",
+        "text": "Flooring, skirting, and wall panels designed to work together for a complete finish."
+      }
+    },
+    "finalCta": {
+      "title": "Ready to Build with a Manufacturer-Backed System?",
+      "ctaPrimary": "Explore All Products",
+      "ctaSecondary": "Contact Sales"
+    }
   },
   "ResourcesPage": {
     "heroTitle": "Resources & Downloads",
@@ -527,5 +547,3 @@
     "termsOfService": "Terms of Service"
   }
 }
-
-    
