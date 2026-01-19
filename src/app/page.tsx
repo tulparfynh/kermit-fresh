@@ -113,7 +113,7 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent" />
-          <div className="absolute inset-0 flex flex-col items-center justify-end text-center p-6 md:p-12">
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 md:p-12">
             <div className="max-w-4xl text-white">
                 <h1 className="font-headline text-3xl lg:text-5xl font-bold tracking-tight">
                     {t('heroTitle')}
