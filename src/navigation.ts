@@ -1,3 +1,4 @@
+
 import {
   createLocalizedPathnamesNavigation,
   Pathnames
@@ -14,6 +15,10 @@ export const pathnames = {
   '/about': {
     en: '/about',
     tr: '/hakkimizda'
+  },
+   '/contact': {
+    en: '/contact',
+    tr: '/iletisim'
   },
   '/spc-wall-panels': {
     en: '/spc-wall-panels',

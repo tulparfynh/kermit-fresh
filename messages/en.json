@@ -134,6 +134,48 @@
       "ctaSecondary": "Download Catalogues"
     }
   },
+  "ContactPage": {
+    "seo": {
+      "title": "Contact Kermit Floor | Manufacturer Inquiries",
+      "description": "Contact Kermit Floor for sales, technical support, or partnership inquiries. We are a leading manufacturer of SPC flooring, skirting, and wall panels."
+    },
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "Get in touch with our team for sales, support, or partnership inquiries. We're here to help."
+    },
+    "details": {
+      "title": "Contact Information",
+      "addressTitle": "Head Office",
+      "phoneTitle": "Phone",
+      "emailTitle": "Email",
+      "hoursTitle": "Business Hours",
+      "hoursValue": "Monday - Friday: 9:00 AM - 6:00 PM"
+    },
+    "form": {
+      "title": "Send a Message",
+      "description": "Fill out the form below and we will get back to you as soon as possible.",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "phoneLabel": "Phone Number (Optional)",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "inquiryTypeLabel": "Inquiry Type",
+      "inquiryTypePlaceholder": "Select an inquiry type",
+      "inquiryTypeSales": "Sales & Pricing",
+      "inquiryTypeSupport": "Technical Support",
+      "inquiryTypePartnership": "Partnerships & Distribution",
+      "inquiryTypeGeneral": "General Inquiry",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "Please describe your inquiry in detail...",
+      "submitButton": "Send Message",
+      "submittingButton": "Sending...",
+      "successTitle": "Message Sent!",
+      "successDescription": "Thank you, {name}! Your message has been received. We'll be in touch shortly.",
+      "errorTitle": "Something went wrong",
+      "errorMessage": "An unexpected error occurred. Please try again."
+    }
+  },
   "PanelNames": {
     "23054-2": "Anthracite Concrete",
     "23054-5": "Concrete Light Grey",

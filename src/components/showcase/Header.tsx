@@ -44,8 +44,8 @@ export function NavMenu({ isMobile = false }) {
     { href: '/spc-parquet-natural-collection', label: t('navFloors') },
     { href: '/skirting-boards/optima-60-mm-skirting-board', label: t('navSkirtings') },
     { href: getResourcesLink(), label: t('navDownload') },
-    { href: '#', label: t('navAbout') },
-    { href: '#', label: t('navContact') },
+    { href: '/about', label: t('navAbout') },
+    { href: '/contact', label: t('navContact') },
   ];
 
   return (
