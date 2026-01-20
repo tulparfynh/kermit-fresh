@@ -17,10 +17,13 @@ export function Footer() {
     ];
     
     const supportLinks = [
-      { href: '#', label: t('supportCatalogue') },
-      { href: '#', label: t('supportInstallation') },
-      { href: '#', label: t('supportTechnical') },
+      { href: '/resources', label: t('supportCatalogue') },
+      { href: '/resources', label: t('supportInstallation') },
+      { href: '/resources', label: t('supportTechnical') },
     ];
+
+    const phoneRaw = t('phone').replace(/[^0-9+]/g, '');
+    const emailAddress = t('email');
 
   return (
     <footer className="bg-muted text-muted-foreground">
@@ -73,11 +76,11 @@ export function Footer() {
                 </li>
                 <li className="flex items-start">
                     <Phone className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0 mr-3" />
-                    <a href="tel:+905368338429" className="hover:text-primary transition-colors">+90 (536) 833-8429</a>
+                    <a href={`tel:${phoneRaw}`} className="hover:text-primary transition-colors">{t('phone')}</a>
                 </li>
                 <li className="flex items-start">
                     <Mail className="h-5 w-5 mt-0.5 text-secondary flex-shrink-0 mr-3" />
-                    <a href="mailto:info@kermitfloor.com" className="hover:text-primary transition-colors">info@kermitfloor.com</a>
+                    <a href={`mailto:${emailAddress}`} className="hover:text-primary transition-colors">{emailAddress}</a>
                 </li>
                 </ul>
             </div>

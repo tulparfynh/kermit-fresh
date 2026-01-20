@@ -413,7 +413,9 @@
     "supportInstallation": "Montaj Kılavuzu",
     "supportTechnical": "Teknik Veri Sayfaları",
     "contactTitle": "İletişim",
-    "address": "123 Kermit Sokak, Floor City, 16000, Türkiye",
+    "address": "Cumhuriyet Mh. Cihan Sk. No:4, Çayırova / Kocaeli, Türkiye",
+    "phone": "+90 262 658 97 29",
+    "email": "info@kermit.com.tr",
     "copyright": "© {year} Kermit Floor. Tüm hakları saklıdır.",
     "privacyPolicy": "Gizlilik Politikası",
     "termsOfService": "Hizmet Şartları"
