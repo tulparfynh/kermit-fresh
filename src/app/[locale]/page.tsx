@@ -11,6 +11,7 @@ import { getStarterPacks } from '@/lib/resources-data';
 import type { Resource, Locale } from '@/lib/resources-data';
 import { cn } from '@/lib/utils';
 import { Separator } from '@/components/ui/separator';
+import { Chatbox } from '@/components/showcase/Chatbox';
 
 const StarterPackPill = ({ pack, locale }: { pack: Resource; locale: Locale }) => {
   const title = locale === 'tr' ? pack.title_tr : pack.title;
@@ -249,6 +250,7 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
         </section>
       </main>
       <Footer />
+      <Chatbox />
     </div>
   );
 }
