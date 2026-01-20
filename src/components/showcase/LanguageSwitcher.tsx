@@ -1,4 +1,3 @@
-
 'use client';
 
 import {
@@ -13,7 +12,7 @@ import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/navigation';
 
 const GBFlag = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" className="w-6 h-auto rounded-sm" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" className="!w-7 !h-auto rounded-sm" aria-hidden="true">
         <rect width="5" height="3" fill="#00247d" />
         <path d="M0,0L5,3M5,0L0,3" stroke="#fff" strokeWidth=".6" />
         <path d="M0,0L5,3M5,0L0,3" stroke="#cf142b" strokeWidth=".4" />
@@ -23,7 +22,7 @@ const GBFlag = () => (
 );
 
 const TRFlag = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" className="w-6 h-auto rounded-sm" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" className="!w-7 !h-auto rounded-sm" aria-hidden="true">
         <rect width="30" height="20" fill="#e30a17" />
         <circle cx="10" cy="10" r="5" fill="#fff" />
         <circle cx="11.5" cy="10" r="4" fill="#e30a17" />
@@ -50,22 +49,24 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" className="h-12 w-12">
           {currentLanguage?.flag}
           <span className="sr-only">Change language, current: {currentLanguage?.name}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="min-w-0">
+      <DropdownMenuContent align="end" className="w-48 p-2">
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => handleLanguageChange(lang.code)}
-            className="flex justify-between items-center gap-2"
+            className="flex items-center justify-between px-3 py-2 text-base"
             disabled={locale === lang.code}
           >
-            {lang.flag}
-            <span className="sr-only">{lang.name}</span>
-            {locale === lang.code && <Check className="h-4 w-4" />}
+            <span className="flex items-center gap-3">
+              {lang.flag}
+              <span className="font-medium">{lang.name}</span>
+            </span>
+            {locale === lang.code && <Check className="!h-5 !w-5" />}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
