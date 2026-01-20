@@ -1,22 +1,10 @@
-
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
 import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { MapPin, Phone, Mail, Building, Printer, Smartphone } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import { submitContactForm } from '@/app/actions';
-import { contactFormSchema } from '@/lib/schema';
 import { Separator } from '../ui/separator';
 
 function LocationCard({ location }: { location: { title: string; details: any[] } }) {
@@ -46,120 +34,6 @@ function LocationCard({ location }: { location: { title: string; details: any[] 
   );
 }
 
-
-function ContactForm() {
-  const t = useTranslations('ContactPage.form');
-  const { toast } = useToast();
-  
-  const form = useForm<z.infer<typeof contactFormSchema>>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      phone: '',
-      inquiryType: '',
-      message: '',
-    },
-  });
-
-  async function onSubmit(values: z.infer<typeof contactFormSchema>) {
-    const result = await submitContactForm(values);
-    if (result.success) {
-      toast({
-        title: t('successTitle'),
-        description: t('successDescription', { name: values.name }),
-      });
-      form.reset();
-    } else {
-      toast({
-        variant: 'destructive',
-        title: t('errorTitle'),
-        description: t('errorMessage'),
-      });
-    }
-  }
-
-  const inquiryTypes = [
-    { value: 'sales', label: t('inquiryTypeSales') },
-    { value: 'support', label: t('inquiryTypeSupport') },
-    { value: 'partnership', label: t('inquiryTypePartnership') },
-    { value: 'general', label: t('inquiryTypeGeneral') },
-  ];
-
-  return (
-    <Card className="w-full">
-        <CardHeader>
-            <CardTitle className="font-headline text-2xl">{t('title')}</CardTitle>
-            <p className="text-muted-foreground pt-1">{t('description')}</p>
-        </CardHeader>
-        <CardContent>
-            <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <FormField control={form.control} name="name" render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>{t('nameLabel')}</FormLabel>
-                            <FormControl>
-                                <Input placeholder={t('namePlaceholder')} {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )} />
-                    <FormField control={form.control} name="email" render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>{t('emailLabel')}</FormLabel>
-                            <FormControl>
-                                <Input type="email" placeholder={t('emailPlaceholder')} {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )} />
-                </div>
-                <FormField control={form.control} name="phone" render={({ field }) => (
-                    <FormItem>
-                        <FormLabel>{t('phoneLabel')}</FormLabel>
-                        <FormControl>
-                            <Input placeholder={t('phonePlaceholder')} {...field} />
-                        </FormControl>
-                        <FormMessage />
-                    </FormItem>
-                )} />
-                <FormField control={form.control} name="inquiryType" render={({ field }) => (
-                    <FormItem>
-                        <FormLabel>{t('inquiryTypeLabel')}</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                            <FormControl>
-                                <SelectTrigger>
-                                    <SelectValue placeholder={t('inquiryTypePlaceholder')} />
-                                </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                                {inquiryTypes.map(type => (
-                                    <SelectItem key={type.value} value={type.value}>{type.label}</SelectItem>
-                                ))}
-                            </SelectContent>
-                        </Select>
-                        <FormMessage />
-                    </FormItem>
-                )} />
-                <FormField control={form.control} name="message" render={({ field }) => (
-                    <FormItem>
-                        <FormLabel>{t('messageLabel')}</FormLabel>
-                        <FormControl>
-                            <Textarea placeholder={t('messagePlaceholder')} className="min-h-[120px]" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                    </FormItem>
-                )} />
-                <Button type="submit" size="lg" disabled={form.formState.isSubmitting}>
-                    {form.formState.isSubmitting ? t('submittingButton') : t('submitButton')}
-                </Button>
-            </form>
-            </Form>
-        </CardContent>
-    </Card>
-  );
-}
 
 export default function ContactPageClient() {
   const t = useTranslations('ContactPage');
@@ -229,13 +103,8 @@ export default function ContactPageClient() {
 
         <Separator />
         
-        <section className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
-          <div className="lg:col-span-3">
-            <ContactForm />
-          </div>
-
-          <div className="lg:col-span-2">
-            <div className="aspect-video w-full rounded-lg overflow-hidden border">
+        <section>
+            <div className="aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden border">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.2431436157026!2d29.365398076546054!3d40.84458522948732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadfc4706f8761%3A0x8e20cf6c5c3d173a!2sKERM%C4%B0T%20FLOOR!5e0!3m2!1sen!2str!4v1768930053851!5m2!1sen!2str"
                     width="100%"
@@ -247,7 +116,6 @@ export default function ContactPageClient() {
                     title="Kermit Floor Factory Location"
                 ></iframe>
             </div>
-          </div>
         </section>
       </div>
     </>

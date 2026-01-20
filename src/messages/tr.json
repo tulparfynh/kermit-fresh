@@ -212,30 +212,6 @@
       "romaniaAddress": "Bükreş - Romanya",
       "romaniaPhone": "+40 738 754 074 / +40 722 547 258",
       "romaniaEmail": "info@dmsinnovative.ro"
-    },
-    "form": {
-      "title": "Mesaj Gönderin",
-      "description": "Aşağıdaki formu doldurun, size en kısa sürede geri dönüş yapalım.",
-      "nameLabel": "Tam Adınız",
-      "namePlaceholder": "Ad Soyad",
-      "emailLabel": "E-posta Adresi",
-      "emailPlaceholder": "ornek@example.com",
-      "phoneLabel": "Telefon Numarası (İsteğe Bağlı)",
-      "phonePlaceholder": "+90 (555) 123-4567",
-      "inquiryTypeLabel": "Talep Türü",
-      "inquiryTypePlaceholder": "Bir talep türü seçin",
-      "inquiryTypeSales": "Satış ve Fiyatlandırma",
-      "inquiryTypeSupport": "Teknik Destek",
-      "inquiryTypePartnership": "İş Ortaklığı ve Bayilik",
-      "inquiryTypeGeneral": "Genel Bilgi Talebi",
-      "messageLabel": "Mesajınız",
-      "messagePlaceholder": "Lütfen talebinizi detaylı olarak açıklayın...",
-      "submitButton": "Mesajı Gönder",
-      "submittingButton": "Gönderiliyor...",
-      "successTitle": "Mesajınız Gönderildi!",
-      "successDescription": "Teşekkürler, {name}! Mesajınız alınmıştır. En kısa sürede sizinle iletişime geçeceğiz.",
-      "errorTitle": "Bir şeyler ters gitti",
-      "errorMessage": "Beklenmedik bir hata oluştu. Lütfen tekrar deneyin."
     }
   },
   "PanelNames": {

@@ -212,30 +212,6 @@
       "romaniaAddress": "Bucuresti - Romania",
       "romaniaPhone": "+40 738 754 074 / +40 722 547 258",
       "romaniaEmail": "info@dmsinnovative.ro"
-    },
-    "form": {
-      "title": "Send a Message",
-      "description": "Fill out the form below and we will get back to you as soon as possible.",
-      "nameLabel": "Full Name",
-      "namePlaceholder": "John Doe",
-      "emailLabel": "Email Address",
-      "emailPlaceholder": "you@example.com",
-      "phoneLabel": "Phone Number (Optional)",
-      "phonePlaceholder": "+1 (555) 123-4567",
-      "inquiryTypeLabel": "Inquiry Type",
-      "inquiryTypePlaceholder": "Select an inquiry type",
-      "inquiryTypeSales": "Sales & Pricing",
-      "inquiryTypeSupport": "Technical Support",
-      "inquiryTypePartnership": "Partnerships & Distribution",
-      "inquiryTypeGeneral": "General Inquiry",
-      "messageLabel": "Your Message",
-      "messagePlaceholder": "Please describe your inquiry in detail...",
-      "submitButton": "Send Message",
-      "submittingButton": "Sending...",
-      "successTitle": "Message Sent!",
-      "successDescription": "Thank you, {name}! Your message has been received. We'll be in touch shortly.",
-      "errorTitle": "Something went wrong",
-      "errorMessage": "An unexpected error occurred. Please try again."
     }
   },
   "PanelNames": {

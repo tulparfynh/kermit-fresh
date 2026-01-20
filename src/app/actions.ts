@@ -2,7 +2,7 @@
 'use server';
 
 import { z } from 'zod';
-import { inquirySchema, contactFormSchema } from '@/lib/schema';
+import { inquirySchema } from '@/lib/schema';
 
 export async function submitInquiry(data: z.infer<typeof inquirySchema>) {
   try {
@@ -14,25 +14,6 @@ export async function submitInquiry(data: z.infer<typeof inquirySchema>) {
     return {
       success: true,
       message: `Thank you, ${data.name}! Your inquiry about ${data.panelName} has been received.`,
-    };
-  } catch (e) {
-    return {
-      success: false,
-      message: 'An unexpected error occurred. Please try again.',
-    };
-  }
-}
-
-export async function submitContactForm(data: z.infer<typeof contactFormSchema>) {
-  try {
-    // In a real application, you would send an email here.
-    // For this showcase, we'll just log the data to the console.
-    console.log('New Contact Form Submission:');
-    console.log(data);
-    
-    return {
-      success: true,
-      message: `Thank you, ${data.name}! Your message has been received.`,
     };
   } catch (e) {
     return {
