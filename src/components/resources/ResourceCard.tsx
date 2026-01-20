@@ -8,7 +8,6 @@ import { Badge } from '@/components/ui/badge';
 import { format } from 'date-fns';
 import { enUS, tr } from 'date-fns/locale';
 import { Eye, Download, FileText } from 'lucide-react';
-import { Link } from '@/navigation';
 
 type ResourceCardProps = {
   resource: Resource;
@@ -46,15 +45,15 @@ export default function ResourceCard({ resource }: ResourceCardProps) {
       <CardFooter className="p-6 pt-0 md:pt-6 flex-shrink-0 w-full md:w-auto border-t md:border-t-0 md:border-l flex flex-row md:flex-col items-center justify-center gap-2">
         {resource.previewEnabled && (
             <Button variant="outline" asChild className="w-full">
-              <Link href={fileDetails.url} target="_blank">
+              <a href={fileDetails.url} target="_blank" rel="noopener noreferrer">
                 <Eye className="mr-2 h-4 w-4" /> {t('preview')}
-              </Link>
+              </a>
             </Button>
         )}
         <Button asChild className="w-full">
-          <Link href={fileDetails.url} download>
+          <a href={fileDetails.url} download>
             <Download className="mr-2 h-4 w-4" /> {t('download')}
-          </Link>
+          </a>
         </Button>
       </CardFooter>
     </Card>

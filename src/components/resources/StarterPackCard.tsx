@@ -5,7 +5,6 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check, Download, Package, FileText, X } from 'lucide-react';
-import { Link } from '@/navigation';
 import {
   Dialog,
   DialogContent,
@@ -59,10 +58,10 @@ export default function StarterPackCard({ pack, libraryDocs }: StarterPackCardPr
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row gap-2">
         <Button asChild className="w-full sm:flex-1 whitespace-normal h-auto">
-            <Link href={downloadUrl}>
+            <a href={downloadUrl} download>
                 <Download className="mr-2 h-4 w-4" />
                 {t('downloadZip')}
-            </Link>
+            </a>
         </Button>
         <Dialog>
             <DialogTrigger asChild>
