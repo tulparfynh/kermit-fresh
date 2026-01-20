@@ -115,6 +115,25 @@
       "previewEnabled": true
     },
     {
+      "id": "wall-panel-catalogue-2025",
+      "productLine": "wall_panels",
+      "docType": "catalogue",
+      "audience": ["all"],
+      "installationMethod": null,
+      "title": "SPC Wall Panel Catalogue 2025",
+      "title_tr": "SPC Duvar Paneli Kataloğu 2025",
+      "summary": "The complete collection of our innovative SPC wall panels.",
+      "summary_tr": "Yenilikçi SPC duvar panellerimizin eksiksiz koleksiyonu.",
+      "version": "v1.0",
+      "updatedAt": "2024-07-25",
+      "tags": ["catalogue", "wall-panels", "2025"],
+      "files": {
+        "en": { "url": "/downloads/spc-wall-panel-catalogue-en.pdf", "size": "15 MB", "format": "pdf" },
+        "tr": { "url": "/downloads/spc-duvar-paneli-katalog-tr.pdf", "size": "15 MB", "format": "pdf" }
+      },
+      "previewEnabled": true
+    },
+    {
       "id": "skirting-tds-alpha-140mm",
       "productLine": "skirting",
       "docType": "tds",
