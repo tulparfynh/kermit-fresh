@@ -169,7 +169,7 @@ function SkirtingCollectionNav() {
     { name: t('elite-100-mm'), href: '/skirting-boards/elite-100-mm-skirting-board', imageUrl: '/images/skirting-boards/elite-100-mm-skirting-board/E1003031/product.jpg', imageHint: 'elite 100mm skirting' },
     { name: t('moderna-100-mm'), href: '/skirting-boards/moderna-100-mm-skirting-board', imageUrl: '/images/skirting-boards/moderna-100-mm-skirting-board/1004031/product.jpg', imageHint: 'moderna 100mm skirting' },
     { name: t('x-line-100-mm'), href: '/skirting-boards/x-line-100-mm-skirting-board', imageUrl: '/images/skirting-boards/x-line-100-mm-skirting-board/X1004031/product.jpg', imageHint: 'x-line 100mm skirting' },
-    { name: t('alpha-140-mm'), href: '/skirting-boards/alpha-140-mm-skirting-board', imageUrl: '/images/skirting-boards/alpha-140-mm-skirting-board/14005031/product.jpg', imageHint: 'alpha 140mm skirting' },
+    { name: t('alpha-140-mm'), href: '/skirting-boards/alpha-140-mm-skirting-board', imageUrl: '/images/skirting-boards/alpha-140-mm-skirting-board/1404031/product.jpg', imageHint: 'alpha 140mm skirting' },
   ];
 
   return (
