@@ -133,7 +133,7 @@ export default async function AboutPage() {
             {/* 5. Manufacturing & Supply Footprint */}
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative aspect-square lg:aspect-[4/3] rounded-lg overflow-hidden">
-                    <Image src="https://images.unsplash.com/photo-1581092918056-0c9c4e579346?q=80&w=1974&auto=format&fit=crop" alt="Manufacturing facility" fill className="object-cover" data-ai-hint="manufacturing facility" sizes="(max-width: 1024px) 100vw, 50vw" />
+                    <Image src="/images/about-us/factory.jpg" alt="Manufacturing facility" fill className="object-cover" data-ai-hint="manufacturing facility" sizes="(max-width: 1024px) 100vw, 50vw" />
                 </div>
                 <div>
                     <h2 className="font-headline text-3xl font-bold text-foreground">{t('footprint.title')}</h2>
