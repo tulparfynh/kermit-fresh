@@ -158,7 +158,7 @@ export default async function AboutPage() {
             {/* 6. Sustainability & Responsibility */}
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="lg:order-2 relative aspect-square lg:aspect-[4/3] rounded-lg overflow-hidden">
-                    <Image src="https://images.unsplash.com/photo-1542601906-8b6a35da7601?q=80&w=2070&auto=format&fit=crop" alt="Hands holding a green sprout" fill className="object-cover" data-ai-hint="sustainability responsibility" sizes="(max-width: 1024px) 100vw, 50vw" />
+                    <Image src="/images/about-us/sustainability.jpg" alt="Hands holding a green sprout" fill className="object-cover" data-ai-hint="sustainability responsibility" sizes="(max-width: 1024px) 100vw, 50vw" />
                 </div>
                 <div className="lg:order-1">
                     <h2 className="font-headline text-3xl font-bold text-foreground">{t('sustainability.title')}</h2>
