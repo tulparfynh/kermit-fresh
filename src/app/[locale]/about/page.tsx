@@ -66,15 +66,28 @@ export default async function AboutPage() {
       <main className="flex-grow">
         
         {/* 1. Hero */}
-        <section className="bg-muted py-16 text-center">
-          <div className="container px-4">
-            <h1 className="font-headline text-4xl lg:text-5xl font-bold text-primary">{t('hero.title')}</h1>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">{t('hero.subtitle')}</p>
+        <section className="relative h-72 md:h-96 w-full">
+          <Image
+            src="/images/hero-images/about-us-hero-image.jpg"
+            alt={t('hero.title')}
+            fill
+            className="object-cover"
+            data-ai-hint="company values mission"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
+            <h1 className="font-headline text-4xl lg:text-5xl font-bold tracking-tight text-white">
+              {t('hero.title')}
+            </h1>
+            <p className="mt-4 text-lg text-white/90 max-w-3xl mx-auto">
+              {t('hero.subtitle')}
+            </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button asChild size="lg">
                 <Link href="/spc-wall-panels">{t('hero.ctaPrimary')}</Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white/10 hover:text-white">
                 <Link href="/resources">{t('hero.ctaSecondary')}</Link>
               </Button>
             </div>
