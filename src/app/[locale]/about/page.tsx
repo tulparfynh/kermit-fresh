@@ -55,9 +55,9 @@ export default async function AboutPage() {
   ];
   
   const whatWeMakeItems = [
-      { title: t('whatWeMake.flooring.title'), text: t('whatWeMake.flooring.text'), image: 'https://www.kermitfloor.com/wp-content/uploads/2022/11/Screenshot-2022-11-23-at-13.43.32.jpg', imageHint: 'SPC flooring layers' },
-      { title: t('whatWeMake.skirting.title'), text: t('whatWeMake.skirting.text'), image: 'https://www.kermitfloor.com/wp-content/uploads/2023/12/3-1.jpg', imageHint: 'SPC skirting boards' },
-      { title: t('whatWeMake.wallPanels.title'), text: t('whatWeMake.wallPanels.text'), image: 'https://www.kermitfloor.com/wp-content/uploads/2022/11/Screenshot-2022-11-23-at-13.42.06-2.jpg', imageHint: 'SPC wall panels' },
+      { title: t('whatWeMake.flooring.title'), text: t('whatWeMake.flooring.text'), image: '/images/spc-parquet-natural-collection/29098-2/application.jpg', imageHint: 'elegant room flooring' },
+      { title: t('whatWeMake.skirting.title'), text: t('whatWeMake.skirting.text'), image: '/images/skirting-boards/elite-100-mm-skirting-board/E1004031/application.jpg', imageHint: 'decorative skirting' },
+      { title: t('whatWeMake.wallPanels.title'), text: t('whatWeMake.wallPanels.text'), image: '/images/spc-wall-panels/23048-6/application.jpg', imageHint: 'modern kitchen panels' },
   ]
 
   return (
