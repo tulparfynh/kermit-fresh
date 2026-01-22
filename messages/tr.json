@@ -98,6 +98,24 @@
     "spcParquetStoneCollectionTitle": "Stone Koleksiyonu",
     "fullNaturalCollectionTitle": "Natural: Tüm Renkler"
   },
+  "SpcWallPanelsPage": {
+    "seo": {
+      "title": "Kermit Floor | SPC Duvar Panelleri",
+      "description": "Premium SPC duvar paneli koleksiyonumuzu keşfedin. Su geçirmez, dayanıklı ve kolay montaj."
+    }
+  },
+  "Spc3dWallPanelsModelAPage": {
+    "seo": {
+      "title": "Kermit Floor | SPC 3D Duvar Panelleri",
+      "description": "Model A 3D SPC panellerimizle duvarlarınızı dönüştürün, benzersiz dokular ve modern tasarımlar sunar."
+    }
+  },
+  "Spc3dWallPanelsModelBPage": {
+    "seo": {
+      "title": "Kermit Floor | SPC 3D Duvar Panelleri",
+      "description": "Model B 3D SPC panellerimizle büyüleyici duvarlar yaratın, zarif ve çağdaş desenlere sahiptir."
+    }
+  },
   "ResourcesPage": {
     "heroTitle": "Dökümanlar ve Videolar",
     "heroSubtitle": "Kataloglar, teknik veri sayfaları, montaj kılavuzları, CAD dosyaları, texture'lar, garanti ve paketleme bilgileri.",

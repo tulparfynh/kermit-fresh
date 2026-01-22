@@ -98,6 +98,24 @@
     "spcParquetStoneCollectionTitle": "Stone Collection",
     "fullNaturalCollectionTitle": "Full Natural Range"
   },
+  "SpcWallPanelsPage": {
+    "seo": {
+      "title": "Kermit Floor | SPC Wall Panels",
+      "description": "Discover our premium collection of SPC wall panels. Waterproof, durable, and easy to install."
+    }
+  },
+  "Spc3dWallPanelsModelAPage": {
+    "seo": {
+      "title": "Kermit Floor | SPC 3D Wall Panels",
+      "description": "Transform your walls with our Model A 3D SPC panels, offering unique textures and modern designs."
+    }
+  },
+  "Spc3dWallPanelsModelBPage": {
+    "seo": {
+      "title": "Kermit Floor | SPC 3D Wall Panels",
+      "description": "Create stunning feature walls with our Model B 3D SPC panels, featuring elegant and contemporary patterns."
+    }
+  },
   "ResourcesPage": {
     "heroTitle": "Resources & Downloads",
     "heroSubtitle": "Catalogues, technical data sheets, installation guides, CAD files, textures, warranties and packaging information.",
