@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Header } from '@/components/showcase/Header';
 import { Footer } from '@/components/showcase/Footer';
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { ArrowRight, Factory, DraftingCompass, Layers, ChevronDown, Package, Download, BookOpen, FileText, Wrench, ShieldCheck, Zap, Palette, Instagram } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { getStarterPacks } from '@/lib/resources-data';
@@ -12,64 +12,17 @@ import type { Resource, Locale } from '@/lib/resources-data';
 import { cn } from '@/lib/utils';
 import { Separator } from '@/components/ui/separator';
 import { Chatbox } from '@/components/showcase/Chatbox';
+import type { Metadata } from 'next';
 
-const StarterPackPill = ({ pack, locale }: { pack: Resource; locale: Locale }) => {
-  const title = locale === 'tr' ? pack.title_tr : pack.title;
-  const downloadUrl = pack.files[locale]?.url || pack.files['en'].url;
-
-  return (
-    <Button asChild variant="secondary" className="h-auto py-2 px-4 bg-background/20 hover:bg-background/40 backdrop-blur-sm border border-white/20 text-white hover:text-white">
-      <a href={downloadUrl} download>
-        <Download className="mr-2 h-4 w-4" />
-        <span className="text-sm font-semibold">{title}</span>
-      </a>
-    </Button>
-  );
-};
-
-const ProductLineCard = ({ title, description, benefits, href, imageUrl, imageHint, ctaText }: { title: string, description: string, benefits: {text: string, icon: React.ElementType}[], href: any, imageUrl: string, imageHint: string, ctaText: string }) => (
-  <Card className="flex flex-col overflow-hidden text-left transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-    <div className="relative aspect-[4/3] w-full">
-      <Image src={imageUrl} alt={title} fill className="object-cover" data-ai-hint={imageHint} sizes="(max-width: 768px) 100vw, 33vw" />
-    </div>
-    <CardHeader>
-      <CardTitle className="font-headline text-2xl">{title}</CardTitle>
-      <CardDescription>{description}</CardDescription>
-    </CardHeader>
-    <CardContent className="flex-grow space-y-3">
-        {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-center gap-3">
-                <benefit.icon className="h-5 w-5 text-secondary flex-shrink-0" />
-                <span className="text-sm font-medium">{benefit.text}</span>
-            </div>
-        ))}
-    </CardContent>
-    <div className="p-6 pt-4">
-      <Button asChild variant="outline" className="w-full">
-        <Link href={href}>
-          {ctaText} <ArrowRight className="ml-2 h-4 w-4" />
-        </Link>
-      </Button>
-    </div>
-  </Card>
-);
-
-const WhyKermitCard = ({ icon: Icon, title, text }: { icon: React.ElementType, title: string, text: string }) => (
-  <div className="flex flex-col items-center text-center p-6 bg-muted/50 rounded-lg h-full">
-    <div className="bg-background p-3 rounded-full mb-4 border">
-        <Icon className="h-8 w-8 text-primary" />
-    </div>
-    <h3 className="font-headline text-lg font-semibold text-foreground">{title}</h3>
-    <p className="text-muted-foreground text-sm mt-2">{text}</p>
-  </div>
-);
-
-const ResourceTeaserCard = ({ title, icon: Icon }: { title: string, icon: React.ElementType }) => (
-    <Card className="p-6 flex flex-col items-center justify-center text-center">
-        <Icon className="h-10 w-10 text-secondary mb-3" />
-        <h3 className="font-headline font-semibold text-lg">{title}</h3>
-    </Card>
-);
+export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
+  const messages = await getMessages({locale});
+  const t = (key: string) => ((messages.HomePage as any).seo as any)[key] as string;
+ 
+  return {
+    title: t('title'),
+    description: t('description')
+  };
+}
 
 export default async function Home({ params }: { params: { locale: Locale } }) {
   const t = await getTranslations('HomePage');

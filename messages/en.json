@@ -30,6 +30,10 @@
     "heroTitleSkirtingXLine100mm": "X-LINE 100MM SKIRTING BOARD"
   },
   "HomePage": {
+    "seo": {
+      "title": "Kermit Floor | A complete SPC interior finishing system",
+      "description": "A complete SPC interior finishing system from the same brand with durable performance and best selling designs."
+    },
     "heroTitle": "SPC FLOORS, WALLS AND SKIRTINGS",
     "heroSubtitle": "A complete SPC interior finishing system from the same brand with durable performance and best selling designs.",
     "heroStarterPacksTitle": "Quick-start your project with our resource packs:",
@@ -587,5 +591,3 @@
     "email": "info@kermit.com.tr"
   }
 }
-
-    

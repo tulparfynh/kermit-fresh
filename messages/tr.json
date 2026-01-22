@@ -30,6 +30,10 @@
     "heroTitleSkirtingXLine100mm": "X-LINE 100mm SÜPÜRGELİK"
   },
   "HomePage": {
+    "seo": {
+      "title": "Kermit Floor | Duvardan zemine yekün bir SPC finişi",
+      "description": "Parkeden Duvara ve Süpürgeliğe, en popüler renkler ve çizgilerle bir iç mekan finiş sistemi."
+    },
     "heroTitle": "SPC PARKE, DUVAR PANELİ VE SÜPÜRGELİKLER",
     "heroSubtitle": "Parkeden Duvara ve Süpürgeliğe, en popüler renkler ve çizgilerle bir iç mekan finiş sistemi.",
     "heroStarterPacksTitle": "Mesleğinize Uygun Hızlı Başlangıç Paketlerimiz:",
@@ -452,5 +456,3 @@
     "termsOfService": "Hizmet Şartları"
   }
 }
-
-    
