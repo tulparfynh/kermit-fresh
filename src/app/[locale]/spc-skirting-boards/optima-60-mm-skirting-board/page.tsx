@@ -4,6 +4,18 @@ import { Showcase } from '@/components/showcase/Showcase';
 import { Chatbox } from '@/components/showcase/Chatbox';
 import { Footer } from '@/components/showcase/Footer';
 import { getSkirtingOptima60mm } from '@/lib/skirting-optima-60-mm-data';
+import { getMessages } from 'next-intl/server';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
+  const messages = await getMessages({locale});
+  const t = (key: string) => ((messages.SkirtingPages as any)['optima-60-mm'] as any)[key] as string;
+ 
+  return {
+    title: t('title'),
+    description: t('description')
+  };
+}
 
 // This tells Next.js to re-validate the page (check for new data)
 // at most once every 60 seconds.
@@ -23,3 +35,5 @@ export default async function SkirtingOptima60mmPage() {
     </main>
   );
 }
+
+    

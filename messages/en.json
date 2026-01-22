@@ -559,6 +559,40 @@
     "X1013031": "X1013031",
     "X1015031": "X1015031"
   },
+  "SkirtingPages": {
+    "alpha-140-mm": {
+      "title": "Kermit Floor | Alpha 140mm SPC Skirting Boards",
+      "description": "Discover the Alpha 140mm SPC skirting board. High, modern, and durable for a perfect finish."
+    },
+    "berlin-100-mm": {
+      "title": "Kermit Floor | Berlin 100mm SPC Skirting Boards",
+      "description": "Explore the Berlin 100mm SPC skirting board. Classic design meets modern durability."
+    },
+    "elite-100-mm": {
+      "title": "Kermit Floor | Elite 100mm SPC Skirting Boards",
+      "description": "The Elite 100mm SPC skirting board offers a sophisticated profile for any interior."
+    },
+    "moderna-100-mm": {
+      "title": "Kermit Floor | Moderna 100mm SPC Skirting Boards",
+      "description": "Achieve a clean, contemporary look with the Moderna 100mm SPC skirting board."
+    },
+    "optima-60-mm": {
+      "title": "Kermit Floor | Optima 60mm SPC Skirting Boards",
+      "description": "The Optima 60mm SPC skirting board is a versatile and minimalist solution for any space."
+    },
+    "optima-90-mm": {
+      "title": "Kermit Floor | Optima 90mm SPC Skirting Boards",
+      "description": "Find the perfect balance of height and style with the Optima 90mm SPC skirting board."
+    },
+    "solid-80-mm": {
+      "title": "Kermit Floor | Solid 80mm SPC Skirting Boards",
+      "description": "The Solid 80mm SPC skirting board provides a robust and timeless finish to your walls."
+    },
+    "x-line-100-mm": {
+      "title": "Kermit Floor | X-Line 100mm SPC Skirting Boards",
+      "description": "Create a sharp, architectural look with the X-Line 100mm SPC skirting board."
+    }
+  },
   "ProductDetails": {
     "specThickness": "THICKNESS",
     "specDepth": "DEPTH",

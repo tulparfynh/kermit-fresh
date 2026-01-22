@@ -426,6 +426,40 @@
     "X1013031": "X1013031",
     "X1015031": "X1015031"
   },
+  "SkirtingPages": {
+    "alpha-140-mm": {
+      "title": "Kermit Floor | Alpha 140mm SPC Süpürgelik",
+      "description": "Alpha 140mm SPC süpürgelik koleksiyonunu keşfedin. Kusursuz bir bitiş için yüksek, modern ve dayanıklı."
+    },
+    "berlin-100-mm": {
+      "title": "Kermit Floor | Berlin 100mm SPC Süpürgelik",
+      "description": "Berlin 100mm SPC süpürgelik koleksiyonunu keşfedin. Klasik tasarım modern dayanıklılıkla buluşuyor."
+    },
+    "elite-100-mm": {
+      "title": "Kermit Floor | Elite 100mm SPC Süpürgelik",
+      "description": "Elite 100mm SPC süpürgelik, her iç mekan için sofistike bir profil sunar."
+    },
+    "moderna-100-mm": {
+      "title": "Kermit Floor | Moderna 100mm SPC Süpürgelik",
+      "description": "Moderna 100mm SPC süpürgelik ile temiz, çağdaş bir görünüm elde edin."
+    },
+    "optima-60-mm": {
+      "title": "Kermit Floor | Optima 60mm SPC Süpürgelik",
+      "description": "Optima 60mm SPC süpürgelik, her alan için çok yönlü ve minimalist bir çözümdür."
+    },
+    "optima-90-mm": {
+      "title": "Kermit Floor | Optima 90mm SPC Süpürgelik",
+      "description": "Optima 90mm SPC süpürgelik ile yükseklik ve stil arasında mükemmel dengeyi bulun."
+    },
+    "solid-80-mm": {
+      "title": "Kermit Floor | Solid 80mm SPC Süpürgelik",
+      "description": "Solid 80mm SPC süpürgelik, duvarlarınıza sağlam ve zamansız bir bitiş sağlar."
+    },
+    "x-line-100-mm": {
+      "title": "Kermit Floor | X-Line 100mm SPC Süpürgelik",
+      "description": "X-Line 100mm SPC süpürgelik ile keskin, mimari bir görünüm yaratın."
+    }
+  },
   "ProductDetails": {
     "specThickness": "KALINLIK",
     "specDepth": "DERİNLİK",
