@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Instagram, MessageCircle, Send, Heart, Bookmark } from 'lucide-react';
@@ -22,7 +23,6 @@ export default function InstagramPostCard({ post }: { post: InstagramPost }) {
                 width={28}
                 height={28}
                 className="object-contain"
-                unoptimized
               />
           </div>
           <span className="font-semibold text-sm">kermitfloor</span>
