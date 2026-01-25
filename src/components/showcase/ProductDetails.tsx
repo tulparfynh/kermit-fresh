@@ -267,6 +267,12 @@ export function ProductDetails({ panel, panels, onPanelSelect, collectionType, t
                   </ul>
               </div>
             </div>
+            {collectionType === 'skirting-optima-90-mm' && (
+                <div className="mt-6 border-t pt-4 flex justify-center items-center gap-3">
+                    <Image src="/images/icons/embossed-icon.jpg" alt={t('specEmbossed')} width={32} height={32} className="rounded" />
+                    <span className="font-semibold text-lg text-foreground">{t('specEmbossed')}</span>
+                </div>
+            )}
           </div>
         </CardContent>
         

@@ -616,6 +616,7 @@
     "specLockingSystem": "LOCKING SYSTEM",
     "specHeight": "HEIGHT",
     "specLength": "LENGTH",
+    "specEmbossed": "Embossed",
     "featureWaterProof": "Water Proof",
     "featureAntiBacterial": "Anti Bacterial",
     "featureQuickInstallation": "Quick Installation",
