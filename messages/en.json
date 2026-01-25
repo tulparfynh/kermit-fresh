@@ -34,7 +34,7 @@
       "title": "Kermit Floor | A complete SPC interior finishing system",
       "description": "A complete SPC interior finishing system from the same brand with durable performance and best selling designs."
     },
-    "heroTitle": "SPC FLOORS, WALLS AND SKIRTINGS",
+    "heroTitle": "SPC FLOORS, SPC WALLS AND SPC SKIRTINGS",
     "heroSubtitle": "A complete SPC interior finishing system from the same brand with durable performance and best selling designs.",
     "heroStarterPacksTitle": "Quick-start your project with our resource packs:",
     "productLinesTitle": "A System-Based Approach to SPC Interiors",
@@ -644,6 +644,9 @@
     "emailAction": "E-mail Us",
     "whatsappAction": "WhatsApp",
     "whatsappMessage": "I would like to request the {packName}."
+  },
+  "ShowcasePage": {
+    "applicationVideoTitle": "Exemplary Application Video"
   },
   "Chatbox": {
     "greeting": "Hello! How can I help you with our SPC wall panels today?",

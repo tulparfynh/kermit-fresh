@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import Image from 'next/image';
@@ -229,6 +230,7 @@ export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
   const tSpcParquetStoneCollectionPanelNames = useTranslations('SpcParquetStoneCollectionPanelNames');
   const tFullNaturalCollectionPanelNames = useTranslations('FullNaturalCollectionPanelNames');
   const tSkirtingPanelNames = useTranslations('SkirtingPanelNames');
+  const tShowcase = useTranslations('ShowcasePage');
 
   const tPanelNames = (key: string) => {
     switch (true) {
@@ -341,7 +343,7 @@ export function Showcase({ initialPanels, collectionType }: ShowcaseProps) {
       
       <div className="container mx-auto px-4">
         <section id="application-video" className="scroll-mt-20">
-            <h2 className="text-2xl md:text-3xl font-bold font-headline text-primary tracking-wide text-center mb-4">Exemplary Application Video</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-headline text-primary tracking-wide text-center mb-4">{tShowcase('applicationVideoTitle')}</h2>
             <Card className="overflow-hidden shadow-lg border-none bg-background/50 relative aspect-video">
                 <iframe 
                     className="absolute top-0 left-0 w-full h-full"

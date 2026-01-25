@@ -34,7 +34,7 @@
       "title": "Kermit Floor | Duvardan zemine yekün bir SPC finişi",
       "description": "Parkeden Duvara ve Süpürgeliğe, en popüler renkler ve çizgilerle bir iç mekan finiş sistemi."
     },
-    "heroTitle": "SPC PARKE, DUVAR PANELİ VE SÜPÜRGELİKLER",
+    "heroTitle": "SPC PARKE, SPC DUVAR PANELİ VE SPC SÜPÜRGELİKLER",
     "heroSubtitle": "Parkeden Duvara ve Süpürgeliğe, en popüler renkler ve çizgilerle bir iç mekan finiş sistemi.",
     "heroStarterPacksTitle": "Mesleğinize Uygun Hızlı Başlangıç Paketlerimiz:",
     "productLinesTitle": "İç Mekanlara Sistem Bazlı Yaklaşım",
@@ -508,9 +508,12 @@
   },
   "StarterPackDialog": {
     "title": "{packName} Paketini Talep Edin",
-    "emailAction": "E-posta Gönderin",
+    "emailAction": "E-posta",
     "whatsappAction": "WhatsApp",
     "whatsappMessage": "{packName} paketini talep etmek istiyorum."
+  },
+  "ShowcasePage": {
+    "applicationVideoTitle": "Örnek Uygulama Videosu"
   },
   "Chatbox": {
     "greeting": "Merhaba! SPC duvar panellerimiz hakkında size nasıl yardımcı olabilirim?",
@@ -530,9 +533,11 @@
     "supportInstallation": "Montaj Kılavuzu",
     "supportTechnical": "Teknik Veri Sayfaları",
     "contactTitle": "İletişim",
-    "address": "123 Kermit Sokak, Floor City, 16000, Türkiye",
+    "address": "Cumhuriyet Mh. Cihan Sk. No:4 ÇAYIROVA / KOCAELİ - TÜRKİYE",
     "copyright": "© {year} Kermit Floor. Tüm hakları saklıdır.",
     "privacyPolicy": "Gizlilik Politikası",
-    "termsOfService": "Hizmet Şartları"
+    "termsOfService": "Hizmet Şartları",
+    "phone": "+90 262 658 97 29",
+    "email": "info@kermit.com.tr"
   }
 }
