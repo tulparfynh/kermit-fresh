@@ -1,3 +1,4 @@
+
 {
   "Metadata": {
     "title": "Kermit Wall Panel Showcase",
@@ -638,6 +639,12 @@
     "errorTitle": "Something went wrong",
     "errorMessage": "An unexpected error occurred. Please try again."
   },
+  "StarterPackDialog": {
+    "title": "Request our {packName}",
+    "emailAction": "E-mail Us",
+    "whatsappAction": "WhatsApp",
+    "whatsappMessage": "I would like to request the {packName}."
+  },
   "Chatbox": {
     "greeting": "Hello! How can I help you with our SPC wall panels today?",
     "prompt": "Chat with us!",
@@ -664,5 +671,3 @@
     "email": "info@kermit.com.tr"
   }
 }
-
-    

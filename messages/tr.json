@@ -1,3 +1,4 @@
+
 {
   "Metadata": {
     "title": "Kermit Duvar Paneli Vitrini",
@@ -505,6 +506,12 @@
     "errorTitle": "Bir şeyler ters gitti",
     "errorMessage": "Beklenmedik bir hata oluştu. Lütfen tekrar deneyin."
   },
+  "StarterPackDialog": {
+    "title": "{packName} Paketini Talep Edin",
+    "emailAction": "E-posta Gönderin",
+    "whatsappAction": "WhatsApp",
+    "whatsappMessage": "{packName} paketini talep etmek istiyorum."
+  },
   "Chatbox": {
     "greeting": "Merhaba! SPC duvar panellerimiz hakkında size nasıl yardımcı olabilirim?",
     "prompt": "Bizimle sohbet edin!",
@@ -529,5 +536,3 @@
     "termsOfService": "Hizmet Şartları"
   }
 }
-
-    

@@ -16,6 +16,7 @@ import { Chatbox } from '@/components/showcase/Chatbox';
 import type { Metadata } from 'next';
 import { getInstagramPosts } from '@/lib/instagram-data';
 import InstagramPostCard from '@/components/showcase/InstagramPostCard';
+import { StarterPackDialog } from '@/components/showcase/StarterPackDialog';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
   const messages = await getMessages({locale});
@@ -26,21 +27,6 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
     description: t('description')
   };
 }
-
-
-const StarterPackPill = ({ pack, locale }: { pack: Resource, locale: Locale }) => {
-  const title = locale === 'tr' ? pack.title_tr : pack.title;
-  const downloadUrl = pack.files[locale]?.url || pack.files['en'].url;
-
-  return (
-    <Button asChild size="sm" variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20 backdrop-blur-sm h-auto px-4 py-2">
-      <a href={downloadUrl} download>
-        <Download className="mr-2 h-4 w-4" />
-        {title}
-      </a>
-    </Button>
-  );
-};
 
 const ProductLineCard = ({ title, description, benefits, href, imageUrl, imageHint, ctaText }: { title: string, description: string, benefits: {text: string, icon: React.ElementType}[], href: string, imageUrl: string, imageHint: string, ctaText: string }) => (
     <Card className="flex flex-col overflow-hidden text-center group">
@@ -94,7 +80,7 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
   const productLines = [
     { name: 'flooring', href: '/spc-parquet-natural-collection', imageUrl: '/images/spc-parquet-natural-collection/29098-2/application.jpg', imageHint: 'elegant room flooring', benefits: [{text: t('flooringBenefits.b1'), icon: ShieldCheck}, {text: t('flooringBenefits.b2'), icon: Zap}, {text: t('flooringBenefits.b3'), icon: Palette}] },
     { name: 'walls', href: '/spc-wall-panels', imageUrl: '/images/spc-wall-panels/23048-6/application.jpg', imageHint: 'modern kitchen panels', benefits: [{text: t('wallsBenefits.b1'), icon: ShieldCheck}, {text: t('wallsBenefits.b2'), icon: Zap}, {text: t('wallsBenefits.b3'), icon: Palette}] },
-    { name: 'skirting', href: '/spc-skirting-boards/elite-100-mm-skirting-board', imageUrl: '/images/skirting-boards/elite-100-mm-skirting-board/E1004031/application.jpg', imageHint: 'room with decorative skirting', benefits: [{text: t('skirtingBenefits.b1'), icon: ShieldCheck}, {text: t('skirtingBenefits.b2'), icon: Zap}, {text: t('skirtingBenefits.b3'), icon: Palette}] },
+    { name: 'skirting', href: '/spc-skirting-boards/optima-90-mm-skirting-board', imageUrl: '/images/skirting-boards/elite-100-mm-skirting-board/E1004031/application.jpg', imageHint: 'room with decorative skirting', benefits: [{text: t('skirtingBenefits.b1'), icon: ShieldCheck}, {text: t('skirtingBenefits.b2'), icon: Zap}, {text: t('skirtingBenefits.b3'), icon: Palette}] },
   ];
   
   const whyKermitItems = [
@@ -141,7 +127,7 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
                   <p className="text-white/80 text-sm font-semibold">{t('heroStarterPacksTitle')}</p>
                   <div className="flex flex-wrap justify-center gap-3">
                       {starterPacks.map(pack => (
-                          <StarterPackPill key={pack.id} pack={pack} locale={params?.locale || 'en'} />
+                          <StarterPackDialog key={pack.id} pack={pack} locale={params?.locale || 'en'} />
                       ))}
                   </div>
               </div>
