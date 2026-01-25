@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -75,8 +74,8 @@ export default function ContactPageClient() {
     <>
       <section className="relative h-64 w-full">
         <Image
-          src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2070&auto=format&fit=crop"
-          alt="Business team in a modern office"
+          src="/images/hero-images/contact-us-hero-image.jpg"
+          alt={t('hero.title')}
           fill
           className="object-cover"
           data-ai-hint="business office contact"
