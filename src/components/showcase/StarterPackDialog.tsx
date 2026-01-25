@@ -29,7 +29,7 @@ export function StarterPackDialog({ pack, locale }: StarterPackDialogProps) {
     
     const title = locale === 'tr' ? pack.title_tr : pack.title;
     const email = "info@kermit.com.tr";
-    const phone = "905376156129";
+    const phone = locale === 'tr' ? "905532775896" : "905376156129";
     
     const whatsappMessage = t('whatsappMessage', { packName: title });
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`;
