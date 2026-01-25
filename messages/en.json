@@ -682,6 +682,63 @@
       "title": "Kermit Floor | Privacy Policy",
       "description": "Learn how Kermit Floor collects, uses, and protects your personal data."
     },
-    "title": "Privacy Policy"
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: 25 January 2026",
+    "section1": {
+      "title": "1. Who we are (Data Controller)",
+      "content": "<p>This website (“Site”) is operated by Kermit Plastik Sanayi ve Ticaret Anonim Şirketi (“Kermit Floor”, “we”, “us”).</p><ul><li><strong>Data Controller (KVKK):</strong> Kermit Plastik Sanayi ve Ticaret Anonim Şirketi</li><li><strong>Address:</strong> Cumhuriyet Mh. Cihan Sk. No:4 ÇAYIROVA / KOCAELİ - TÜRKİYE</li><li><strong>Contact (privacy):</strong> info@kermit.com.tr</li><li><strong>Phone:</strong> +90 262 658 97 29</li></ul>"
+    },
+    "section2": {
+      "title": "2. Scope",
+      "content": "<p>This Privacy Policy explains how we collect, use, disclose, and protect personal data when you:</p><ul><li>visit the Site,</li><li>contact us via forms, email, phone, or WhatsApp,</li><li>request catalogs/technical documents,</li><li>submit inquiries or RFQs,</li><li>apply for distributorship/partnership,</li><li>interact with embedded content (e.g., Instagram), and</li><li>subscribe to updates (if offered).</li></ul>"
+    },
+    "section3": {
+      "title": "3. Personal data we collect",
+      "content": "<p>Depending on how you use the Site, we may collect:</p><h3>A. Data you provide</h3><ul><li><strong>Identity/contact:</strong> name, surname, company, title, email, phone</li><li><strong>Inquiry content:</strong> messages, product interests, project details, attachments</li><li><strong>Commercial details (B2B):</strong> company address, VAT/tax number, delivery preferences (if applicable)</li></ul><h3>B. Data collected automatically</h3><ul><li><strong>Device and usage:</strong> IP address, browser type, pages viewed, approximate location (city/country), timestamps, referring URLs</li><li><strong>Cookies and similar technologies</strong> (see Section 8)</li></ul><h3>C. Data from third parties (limited)</h3><ul><li>Analytics/measurement providers (aggregated usage stats)</li><li>Social platforms (when you interact with embedded content)</li></ul><p><strong>Note:</strong> We do not intentionally collect special categories of personal data (sensitive data). Please do not submit sensitive data via Site forms.</p>"
+    },
+    "section4": {
+      "title": "4. Purposes of processing",
+      "content": "<p>We process personal data for the following purposes:</p><ol><li>Responding to inquiries and providing quotations / product information</li><li>Customer and relationship management (B2B communications, distributor onboarding)</li><li>Providing requested resources (catalogs, technical sheets, installation guides)</li><li>Site operation, security, and fraud prevention</li><li>Improving the Site (performance, usability, analytics)</li><li>Legal compliance (recordkeeping, responding to lawful requests)</li><li>Marketing communications (only where permitted/consented; see Section 7)</li></ol><p><em>These purpose disclosures are part of the transparency obligations under KVKK and GDPR.</em></p>"
+    },
+    "section5": {
+      "title": "5. Legal bases (KVKK / GDPR)",
+      "content": "<p>We rely on one or more legal grounds depending on the context:</p><p><strong>Under KVKK (Law No. 6698):</strong></p><ul><li>Processing is necessary for the establishment, exercise, or protection of a right (e.g., handling disputes, claims)</li><li>Processing is necessary for the performance of a contract or pre-contract steps (e.g., preparing a quotation at your request)</li><li>Processing is necessary for legitimate interests of the data controller (e.g., ensuring Site security), provided fundamental rights are not harmed</li><li>Explicit consent where required (e.g., non-essential cookies, certain marketing)</li></ul><p><em>KVKK requires that you disclose the collection method and legal reason.</em></p><p><strong>Under GDPR (if applicable):</strong></p><ul><li>Contract / pre-contract steps</li><li>Legitimate interests</li><li>Consent (e.g., non-essential cookies, direct marketing where required)</li><li>Legal obligation</li></ul><p><em>(Transparency items are derived from GDPR Articles 13/14.)</em></p>"
+    },
+    "section6": {
+      "title": "6. Who we share data with (Recipients / Transfers)",
+      "content": "<p>We may share personal data with:</p><ul><li>IT/hosting providers (e.g., hosting, CDN, website infrastructure)</li><li>Analytics providers (only as configured; ideally with IP masking and consent where required)</li><li>Communication tools (email service provider, CRM, customer support tools)</li><li>Professional advisors (lawyers, accountants) where necessary</li><li>Authorities / courts where legally required</li></ul><p>We do not sell personal data.</p><p><strong>International transfers:</strong> Your data may be processed in countries other than your own depending on our vendors’ infrastructure. Where required, we use appropriate safeguards (e.g., contractual protections and security measures).</p>"
+    },
+    "section7": {
+      "title": "7. Marketing communications",
+      "content": "<p>If we offer newsletters or promotional messages:</p><ul><li>We will send them only with your consent or another lawful basis permitted by applicable law.</li><li>You can opt out at any time using the unsubscribe link or by emailing info@kermit.com.tr</li></ul>"
+    },
+    "section8": {
+      "title": "8. Cookies and similar technologies",
+      "content": "<p>We use cookies and similar technologies to:</p><ul><li>keep the Site functional,</li><li>measure usage and improve performance,</li><li>remember preferences (if enabled),</li><li>enable embedded content (e.g., social media).</li></ul><p><strong>Cookie choices:</strong> Where legally required, we present a cookie banner allowing you to accept/reject non-essential cookies. You can also manage cookies via browser settings.</p><p><em>(Optional table—populate with your actual tools)</em></p><ul><li><strong>Essential cookies:</strong> required for basic functions</li><li><strong>Analytics cookies:</strong> [e.g., Google Analytics] (consent-based where required)</li><li><strong>Marketing cookies:</strong> [if any] (consent-based)</li></ul>"
+    },
+    "section9": {
+      "title": "9. Data retention",
+      "content": "<p>We retain personal data only as long as necessary for the purposes listed above, then delete or anonymize it, unless a longer retention period is required by law or necessary for establishing/exercising legal rights (e.g., dispute handling). <em>(Retention disclosure is a GDPR transparency item and good practice under KVKK.)</em></p>"
+    },
+    "section10": {
+      "title": "10. Security",
+      "content": "<p>We apply reasonable technical and organizational measures designed to protect personal data against unauthorized access, loss, misuse, alteration, or disclosure. However, no system is 100% secure.</p>"
+    },
+    "section11": {
+      "title": "11. Your rights (KVKK Art. 11 / GDPR rights where applicable)",
+      "content": "<p>Under KVKK, you have rights including (summary): to learn whether your data is processed, request information, learn the purpose and whether it is used accordingly, know third parties to whom data is transferred, request correction/deletion where conditions are met, and object to certain results.</p><p>Under GDPR (if applicable) you may have rights such as access, rectification, erasure, restriction, portability, and objection, and the right to withdraw consent.</p>"
+    },
+    "section12": {
+      "title": "12. How to exercise your rights",
+      "content": "<p>To submit a request, contact us at:</p><ul><li><strong>Email:</strong> info@kermit.com.tr</li><li><strong>Postal address:</strong> Cumhuriyet Mh. Cihan Sk. No:4 ÇAYIROVA / KOCAELİ - TÜRKİYE</li></ul><p>Include sufficient information to verify your identity and clearly describe your request.</p><p>We may request additional information to confirm identity and process your request in line with applicable law.</p>"
+    },
+    "section13": {
+      "title": "13. Children’s privacy",
+      "content": "<p>The Site is not directed to children. We do not knowingly collect personal data from children.</p>"
+    },
+    "section14": {
+      "title": "14. Changes to this Privacy Policy",
+      "content": "<p>We may update this Privacy Policy from time to time. The “Last updated” date will change accordingly. Material changes will be posted on the Site.</p>"
+    }
   }
 }
