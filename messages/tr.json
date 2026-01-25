@@ -489,7 +489,11 @@
     "featureQuickInstallation": "Hızlı Montaj",
     "featureImpactResistant": "Darbeye Dayanıklı",
     "featureSoundAbsorbtion": "Yüksek Ses Emilimi",
-    "featurePhthalateFree": "Ftalat İçermez"
+    "featurePhthalateFree": "Ftalat İçermez",
+    "featureFlexibleEdges": "Esnek Kenarlar",
+    "featureSmartInstallation": "Akıllı Montaj",
+    "featureMattSurface": "Mat Yüzey",
+    "featureCableChannel": "Kablo Kanalı"
   },
   "InquiryForm": {
     "title": "Bilgi Talebi Gönder",

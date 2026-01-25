@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import type { Panel } from '@/lib/panel-data';
-import { Droplets, ShieldCheck, Zap, Hammer, Volume2, Leaf, ZoomIn, X, ChevronLeft, ChevronRight, Ruler, Square, Building, Layers } from 'lucide-react';
+import { Droplets, ShieldCheck, Zap, Hammer, Volume2, Leaf, ZoomIn, X, ChevronLeft, ChevronRight, Ruler, Square, Building, Layers, Waves, Slice, Cable } from 'lucide-react';
 import {
     Dialog,
     DialogContent,
@@ -48,6 +48,8 @@ export function ProductDetails({ panel, panels, onPanelSelect, collectionType, t
   const t = useTranslations('ProductDetails');
   
   const [api, setApi] = useState<CarouselApi>();
+
+  const isSkirting = collectionType.startsWith('skirting-');
 
   let specs: { label: string; value: string | string[]; icon?: React.ElementType }[];
   
@@ -93,7 +95,7 @@ export function ProductDetails({ panel, panels, onPanelSelect, collectionType, t
       specs = stoneFlooringSpecs;
   } else if (['spc-parquet-natural-collection', 'full-natural-collection'].includes(collectionType)) {
       specs = naturalFlooringSpecs;
-  } else if (collectionType.startsWith('skirting-')) {
+  } else if (isSkirting) {
     let height = 'N/A';
     let depth = 'N/A';
 
@@ -135,9 +137,19 @@ export function ProductDetails({ panel, panels, onPanelSelect, collectionType, t
     { icon: Volume2, text: t('featureSoundAbsorbtion') },
     { icon: Leaf, text: t('featurePhthalateFree') },
   ];
-  
-  const leftFeatures = allFeatures.slice(0, 3);
-  const rightFeatures = allFeatures.slice(3);
+
+  const skirtingFeatures = [
+    { icon: Droplets, text: t('featureWaterProof') },
+    { icon: Hammer, text: t('featureImpactResistant') },
+    { icon: Waves, text: t('featureFlexibleEdges') },
+    { icon: Zap, text: t('featureSmartInstallation') },
+    { icon: Slice, text: t('featureMattSurface') },
+    { icon: Cable, text: t('featureCableChannel') },
+  ];
+
+  const featuresToDisplay = isSkirting ? skirtingFeatures : allFeatures;
+  const leftFeatures = featuresToDisplay.slice(0, 3);
+  const rightFeatures = featuresToDisplay.slice(3);
 
   useEffect(() => {
     if (!api) {
@@ -281,8 +293,8 @@ export function ProductDetails({ panel, panels, onPanelSelect, collectionType, t
         </div>
 
         <div className="lg:hidden col-span-1 bg-muted px-4 py-4 border-t">
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-4 text-center">
-              {allFeatures.map((feature) => (
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 text-center">
+              {featuresToDisplay.map((feature) => (
                 <div key={feature.text} className="flex flex-col items-center gap-2">
                   <feature.icon className="h-6 w-6 text-secondary" />
                   <span className="text-xs font-medium text-foreground/80 leading-tight">{feature.text}</span>

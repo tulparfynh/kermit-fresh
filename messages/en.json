@@ -622,7 +622,11 @@
     "featureQuickInstallation": "Quick Installation",
     "featureImpactResistant": "Impact Resistant",
     "featureSoundAbsorbtion": "Sound Absorbtion",
-    "featurePhthalateFree": "Phthalate Free"
+    "featurePhthalateFree": "Phthalate Free",
+    "featureFlexibleEdges": "Flexible Edges",
+    "featureSmartInstallation": "Smart Installation",
+    "featureMattSurface": "Matt Surface",
+    "featureCableChannel": "Cable Channel"
   },
   "InquiryForm": {
     "title": "Send an Inquiry",
