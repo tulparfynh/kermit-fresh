@@ -12,7 +12,7 @@ export function Footer() {
   const productLinks = [
       { href: '/spc-parquet-natural-collection', label: t('productFlooring') },
       { href: '/spc-wall-panels', label: t('productWallPanels') },
-      { href: '/spc-skirting-boards/optima-60-mm-skirting-board', label: t('productSkirting') },
+      { href: '/spc-skirting-boards/optima-90-mm-skirting-board', label: t('productSkirting') },
     ];
     
     const supportLinks = [
