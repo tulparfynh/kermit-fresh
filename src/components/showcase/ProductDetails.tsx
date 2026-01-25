@@ -104,7 +104,7 @@ export function ProductDetails({ panel, panels, onPanelSelect, collectionType, t
     else if (collectionType.includes('elite-100-mm')) { height = '100 mm'; depth = '18 mm'; }
     else if (collectionType.includes('moderna-100-mm')) { height = '100 mm'; depth = '18 mm'; }
     else if (collectionType.includes('optima-60-mm')) { height = '60 mm'; depth = '14 mm'; }
-    else if (collectionType.includes('optima-90-mm')) { height = '90 mm'; depth = '18 mm'; }
+    else if (collectionType.includes('optima-90-mm')) { height = '90 mm'; depth = '17 mm'; }
     else if (collectionType.includes('solid-80-mm')) { height = '80 mm'; depth = '18 mm'; }
     else if (collectionType.includes('x-line-100-mm')) { height = '100 mm'; depth = '18 mm'; }
 

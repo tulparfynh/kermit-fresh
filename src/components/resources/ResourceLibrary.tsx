@@ -16,7 +16,7 @@ type ResourceLibraryProps = {
   documents: Resource[];
 };
 
-const productLines: ProductLine[] = ['skirting', 'flooring', 'wall_panels'];
+const productLines: ProductLine[] = ['flooring', 'wall_panels', 'skirting'];
 const docTypes: DocType[] = [
   'catalogue', 'tds', 'installation', 'warranty', 'maintenance', 
   'cad', 'textures', 'packaging'
@@ -27,7 +27,7 @@ export default function ResourceLibrary({ documents }: ResourceLibraryProps) {
   const searchParams = useSearchParams();
   const tabFromUrl = searchParams.get('tab');
 
-  const defaultTab = productLines.includes(tabFromUrl as any) ? tabFromUrl : 'skirting';
+  const defaultTab = productLines.includes(tabFromUrl as any) ? tabFromUrl : 'flooring';
 
   const getDocumentsByProductLine = (productLine: ProductLine) => {
     return documents.filter(doc => doc.productLine === productLine || (doc.productLine === 'general' && productLine !== 'general'));
