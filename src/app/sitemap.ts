@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { locales, pathnames, defaultLocale } from '@/navigation';
  
-const domain = 'https://www.kermitfloor.com';
+const domain = 'https://kermitfloor.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
