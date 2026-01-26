@@ -3,12 +3,17 @@ import { locales, pathnames, defaultLocale } from '@/navigation';
  
 const domain = 'https://kermitfloor.com';
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   function getUrl(locale: string, path: string) {
-    const fullPath = path === '/' ? '' : path;
-    return locale === defaultLocale ? `${domain}${fullPath}` : `${domain}/${locale}${fullPath}`;
+    // The root path for the default locale is the domain with a slash.
+    // For other locales, it's domain + /locale + slash.
+    if (path === '/') {
+        return locale === defaultLocale ? `${domain}/` : `${domain}/${locale}/`;
+    }
+    // For all other paths, prefix with locale if not default.
+    return locale === defaultLocale ? `${domain}${path}` : `${domain}/${locale}${path}`;
   }
 
   // Add the homepage route
